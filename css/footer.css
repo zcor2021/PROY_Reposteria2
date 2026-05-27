@@ -1,0 +1,152 @@
+/*--------------------*/
+/* FOOTER */
+/*--------------------*/
+
+footer{
+    background-color: rgba(37,4,4,0.685);
+
+    color: rgb(255,241,225);
+
+    padding: 70px 5vw;
+}
+
+/*--------------------*/
+/* CONTENEDOR */
+/*--------------------*/
+
+.footer-contenido{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+
+    gap: 50px;
+}
+
+/*--------------------*/
+/* BLOQUES */
+/*--------------------*/
+
+.footer-contenido div{
+    min-width: 0;
+}
+
+/*--------------------*/
+/* TITULOS */
+/*--------------------*/
+
+.footer-contenido h2{
+    margin-bottom: 25px;
+
+    font-size: clamp(24px, 1.8vw, 34px);
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer-contenido ul{
+    list-style: none;
+}
+
+.footer-contenido li{
+    margin-bottom: 18px;
+}
+
+/*--------------------*/
+/* ENLACES */
+/*--------------------*/
+
+.footer-contenido a{
+    text-decoration: none;
+
+    color: white;
+
+    font-size: clamp(15px, 1vw, 22px);
+
+    line-height: 1.5;
+
+    transition: 0.3s;
+
+    word-break: break-word;
+}
+
+.footer-contenido a:hover{
+    color: rgb(223, 192, 156);
+}
+
+/*--------------------*/
+/* INFO FOOTER */
+/*--------------------*/
+
+.infoFooter h1{
+    font-family: 'Yeseva One';
+
+    letter-spacing: 0.12em;
+
+    font-size: clamp(28px, 2.2vw, 45px);
+}
+
+.infoFooter h3{
+    margin: 20px 0;
+
+    padding: 14px 0;
+
+    border-top: 2px solid;
+
+    border-bottom: 2px solid;
+
+    font-family: 'Petit Formal Script';
+
+    font-size: clamp(24px, 2vw, 42px);
+}
+
+.infoFooter p{
+    margin-top: 20px;
+
+    line-height: 1.8;
+
+    font-size: clamp(15px, 1vw, 20px);
+}
+
+/*--------------------*/
+/* COPYRIGHT */
+/*--------------------*/
+
+footer > p{
+    margin-top: 70px;
+
+    text-align: center;
+
+    font-size: clamp(14px, 1vw, 20px);
+}
+
+/*--------------------*/
+/* RESPONSIVE */
+/*--------------------*/
+
+@media(max-width:700px){
+
+    footer{
+        padding: 50px 25px;
+    }
+
+    .footer-contenido{
+        gap: 40px;
+
+        justify-items: center;
+
+        text-align: center;
+    }
+
+    .footer-contenido div{
+        width: 100%;
+        max-width: 400px;
+
+        text-align: center;
+    }
+
+    .footer-contenido ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

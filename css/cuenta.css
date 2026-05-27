@@ -1,0 +1,160 @@
+/*--- CONFIGURACIÓN GENERAL ---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://th.bing.com/th/id/R.c3c09b4a7273665dbba59d34eb535893?rik=I8dD8Vsrg3f4Qg&riu=http%3a%2f%2fshopharbour.com.cn%2fcdn%2fshop%2fproducts%2fdune-swatch-351421.jpg%3fv%3d1692200487&ehk=%2b68l%2bqt2nSL9vMDuqtTKbJRE5uw4TlQk87O%2bD0kGSXE%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*--- CONTENEDOR PRINCIPAL ---*/
+.contenedor-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 180px 20px 80px; /* Espacio superior para el header fijo */
+}
+
+/*--- TARJETA DE LOGIN ---*/
+.login-card {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-card h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: #5b3924;
+    margin-bottom: 10px;
+}
+
+.login-card h2 {
+    font-size: 16px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+/*--- FORMULARIO ---*/
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #C8A27A;
+    box-shadow: 0 0 10px rgba(200, 162, 122, 0.2);
+}
+
+/* Estilos de validación visual */
+.form-group input:valid:not(:placeholder-shown) {
+    border-color: #2ecc71;
+}
+
+/*--- BOTONES ---*/
+.botones-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-ingresar, .btn-limpiar {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-ingresar {
+    background-color: #C8A27A;
+    color: white;
+}
+
+.btn-ingresar:hover {
+    background-color: #b08968;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(200, 162, 122, 0.4);
+}
+
+.btn-limpiar {
+    background-color: #f5f5f5;
+    color: #777;
+}
+
+.btn-limpiar:hover {
+    background-color: #e0e0e0;
+}
+
+/*--- ENLACES EXTRAS ---*/
+.login-footer {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.login-footer p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.login-footer a {
+    color: #C8A27A;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/*--- RESPONSIVE ---*/
+@media (max-width: 600px) {
+    .login-card {
+        padding: 40px 25px;
+    }
+    .login-card h1 {
+        font-size: 32px;
+    }
+    .botones-container {
+        flex-direction: column;
+    }
+    .contenedor-login {
+        padding-top: 200px;
+    }
+}

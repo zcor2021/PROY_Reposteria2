@@ -1,0 +1,179 @@
+/*--- CONFIGURACIÓN GENERAL ---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://th.bing.com/th/id/R.c3c09b4a7273665dbba59d34eb535893?rik=I8dD8Vsrg3f4Qg&riu=http%3a%2f%2fshopharbour.com.cn%2fcdn%2fshop%2fproducts%2fdune-swatch-351421.jpg%3fv%3d1692200487&ehk=%2b68l%2bqt2nSL9vMDuqtTKbJRE5uw4TlQk87O%2bD0kGSXE%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+main.Bloque {
+    padding: 160px 0 60px; /* Espacio para el header fijo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+
+/*--- BANNER SUPERIOR ---*/
+.info-tienda {
+    background-color: rgba(250, 235, 215, 0.7);
+    display: flex;
+    width: 100%;
+    border-top: 4px solid #5a4113;
+    border-bottom: 4px solid #5a4113;
+    overflow: hidden;
+}
+
+.blo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-banner {
+    padding: 40px 60px;
+    text-align: center;
+}
+
+.texto-banner h5, .texto-banner h4 {
+    font-size: clamp(35px, 4vw, 55px);
+    font-family: 'Petit Formal Script';
+    color: #5a4113;
+    line-height: 1.1;
+    text-decoration: underline;
+}
+
+.texto-banner h2 {
+    font-size: clamp(20px, 2vw, 28px);
+    margin: 25px 0 15px;
+    color: #222;
+    font-weight: 700;
+}
+
+.texto-banner p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.img-banner img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    border-left: 5px solid #5a4113;
+    border-right: 5px solid #5a4113;
+}
+
+/*--- REJILLA DE TIENDAS (GRID) ---*/
+.contenedor-maps {
+    display: grid;
+    /* Crea columnas automáticas de mínimo 320px */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    width: 90%;
+    max-width: 1300px;
+}
+
+/*--- TARJETAS (CARDS) ---*/
+.maps {
+    background-color: white;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.maps:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(107, 62, 38, 0.2);
+}
+
+.maps img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+.maps-info h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #6b3e26;
+    margin-bottom: 10px;
+}
+
+.maps-info h3 {
+    font-size: 17px;
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: 500;
+    min-height: 50px;
+}
+
+.maps-info ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.maps-info li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.maps button {
+    background-color: #ac5050;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 14px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.maps button:hover {
+    background-color: #7a1f1f;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/*--- RESPONSIVE ---*/
+
+@media (max-width: 1024px) {
+    .info-tienda {
+        flex-direction: column;
+    }
+    .img-banner {
+        display: none; /* Ocultamos imágenes laterales en tablets para priorizar texto */
+    }
+    .texto-banner {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    main.Bloque {
+        padding-top: 180px;
+    }
+    .contenedor-maps {
+        grid-template-columns: 1fr; /* Una sola columna en celulares */
+        width: 95%;
+    }
+}

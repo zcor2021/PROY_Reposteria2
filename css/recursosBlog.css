@@ -1,0 +1,338 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1e8e1; /* Color crema de fondo */
+    font-family: 'Poppins', sans-serif;
+    color: #4a3319;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block; /* Evita espacios en blanco debajo de las imágenes */
+}
+
+/* --- TITULOS CENTRALES --- */
+.titulo-central {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.titulo-central h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 45px);
+    color: #6b2f38;
+    margin-bottom: 15px;
+}
+
+.titulo-central p {
+    font-size: 18px;
+    color: #8b5a3c;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- SECCIÓN HERO (PORTADA) --- */
+.hero-blog {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 180px 8% 80px;
+    gap: 50px;
+    min-height: 80vh;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.subtitulo-blog {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #c08a7b;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-texto h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 65px);
+    color: #6b2f38;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-texto h1 span {
+    font-style: italic;
+    color: #8d4b56;
+}
+
+.hero-texto p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 35px;
+    max-width: 550px;
+    text-align: justify;
+}
+
+.btn-coleccion {
+    background: linear-gradient(to right, #8d3f4b, #b05a68);
+    color: white;
+    padding: 16px 35px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-coleccion:hover {
+    transform: translateY(-3px);
+}
+
+.hero-imagen {
+    flex: 1;
+}
+
+.hero-imagen img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 20px 20px 0px #e4d5cc;
+}
+
+/* --- SECCIÓN ARTÍCULOS / PRODUCTOS --- */
+.seccion-articulos, .seccion-degustacion, .detalles {
+    padding: 80px 8%;
+    width: 100%;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card-producto, .detalle-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-producto img, .detalle-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card-info, .contenido-card {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.card-info h3, .contenido-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #6b2f38;
+}
+
+.precio-tag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.monto {
+    background: #8d3f4b;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* --- SECCIÓN DEGUSTACIÓN --- */
+.contenido-degustacion {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.degustacion-img {
+    flex: 1;
+}
+
+.degustacion-img img {
+    border-radius: 25px;
+    height: 650px;
+    object-fit: cover;
+}
+
+.degustacion-lista {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.item-mousse {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+}
+
+.precio-m {
+    font-weight: bold;
+    font-size: 22px;
+    color: #8d3f4b;
+    margin-left: 20px;
+}
+
+/* --- SECCIÓN DETALLES (3 COLUMNAS) --- */
+.cards-detalles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+/* --- SECCIÓN SUSCRIPCIÓN (REPARADA) --- */
+.banner-suscripcion {
+    padding: 60px 8% 100px;
+}
+
+.suscripcion-flex {
+    background-color: #8d3f4b;
+    display: flex;
+    flex-direction: row; /* En PC están uno al lado del otro */
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.suscripcion-img {
+    flex: 1;
+    overflow: hidden;
+}
+
+.suscripcion-img img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    display: block; /* Quita espacios raros */
+}
+
+.suscripcion-info {
+    flex: 1.2;
+    padding: 60px;
+    color: white;
+    background-color: #8d3f4b; /* Color sólido para el cuadro de texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.suscripcion-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3.5vw, 42px);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.suscripcion-info p {
+    margin-bottom: 30px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.form-sus {
+    display: flex;
+    gap: 15px;
+}
+
+.form-sus input {
+    flex: 1;
+    padding: 18px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+}
+
+.form-sus button {
+    background-color: #f1e8e1;
+    color: #8d3f4b;
+    padding: 18px 30px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 1100px) {
+    .grid-productos, .cards-detalles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* AQUÍ ARREGLAMOS EL ERROR DE TU IMAGEN */
+@media (max-width: 1000px) {
+    .suscripcion-flex {
+        flex-direction: column; /* Apila la imagen arriba y el cuadro burdeos abajo */
+    }
+
+    .suscripcion-img {
+        width: 100%;
+        height: 350px; /* Tamaño de la imagen en móvil */
+        min-height: 350px;
+    }
+
+    .suscripcion-info {
+        width: 100%;
+        padding: 40px 25px; /* Más espacio adentro del cuadro burdeos */
+        text-align: center;
+    }
+
+    .suscripcion-info h2 {
+        margin-top: 0; /* Asegura que el título no suba */
+    }
+
+    .form-sus {
+        flex-direction: column; /* El input y el botón se apilan */
+    }
+
+    /* Otros ajustes de la página */
+    .hero-blog, .contenido-degustacion {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-imagen { order: -1; }
+    .degustacion-img img { height: 400px; }
+    .item-mousse { flex-direction: column; gap: 15px; }
+}
+
+@media (max-width: 600px) {
+    .grid-productos, .cards-detalles {
+        grid-template-columns: 1fr;
+    }
+    .hero-texto h1 { font-size: 38px; }
+    .suscripcion-info h2 { font-size: 28px; }
+}

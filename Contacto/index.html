@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sweet Alchemist</title>
+    <!-- CSS Unificado -->
+    <link rel="stylesheet" href="../css/encabezado.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;800&family=Dancing+Script:wght@600&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header class="encabezadoMenu">
+        <div class="barra" id="barra2">
+            <div class="logo">
+                <a href="../index.html"><i class="fa-solid fa-mug-hot"></i> SWEET ALCHEMIST</a>
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar postres...">
+            </div>
+            <div class="subBarra">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../Cuenta Login/">Cuenta</a></li>
+                        <li><a href="#">Carrito</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    
+        <div class="menuCategorias" id="menu">
+            <nav>
+                <ul>
+                    <li><a href="../Categorias/index.html"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
+                    <li><a href="../Nosotros/index.html"><i class="fa-solid fa-users"></i> NOSOTROS</a></li>
+                    <li><a href="../Blog/index.html"><i class="fa-solid fa-book"></i> BLOG</a></li>
+                    <li><a href="../Tiendas/index.html"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
+                    <li><a href="../pdf/Carta Salón.pdf" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor-contacto">
+        <div class="contact-hero">
+            <!-- PARTE IZQUIERDA: TEXTO Y BENEFICIOS -->
+            <div class="hero-left">
+                <span class="mini-title">Hablemos ♡</span>
+                <h1>ESTAMOS AQUÍ <br><span>PARA TI</span></h1>
+                <p>¿Tienes dudas, necesitas ayuda con tu pedido o quieres crear algo especial? Escríbenos y nuestro equipo te responderá lo antes posible.</p>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fa-regular fa-clock"></i>
+                        <h3>Respuesta rápida</h3>
+                        <p>En menos de 24 horas.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fa-regular fa-heart"></i>
+                        <h3>Atención personalizada</h3>
+                        <p>El postre perfecto para ti.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fa-solid fa-cake-candles"></i>
+                        <h3>Pedidos especiales</h3>
+                        <p>Diseños para cada ocasión.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fa-solid fa-shield-heart"></i>
+                        <h3>Compra segura</h3>
+                        <p>Tu información protegida.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTE DERECHA: FORMULARIO -->
+            <div class="hero-right">
+                <div class="form-card">
+                    <h2>Envíanos tu mensaje</h2>
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nombres Completos</label>
+                                <input type="text" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Teléfono / WhatsApp</label>
+                                <input type="tel" placeholder="+51 000 000 000" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Correo Electrónico</label>
+                                <input type="email" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Asunto</label>
+                                <select required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option>Pedido personalizado</option>
+                                    <option>Consulta general</option>
+                                    <option>Reclamo o sugerencia</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Mensaje</label>
+                            <textarea placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
+                        </div>
+                        <div class="form-button">
+                            <button type="submit" class="btn-enviar">
+                                <i class="fa-solid fa-paper-plane"></i> ENVIAR MENSAJE
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- TARJETAS DE INFORMACIÓN INFERIORES -->
+        <div class="contact-bottom-info">
+            <div class="info-card">
+                <i class="fa-brands fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p>+51 987 654 321</p>
+                <span>Lun a Dom: 8am - 8pm</span>
+            </div>
+            <div class="info-card">
+                <i class="fa-regular fa-envelope"></i>
+                <h3>Email</h3>
+                <p>hola@sweetalchemist.pe</p>
+                <span>Respuesta en 24h</span>
+            </div>
+            <div class="info-card">
+                <i class="fa-brands fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p>@sweetalchemist.pe</p>
+                <span>Síguenos</span>
+            </div>
+            <div class="info-card">
+                <i class="fa-solid fa-shop"></i>
+                <h3>Nuestra Tienda</h3>
+                <p>Av. Dulce Tentación 123</p>
+                <span>Surco - Lima - Perú</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-contenido-principal" class="footer-contenido">
+            
+            <div class="infoFooter">
+                <h1> SWEET ALCHEMIST </h1>
+                <h3> Pasteleria artesanal </h3>
+                <p> Sweet Alchemist crea postres artesanales elaborados con ingredientes de calidad y un toque de creatividad para cada ocasión.</p>
+                <p>Hechos con dulcura y creatividad</p>
+            </div>
+
+            <div>
+                <h2>Información</h2>
+                <ul>
+                    <li><a href="../Trabaja con Nosotros/index.html"><i class="fa-solid fa-handshake"></i> Trabaja con nosotros</a></li>
+                    <br>
+                    <li><a href="#"><i class="fa-solid fa-earth-americas"></i> Zonas de reparto</a></li>
+                    <br>
+                    <li><a href="#"><i class="fa-solid fa-phone"></i> Contacto</a></li>
+                    <br>
+                    <li><a href="../Tiendas/index.html"> Nuestras Tiendas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Políticas</h2>
+                <ul>
+                    <li><a href="../Políticas/index.html"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a></li>
+                    <br>
+                    <li><a href="#"><i class="fa-regular fa-file-lines"></i> Términos y Condiciones</a></li>
+                    <br>
+                    <li><a href="#"><i class="fa-regular fa-credit-card"></i> Cambios y Devoluciones</a></li>
+                    <br>
+                    <li><a href="#"> <i class="fa-solid fa-truck-moving"></i> Envios y entregas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Síguenos</h2>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                    <br>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <br>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
+                    <br>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i> Tiktok </a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Contáctanos</h2>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i> Visítanos</a></li>
+                    <br>
+                    <li><a href="#"> <i class="fa-regular fa-envelope"></i> Escríbenos</a></li>
+                    <br>
+                    <li><a href="#"><i class="fa-regular fa-clock"></i> Horario de Atención </a></li>
+                </ul>
+            </div>
+
+
+        </div>
+            <p>© 2026 Sweet Alchemist. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

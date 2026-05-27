@@ -1,0 +1,123 @@
+/*--- CONFIGURACIÓN GENERAL ---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://th.bing.com/th/id/R.c3c09b4a7273665dbba59d34eb535893?rik=I8dD8Vsrg3f4Qg&riu=http%3a%2f%2fshopharbour.com.cn%2fcdn%2fshop%2fproducts%2fdune-swatch-351421.jpg%3fv%3d1692200487&ehk=%2b68l%2bqt2nSL9vMDuqtTKbJRE5uw4TlQk87O%2bD0kGSXE%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.contenedor-politicas {
+    padding: 160px 5% 80px; /* Espacio para el header fijo */
+    min-height: 100vh;
+}
+
+/*--- TÍTULO DE LA PÁGINA ---*/
+.seccion-titulo {
+    background-color: rgba(116, 116, 97, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.seccion-titulo h1 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: clamp(28px, 4vw, 45px);
+    letter-spacing: 2px;
+}
+
+/*--- TABLA DE POLÍTICAS ---*/
+.tabla-contenedor {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: auto; /* Permite scroll lateral si es necesario en pantallas muy pequeñas */
+}
+
+.tabla-politica {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px; /* Espacio entre filas */
+    margin-bottom: 40px;
+}
+
+.tabla-politica caption {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    color: #4a3319;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo de las celdas */
+.tabla-politica th, 
+.tabla-politica td {
+    padding: 25px;
+    vertical-align: middle;
+    border: 2px solid #5a341b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.col-titulo {
+    background-color: rgba(207, 207, 170, 0.9);
+    color: #222;
+    font-weight: 700;
+    text-align: center;
+    width: 30%;
+    font-size: 16px;
+    border-radius: 15px 0 0 15px;
+}
+
+.col-contenido {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #444;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 17px;
+    border-radius: 0 15px 15px 0;
+}
+
+/*--- RESPONSIVE (MÓVIL) ---*/
+@media (max-width: 768px) {
+    .contenedor-politicas {
+        padding-top: 180px;
+    }
+
+    /* Convertimos la tabla en bloques verticales */
+    .tabla-politica, 
+    .tabla-politica tbody, 
+    .tabla-politica tr, 
+    .tabla-politica th, 
+    .tabla-politica td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla-politica tr {
+        margin-bottom: 30px;
+    }
+
+    .col-titulo {
+        border-radius: 15px 15px 0 0;
+        border-bottom: none;
+        padding: 15px;
+    }
+
+    .col-contenido {
+        border-radius: 0 0 15px 15px;
+        padding: 20px;
+    }
+}

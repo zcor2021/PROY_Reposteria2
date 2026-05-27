@@ -1,0 +1,482 @@
+/*---------- CONFIGURACION GENERAL ----------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: auto;
+    width: 100%;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+/*--------------------*/
+/* RESET */
+/*--------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 241, 225);
+
+    overflow-x: auto;
+    min-width: 320px;
+}
+
+img{
+    max-width: 100%;
+
+    display: block;
+}
+
+/*--------------------*/
+/* CONTENEDOR */
+/*--------------------*/
+
+.containerInicio{
+    display: flex;
+
+    flex-direction: column;
+}
+
+/*--------------------*/
+/* PORTADA */
+/*--------------------*/
+
+.portada{
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+/*--------------------*/
+/* TEXTO PORTADA */
+/*--------------------*/
+
+.texto{
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background-image:
+    linear-gradient(rgba(116,114,114,0.2), rgba(15,15,15,0.4)),
+    url("../imagen/Torta_portada.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    padding: 80px 5vw;
+}
+
+.texto h1{
+    font-size: clamp(40px, 5vw, 90px);
+
+    letter-spacing: 0.2em;
+
+    font-family: "DM Serif Display", serif;
+
+    color: rgb(224, 213, 203);
+
+    text-shadow:
+    -2px -2px 0px #4a3319,
+    2px -2px 0px #4a3319,
+    -2px 2px 0px #4a3319,
+    2px 2px 0px #4a3319,
+    2px 5px 8px rgba(42,27,11,0.4);
+}
+
+.texto h3{
+    font-size: clamp(45px, 7vw, 95px);
+
+    font-family: 'Petit Formal Script';
+
+    color: #5a4113;
+
+    text-shadow:
+    0 0 10px #d8cab0,
+    0 0 20px rgb(175,162,133),
+    0 0 40px rgb(214,197,171);
+}
+
+.texto h4{
+    font-size: clamp(18px, 2vw, 35px);
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    font-family: "Roboto Mono", monospace;
+
+    color: #5a4113;
+}
+
+.texto p{
+    margin-top: 30px;
+
+    max-width: 550px;
+
+    font-size: clamp(16px, 1.5vw, 26px);
+
+    line-height: 1.6;
+
+    color: white;
+}
+
+/*--------------------*/
+/* FAVORITOS */
+/*--------------------*/
+
+.favoritos{
+    grid-row: row-favoritos/row-Frase;
+    grid-column: col-header/col-last;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(255, 255, 255);
+
+    min-height: 100vh;
+    padding: 80px 60px;
+}
+
+.conte{
+    width: 90%;
+
+    text-align: center;
+}
+
+.conte h2{
+    border: 3px dashed black;
+
+    padding: 15px;
+
+    margin-bottom: 30px;
+
+    background-color: rgba(51,29,6,0.185);
+
+    font-size: clamp(28px, 4vw, 60px);
+
+    font-family: 'Yeseva One';
+
+    color: rgb(78,74,74);
+}
+
+.conte p{
+    font-size: clamp(16px, 1.5vw, 24px);
+}
+
+.favGeneral{
+    margin-top: 70px;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+
+    gap: 40px;
+
+    width: 100%;
+}
+
+.fav{
+    text-align: center;
+
+    transition: transform 0.3s;
+}
+
+.fav:hover{
+    transform: translateY(-8px);
+}
+
+.fav img{
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    transition: 0.4s;
+}
+
+.fav:hover img{
+    transform: scale(1.03);
+}
+
+.fav p{
+    margin-top: 15px;
+
+    background-color: #422d055e;
+
+    padding: 15px;
+
+    border-radius: 20px;
+
+    font-size: clamp(14px,1.2vw,22px);
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.fav:hover p{
+    background-color: rgba(66,45,5,0.75);
+
+    color: white;
+}
+
+/*--------------------*/
+/* FRASE */
+/*--------------------*/
+
+.Frase{
+    grid-row: row-Frase/row-productos;
+    grid-column: col-header/col-last;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-image:
+    linear-gradient(rgba(95, 94, 94, 0.356),
+    rgba(126, 126, 126, 0.315)),
+    url(https://www.alafermedulys.fr/wp-content/uploads/2024/03/1710720257_chocolat-en-patisserie-techniques-de-fonte-et-temperage.jpg);
+
+    background-size: cover;
+    background-position: center;
+}
+
+.Frase h2{
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Petit Formal Script';
+
+    font-size: clamp(35px,5vw,70px);
+
+    text-shadow:
+    0 0 17px #5f594d,
+    0 0 20px rgb(201,139,7),
+    0 0 40px rgb(143,115,64);
+}
+
+/*--------------------*/
+/* PRODUCTOS */
+/*--------------------*/
+
+.productos{
+    grid-row: row-productos/row-Parte-inferior;
+    grid-column: col-header/col-last;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    min-height: 100vh;
+
+    background-color: white;
+
+    padding: 80px 60px;
+}
+
+.Contenido{
+    width: 25%;
+}
+
+.Contenido h2{
+    border: 3px dashed;
+
+    padding: 20px;
+
+    margin-bottom: 40px;
+
+    text-align: center;
+
+    background-color: rgba(100,115,128,0.329);
+
+    font-family: 'Yeseva One';
+
+    color: rgb(58,57,56);
+
+    font-size: clamp(24px,2vw,40px);
+}
+
+.Contenido p{
+    margin-bottom: 25px;
+
+    text-align: justify;
+
+    font-size: clamp(16px,1.2vw,21px);
+
+    line-height: 1.7;
+}
+
+.imagenes{
+    width: 75%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 35px;
+}
+
+.cajaaa{
+    transition: transform 0.3s;
+}
+
+.cajaaa:hover{
+    transform: translateY(-8px);
+}
+
+.cajaaa img{
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    transition: 0.4s;
+}
+
+.cajaaa:hover img{
+    transform: scale(1.03);
+}
+
+.cajaaa p{
+    margin-top: 12px;
+
+    text-align: center;
+
+    font-size: clamp(14px,1vw,18px);
+
+    font-weight: 500;
+}
+
+/*--------------------*/
+/* RESPONSIVE */
+/*--------------------*/
+
+@media(max-width:992px){
+
+    .productos{
+        flex-direction: column;
+    }
+
+    .Contenido,
+    .imagenes{
+        width: 100%;
+    }
+
+    .imagenes{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .texto{
+        text-align: center;
+
+        align-items: center;
+    }
+
+    .texto p{
+        max-width: 100%;
+    }
+
+    .favGeneral{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:480px){
+
+    .texto{
+        padding: 60px 20px;
+    }
+
+    .favoritos,
+    .productos{
+        padding: 60px 20px;
+    }
+
+    .favGeneral,
+    .imagenes{
+        grid-template-columns: 1fr;
+    }
+
+    .fav img{
+        height: 300px;
+    }
+
+}
+@media(max-width: 900px){
+
+    .productos{
+        flex-direction: column;
+    }
+
+    .Contenido{
+        width: 100%;
+    }
+
+    .imagenes{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .favGeneral{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width: 600px){
+
+    .imagenes{
+        grid-template-columns: 1fr;
+    }
+
+    .favGeneral{
+        grid-template-columns: 1fr;
+    }
+
+    .texto{
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+}
