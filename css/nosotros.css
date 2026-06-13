@@ -15,7 +15,10 @@ body{
     background-color:rgb(255,244,230);
     color:#222;
 }
-
+/*---BOTON---*/
+.headerPrincipal .menuCategorias nav .nosotros a{
+    background-color: rgba(94,25,25,0.623);
+}
 /* MAIN */
 main{
     width:100%;

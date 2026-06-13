@@ -4,7 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*---BOTON---*/
+.headerPrincipal .menuCategorias nav .tiendas a{
+    background-color: rgba(94,25,25,0.623);
+}
 body {
     font-family: 'Poppins', sans-serif;
     background-image: url(https://th.bing.com/th/id/R.c3c09b4a7273665dbba59d34eb535893?rik=I8dD8Vsrg3f4Qg&riu=http%3a%2f%2fshopharbour.com.cn%2fcdn%2fshop%2fproducts%2fdune-swatch-351421.jpg%3fv%3d1692200487&ehk=%2b68l%2bqt2nSL9vMDuqtTKbJRE5uw4TlQk87O%2bD0kGSXE%3d&risl=&pid=ImgRaw&r=0);

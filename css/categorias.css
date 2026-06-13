@@ -7,6 +7,10 @@ body {
 }
 
 .main-categorias { padding-top: 140px; }
+/*---BOTON---*/
+.headerPrincipal .menuCategorias nav .categorias a{
+    background-color: rgba(94,25,25,0.623);
+}
 
 /*--- HERO ---*/
 .categorias-hero {

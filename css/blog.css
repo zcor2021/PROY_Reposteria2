@@ -4,7 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*---BOTON---*/
+.headerPrincipal .menuCategorias nav .blog a{
+    background-color: rgba(94,25,25,0.623);
+}
 body {
     font-family: 'Poppins', sans-serif;
     /* Fondo igual al de la página Nosotros para consistencia */
