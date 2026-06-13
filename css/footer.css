@@ -3,137 +3,138 @@
 /*--------------------*/
 footer{
     background-color: rgba(37,4,4,0.685);
-
     color: rgb(255,241,225);
-
-    padding: 70px 5vw;
+    padding: 40px 5vw;
+    text-align: center;
 }
 
 /*--------------------*/
 /* CONTENEDOR */
 /*--------------------*/
-
 .footer-contenido{
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-
-    gap: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
 }
 
 /*--------------------*/
 /* BLOQUES */
 /*--------------------*/
-
+/*cada columna toma el mismo espacio*/
 .footer-contenido div{
-    min-width: 0;
+    flex: 1;
+    display: inline-block;
+    text-align: center;
 }
 
 /*--------------------*/
 /* TITULOS */
 /*--------------------*/
-
 .footer-contenido h2{
-    margin-bottom: 25px;
-
-    font-size: clamp(24px, 1.8vw, 34px);
-
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    font-size: clamp(20px, 1.2vw, 22px);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .footer-contenido ul{
-    list-style: none;
+    list-style: none; /*Lista sin viñetas en el footer*/
 }
 
 .footer-contenido li{
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 }
 
 /*--------------------*/
 /* ENLACES */
 /*--------------------*/
-
 .footer-contenido a{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-decoration: none;
-
     color: white;
-
-    font-size: clamp(15px, 1vw, 22px);
-
-    line-height: 1.5;
-
-    transition: 0.3s;
-
-    word-break: break-word;
+    font-size: clamp(15px, 0.9vw, 18px);
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
 }
 
 .footer-contenido a:hover{
-    color: rgb(223, 192, 156);
+    background-color: rgb(216, 183, 183, 0.644);
+    border-radius: 10px;
+    padding: 9px;
+    color: rgb(58, 29, 3);
 }
 
 /*--------------------*/
-/* INFO FOOTER */
+/* APARTADO EN FOOTER */
 /*--------------------*/
-
 .infoFooter h1{
     font-family: 'Yeseva One';
-
     letter-spacing: 0.12em;
-
-    font-size: clamp(28px, 2.2vw, 45px);
+    font-size: clamp(20px, 1.5vw, 28px);
 }
 
 .infoFooter h3{
-    margin: 20px 0;
-
-    padding: 14px 0;
-
-    border-top: 2px solid;
-
-    border-bottom: 2px solid;
-
+    margin: 10px 0;
+    padding: 8px 0;
+    border-top: 2px solid rgba(255,255,255,0.25);
+    border-bottom: 2px solid rgba(255,255,255,0.25);
     font-family: 'Petit Formal Script';
-
-    font-size: clamp(24px, 2vw, 42px);
+    font-size: clamp(16px, 1.2vw, 20px); /*el tamaño de la fuente no será menor de 16px ni mayor de 20px*/
 }
 
 .infoFooter p{
     margin-top: 20px;
-
-    line-height: 1.8;
-
-    font-size: clamp(15px, 1vw, 20px);
+    line-height: 1.6;
+    font-size: clamp(14px, 0.8vw, 17px);
+}
+/*---------------------*/
+/* DERECHOS DE AUTOR */
+/*---------------------*/
+.Parte-inferior p{
+    margin-top: 20px;
+    font-size: clamp(14px, 0.8vw, 17px);
 }
 
 /*--------------------*/
 /* RESPONSIVE */
 /*--------------------*/
-
-@media(max-width:700px){
-
-    footer{
-        padding: 50px 25px;
+/* En tabletas el footer se reorganiza en 2 columnas */
+@media (max-width: 1024px) {
+    .footer-contenido {
+        flex-wrap: wrap;
+        gap: 30px;
     }
 
-    .footer-contenido{
-        gap: 40px;
-
-        justify-items: center;
-
-        text-align: center;
+    /* Cada bloque ocupa la mitad del ancho */
+    .footer-contenido div {
+        flex: 0 0 45%;
     }
 
-    .footer-contenido div{
-        width: 100%;
-        max-width: 400px;
-
-        text-align: center;
+    /* Menos padding en tabletas */
+    footer {
+        padding: 40px;
     }
+}
 
-    .footer-contenido ul{
-        display: flex;
+/* En móviles cada bloque ocupa toda la fila */
+@media (max-width: 768px) {
+    .footer-contenido {
         flex-direction: column;
-        align-items: center;
+        gap: 25px;
     }
 
+    /* Cada columna ocupa todo el ancho */
+    .footer-contenido div {
+        flex: 0 0 100%;
+    }
+
+    /* Padding más pequeño en móvil */
+    footer {
+        padding: 30px 20px;
+    }
+
+    /* Título de marca más pequeño */
+    .infoFooter h1 {
+        font-size: 22px;
+    }
 }

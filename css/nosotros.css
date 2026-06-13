@@ -5,22 +5,26 @@
     box-sizing:border-box;
 }
 
+/* Fondo de la página de nosotros */
 body{
     font-family:'Poppins', sans-serif;
     background-image:url(https://th.bing.com/th/id/R.c3c09b4a7273665dbba59d34eb535893?rik=I8dD8Vsrg3f4Qg&riu=http%3a%2f%2fshopharbour.com.cn%2fcdn%2fshop%2fproducts%2fdune-swatch-351421.jpg%3fv%3d1692200487&ehk=%2b68l%2bqt2nSL9vMDuqtTKbJRE5uw4TlQk87O%2bD0kGSXE%3d&risl=&pid=ImgRaw&r=0);
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
+    background-color:rgb(255,244,230);
     color:#222;
 }
 
 /* MAIN */
 main{
     width:100%;
-    padding:140px 20px 40px;
+    padding:40px 20px;
 }
 
-/* CONTENEDOR GENERAL */
+/* ESTRUCTURA DE DOS COLUMNAS */
+
+/* Fila principal que divide lateral y contenido */
 .fila{
     width:100%;
     display:flex;
@@ -28,17 +32,32 @@ main{
     align-items:flex-start;
 }
 
-/* LATERAL */
+/* ANIMACION */
+/* Entrada suave desde abajo para el lateral izquierdo */
+@keyframes subirEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Columna izquierda de navegación */
 .lateral{
     flex:1;
     min-width:280px;
 
     background:white;
-    padding:25px;
-    border-radius:14px;
+    padding:20px;
+    border-radius:10px;
+
+    animation: subirEntrada 0.8s ease-out forwards;
 }
 
-/* PRINCIPAL */
+/* Columna derecha con el contenido principal */
 .principal{
     flex:2.2;
 
@@ -47,11 +66,13 @@ main{
     border-radius:14px;
 }
 
+/*----------------*/
 /* TITULOS */
-main h1,
-main h2{
+/*----------------*/
+main h1, main h2{
     color:#6b3e26;
     margin-bottom:15px;
+    font-size: 29px;
 }
 
 main h3{
@@ -65,33 +86,48 @@ main p{
     font-size:18px;
 }
 
-/* HISTORIA LATERAL */
+/* Sección de texto justificado */
 .his{
     text-align:justify;
+    padding: 14px;
 }
 
 .his h2{
     background:#e7e2de;
-    padding:14px;
-    border-radius:12px;
+    padding:10px 20px;
+    border-radius:14px;
 }
 
 .historia{
-    margin:20px auto;
+    margin:15px auto;
+    width:94%;
+    padding:20px;
 }
 
-.historia img{
+.historia img, .cuadro2 img{
     width:100%;
     border-radius:12px;
     display:block;
+    transition:transform 0.4s ease;
+}
+
+/* Zoom suave al pasar el cursor */
+.historia img:hover, .cuadro2 img:hover {
+    transform: scale(1.02);
 }
 
 /* CUADROS */
 .cuadro{
     background:#e7e2de;
-    margin-top:25px;
-    padding:22px;
-    border-radius:14px;
+    width: 70%;
+    margin:20px auto;
+    padding:20px;
+    border-radius:17px;
+    transition: transform 0.3s ease;
+}
+
+.cuadro:hover{
+    transform: translateY(-5px);
 }
 
 .cuadro ul{
@@ -102,36 +138,50 @@ main p{
     margin-bottom:10px;
 }
 
+.cuadro2{
+    background:#e7e2de;
+    padding:20px;
+    border-radius:10px;
+    margin:20px 0;
+    transition: transform 0.3s ease;
+}
+
+.cuadro2:hover{
+    transform: translateY(-5px);
+}
+
 /* HISTORIA PRINCIPAL */
 .tarjeta-historia{
     display:flex;
-    align-items:stretch;
+    align-items:center;
     background:#e7e2de;
-    border-radius:14px;
+    border-radius:10px;
     overflow:hidden;
-    margin-bottom:25px;
+    margin:20px 0;
+    transition: transform 0.3s ease;
+}
+.tarjeta-historia:hover{
+    transform: translateY(-5px);
 }
 
-.historia-texto{
-    flex:1;
+.tarjeta-historia .historia-texto{
+    width:50%;
     padding:40px;
     text-align:justify;
 }
 
 .tarjeta-historia img{
-    flex:1;
-    width:100%;
-    min-height:350px;
+    width:50%;
+    height:400px;
     object-fit:cover;
+    display:block;
+    transition: transform 0.4s ease;
 }
 
-/* CONTENEDORES */
-.cuadro2{
-    background:#e7e2de;
-    padding:25px;
-    border-radius:14px;
-    margin-bottom:25px;
+.tarjeta-historia:hover img{
+    transform: scale(1.04);
 }
+
 
 /* TIMELINE */
 .timeline{
@@ -146,6 +196,12 @@ main p{
     padding:20px;
     border-radius:12px;
     border:1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline div:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* ESPECIALES */
@@ -169,18 +225,27 @@ main p{
 
 .especiales img{
     width:100%;
-    height:250px;
+    height:260px;
     object-fit:cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.especiales div:hover img{
+    transform: scale(1.05);
 }
 
 .especiales h3{
-    margin:20px 15px 10px;
-    font-size:22px;
+    margin:25px 15px 10px 15px;
+    font-size:23px;
+    color: #6b3e26;
 }
 
 .especiales p{
-    margin:0 15px 25px;
+    font-size: 19px;
+    margin:0 15px 30px 15px;
     color:#555;
+    line-height: 1.5;
 }
 
 /* FINAL */
@@ -216,9 +281,12 @@ main p{
         flex-direction:column;
     }
 
-    .lateral,
-    .principal{
+    .lateral,.principal{
         width:100%;
+    }
+
+    .his h2,.cuadro h2, .cuadro ul li, .cuadro p{
+        text-align: center;
     }
 
 }
@@ -226,19 +294,43 @@ main p{
 @media(max-width:900px){
 
     main{
-        padding:170px 15px 30px;
+        padding:40px 15px;
     }
 
     .tarjeta-historia{
         flex-direction:column;
     }
 
+    .tarjeta-historia .historia-texto{
+        width: 100%;
+        padding: 20px;
+    }
+
     .historia-texto{
-        padding:25px;
+        padding:5px;
     }
 
     .tarjeta-historia img{
-        min-height:260px;
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10%;
+        margin: 0 auto 15px;
+    }
+
+    .historia{
+        width: 100%;
+        padding: 0;
+    }
+    .historia img{
+        width: 100%;
+    }
+
+    .cuadro{
+        min-width: 95%;
+    }
+
+    .historia-texto h2, .cuadro2 h1, .cuadro2 h2{
+        text-align: center;
     }
 
 }
@@ -261,13 +353,11 @@ main p{
         font-size:16px;
     }
 
-    .principal,
-    .lateral{
+    .principal, .lateral{
         padding:18px;
     }
 
-    .cuadro2,
-    .cuadro{
+    .cuadro2,.cuadro{
         padding:18px;
     }
 

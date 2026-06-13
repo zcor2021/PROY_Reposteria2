@@ -11,10 +11,11 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    background-color: rgb(255, 244, 230);
 }
 
-main.Bloque {
-    padding: 160px 0 60px; /* Espacio para el header fijo */
+.Bloque {
+    padding: 60px 0; /* Espacio para el header fijo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +25,7 @@ main.Bloque {
 
 /*--- BANNER SUPERIOR ---*/
 .info-tienda {
-    background-color: rgba(250, 235, 215, 0.7);
+    background-color: rgba(255,255,255,0.541);
     display: flex;
     width: 100%;
     border-top: 4px solid #5a4113;
@@ -32,11 +33,23 @@ main.Bloque {
     overflow: hidden;
 }
 
-.blo {
+.img-banner, .texto-banner {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.img-banner img{
+    width: 100%;
+    object-fit: cover;
+    border-left: 5px solid #5a4113;
+    border-right: 5px solid #5a4113;
+    transition: transform 0.4s ease;
+}
+
+.img-banner img:hover{
+    transform: scale(1.02);
 }
 
 .texto-banner {
@@ -160,8 +173,13 @@ main.Bloque {
     .info-tienda {
         flex-direction: column;
     }
-    .img-banner {
-        display: none; /* Ocultamos imágenes laterales en tablets para priorizar texto */
+    .img-banner{
+        margin-bottom: 40px;
+    }
+    .img-banner img {
+        width: 80%;
+        height: 300px;
+        margin: 0 auto;
     }
     .texto-banner {
         padding: 50px 20px;
@@ -169,11 +187,15 @@ main.Bloque {
 }
 
 @media (max-width: 768px) {
-    main.Bloque {
-        padding-top: 180px;
+    .Bloque {
+        padding-top: 40px;
     }
     .contenedor-maps {
         grid-template-columns: 1fr; /* Una sola columna en celulares */
-        width: 95%;
+        width: 90%;
+    }
+    .img-banner img{
+        width: 100%;
+        height: 220px;
     }
 }

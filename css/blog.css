@@ -12,6 +12,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    background-color: rgb(255, 244, 230);
 }
 
 /*--- CONTENEDOR PRINCIPAL ---*/
@@ -19,7 +20,7 @@ body {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 160px 40px 60px; /* Margen superior para el encabezado fijo */
+    padding: 70px 60px; /* Margen superior para el encabezado fijo */
 }
 
 /*--- REJILLA DE BLOG (GRID) ---*/
@@ -27,7 +28,7 @@ body {
     display: grid;
     /* 3 columnas por defecto (Desktop) */
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 50px;
 }
 
 /*--- TARJETAS (CARDS) ---*/
@@ -109,9 +110,6 @@ body {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas */
         gap: 30px;
     }
-    .contenedor-blog {
-        padding-top: 180px;
-    }
 }
 
 /* Celulares */
@@ -120,7 +118,7 @@ body {
         grid-template-columns: 1fr; /* 1 columna */
     }
     .contenedor-blog {
-        padding: 180px 20px 40px;
+        padding: 40px;
     }
     .blog-img {
         height: 220px;

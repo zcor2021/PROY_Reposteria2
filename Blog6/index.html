@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dulce Tentación - Sweet Alchemist</title>
-    <!-- CSS Unificado -->
+    
     <link rel="stylesheet" href="../css/encabezado.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/recursosBlog.css">
     
-    <!-- Fuentes -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeseva+One&family=Petit+Formal+Script&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
-    <header class="encabezadoMenu">
-        <div class="barra" id="barra2">
-            <div class="logo">
+    <header class="headerPrincipal">
+            <div class="barra" id="barra1">
+            
+              <div class="logo">
                 <a href="../index.html"><i class="fa-solid fa-mug-hot"></i> SWEET ALCHEMIST</a>
-            </div>
-            <div class="buscador">
+              </div>
+
+              <div class="buscador">
                 <input type="text" placeholder="Buscar postres...">
-            </div>
-            <div class="subBarra">
+              </div>
+
+              <div class="subBarra">
                 <nav>
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
@@ -31,21 +35,23 @@
                         <li><a href="#">Carrito</a></li>
                     </ul>
                 </nav>
+              </div>
             </div>
-        </div>
-    
-        <div class="menuCategorias" id="menu">
-            <nav>
-                <ul>
-                    <li><a href="../Categorias/"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
-                    <li><a href="../Nosotros/"><i class="fa-solid fa-users"></i> NOSOTROS</a></li>
-                    <li><a href="../Blog/"><i class="fa-solid fa-book"></i> BLOG</a></li>
-                    <li><a href="../Tiendas/"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
-                    <li><a href="../pdf/Carta Salón.pdf" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        
+            <div class="menuCategorias" id="menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                  <nav>
+                    <ul>
+                      <li><a href="../Categorias/"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
+                      <li><a href="../Nosotros/"><i class="fa-solid fa-users"></i>  NOSOTROS</a></li>
+                      <li><a href="../Blog/"><i class="fa-solid fa-book"></i> BLOG</a></li>
+                      <li><a href="../Tiendas/"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
+                      <li><a href="../pdf/Carta Salón.pdf" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
+                    </ul>
+                  </nav>
+            </div>
+        </header>
 
     <main class="blog-detalle">
         <!-- PORTADA (HERO) -->
@@ -216,37 +222,31 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="Parte-inferior">
         <div id="footer-contenido-principal" class="footer-contenido">
             
             <div class="infoFooter">
                 <h1> SWEET ALCHEMIST </h1>
                 <h3> Pasteleria artesanal </h3>
                 <p> Sweet Alchemist crea postres artesanales elaborados con ingredientes de calidad y un toque de creatividad para cada ocasión.</p>
-                <p>Hechos con dulcura y creatividad</p>
+                <p>Hechos con dulzura y creatividad.</p>
             </div>
 
             <div>
                 <h2>Información</h2>
                 <ul>
-                    <li><a href="../Trabaja con Nosotros/index.html"><i class="fa-solid fa-handshake"></i> Trabaja con nosotros</a></li>
-                    <br>
+                    <li><a href="../Trabaja con Nosotros/"><i class="fa-solid fa-handshake"></i> Trabaja con nosotros</a></li>
                     <li><a href="#"><i class="fa-solid fa-earth-americas"></i> Zonas de reparto</a></li>
-                    <br>
-                    <li><a href="../Contacto/index.html"><i class="fa-solid fa-phone"></i> Contacto</a></li>
-                    <br>
-                    <li><a href="../Tiendas/index.html"> Nuestras Tiendas</a></li>
+                    <li><a href="../Contacto/"><i class="fa-solid fa-phone"></i> Contacto</a></li>
+                    <li><a href="../Tiendas/"> <i class="fa-solid fa-store"></i>Nuestras Tiendas</a></li>
                 </ul>
             </div>
             <div>
                 <h2>Políticas</h2>
                 <ul>
-                    <li><a href="../Políticas/index.html"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a></li>
-                    <br>
+                    <li><a href="../Políticas/"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a></li>
                     <li><a href="#"><i class="fa-regular fa-file-lines"></i> Términos y Condiciones</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-regular fa-credit-card"></i> Cambios y Devoluciones</a></li>
-                    <br>
                     <li><a href="#"> <i class="fa-solid fa-truck-moving"></i> Envios y entregas</a></li>
                 </ul>
             </div>
@@ -254,11 +254,8 @@
                 <h2>Síguenos</h2>
                 <ul>
                     <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-brands fa-tiktok"></i> Tiktok </a></li>
                 </ul>
             </div>
@@ -267,9 +264,7 @@
                 <h2>Contáctanos</h2>
                 <ul>
                     <li><a href="#"><i class="fa-solid fa-location-dot"></i> Visítanos</a></li>
-                    <br>
                     <li><a href="#"> <i class="fa-regular fa-envelope"></i> Escríbenos</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-regular fa-clock"></i> Horario de Atención </a></li>
                 </ul>
             </div>

@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiendas - Sweet Alchemist</title>
-    <!-- CSS Unificado -->
+    
     <link rel="stylesheet" href="../css/encabezado.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/tienda.css">
 
-    <!-- Fuentes -->
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeseva+One&family=Petit+Formal+Script&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
-    <header class="encabezadoMenu">
-        <div class="barra" id="barra2">
-            <div class="logo">
+    <header class="headerPrincipal">
+            <div class="barra" id="barra1">
+            
+              <div class="logo">
                 <a href="../index.html"><i class="fa-solid fa-mug-hot"></i> SWEET ALCHEMIST</a>
-            </div>
+              </div>
 
-            <div class="buscador">
+              <div class="buscador">
                 <input type="text" placeholder="Buscar postres...">
-            </div>
+              </div>
 
-            <div class="subBarra">
+              <div class="subBarra">
                 <nav>
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
@@ -33,37 +34,39 @@
                         <li><a href="#">Carrito</a></li>
                     </ul>
                 </nav>
+              </div>
             </div>
-        </div>
-
-        <div class="menuCategorias" id="menu">
-            <nav>
-                <ul>
-                    <li><a href="../Categorias/"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
-                    <li><a href="../Nosotros/"><i class="fa-solid fa-users"></i> NOSOTROS</a></li>
-                    <li><a href="../Blog/"><i class="fa-solid fa-book"></i> BLOG</a></li>
-                    <li><a href="#"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
-                    <li><a href="../pdf/Carta Salón.pdf" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        
+            <div class="menuCategorias" id="menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                  <nav>
+                    <ul>
+                      <li><a href="../Categorias/"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
+                      <li><a href="../Nosotros/"><i class="fa-solid fa-users"></i>  NOSOTROS</a></li>
+                      <li><a href="../Blog/"><i class="fa-solid fa-book"></i> BLOG</a></li>
+                      <li><a href="../Tiendas/"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
+                      <li><a href="../pdf/Carta Salón.pdf" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
+                    </ul>
+                  </nav>
+            </div>
+        </header>
 
     <main class="Bloque">
         <!-- Banner Superior -->
         <section class="info-tienda">
-            <div class="blo texto-banner">
+            <div class="texto-banner">
                 <h5>Visítanos en nuestras</h5>
                 <h4>Tiendas</h4>
                 <h2>Cocinamos momentos dulces para que tú solo te preocupes de compartirlos con los que más quieres.</h2>
                 <p>Llevamos la esencia de la repostería peruana a otro nivel, fusionando recetas caseras con ingredientes naturales y un cuidado artesanal.</p>
             </div>
             
-            <div class="blo img-banner">
+            <div class="img-banner">
                 <img src="https://horneandosabores.net/wp-content/uploads/exquisita-variedad-postres-fruta.webp" alt="Postres con fruta">
             </div> 
 
-            <div class="blo img-banner">
+            <div class="img-banner">
                 <img src="https://horneandosabores.net/wp-content/uploads/exquisito-merchandising-postres-marca-1.webp" alt="Merchandising postres">
             </div> 
         </section>
@@ -151,52 +154,56 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="Parte-inferior">
         <div id="footer-contenido-principal" class="footer-contenido">
+            
             <div class="infoFooter">
                 <h1> SWEET ALCHEMIST </h1>
                 <h3> Pasteleria artesanal </h3>
-                <p> Sweet Alchemist crea postres artesanales con ingredientes de calidad para cada ocasión.</p>
-                <p>Hechos con dulcura y creatividad</p>
+                <p> Sweet Alchemist crea postres artesanales elaborados con ingredientes de calidad y un toque de creatividad para cada ocasión.</p>
+                <p>Hechos con dulzura y creatividad.</p>
             </div>
+
             <div>
                 <h2>Información</h2>
                 <ul>
-                    <li><a href="../Trabaja con Nosotros/index.html">Trabaja con nosotros</a></li>
-                    <br>
-                    <li><a href="../Contacto/index.html">Contacto</a></li>
-                    <br>
-                    <li><a href="../Tiendas/index.html">Nuestras Tiendas</a></li>
+                    <li><a href="../Trabaja con Nosotros/"><i class="fa-solid fa-handshake"></i> Trabaja con nosotros</a></li>
+                    <li><a href="#"><i class="fa-solid fa-earth-americas"></i> Zonas de reparto</a></li>
+                    <li><a href="../Contacto/"><i class="fa-solid fa-phone"></i> Contacto</a></li>
+                    <li><a href="../Tiendas/"> <i class="fa-solid fa-store"></i>Nuestras Tiendas</a></li>
                 </ul>
             </div>
             <div>
                 <h2>Políticas</h2>
                 <ul>
-                    <li><a href="../Políticas/index.html">Privacidad</a></li>
-                    <br>
-                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="../Políticas/"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a></li>
+                    <li><a href="#"><i class="fa-regular fa-file-lines"></i> Términos y Condiciones</a></li>
+                    <li><a href="#"><i class="fa-regular fa-credit-card"></i> Cambios y Devoluciones</a></li>
+                    <li><a href="#"> <i class="fa-solid fa-truck-moving"></i> Envios y entregas</a></li>
                 </ul>
             </div>
             <div>
                 <h2>Síguenos</h2>
                 <ul>
                     <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <br>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
                     <li><a href="#"><i class="fa-brands fa-tiktok"></i> Tiktok </a></li>
                 </ul>
             </div>
+
             <div>
                 <h2>Contáctanos</h2>
                 <ul>
                     <li><a href="#"><i class="fa-solid fa-location-dot"></i> Visítanos</a></li>
-                    <br>
-                    <li><a href="#"><i class="fa-regular fa-clock"></i> Horarios</a></li>
+                    <li><a href="#"> <i class="fa-regular fa-envelope"></i> Escríbenos</a></li>
+                    <li><a href="#"><i class="fa-regular fa-clock"></i> Horario de Atención </a></li>
                 </ul>
             </div>
+
+
         </div>
-        <p>© 2026 Sweet Alchemist. Todos los derechos reservados.</p>
-    </footer>   
+            <p>© 2026 Sweet Alchemist. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

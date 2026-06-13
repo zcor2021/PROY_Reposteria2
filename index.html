@@ -28,35 +28,37 @@
         <header class="headerPrincipal">
             <div class="barra" id="barra1">
             
-            <div class="logo">
+              <div class="logo">
                 <a href="#"><i class="fa-solid fa-mug-hot"></i> SWEET ALCHEMIST</a>
-            </div>
+              </div>
 
-                    <div class="buscador">
-                    <input type="text" placeholder="Buscar postres...">
-                    </div>
+              <div class="buscador">
+                <input type="text" placeholder="Buscar postres...">
+              </div>
 
-                    <div class="subBarra">
+              <div class="subBarra">
                 <nav>
                     <ul>
                         <li><a href="#">Inicio</a></li>
-                        <li><a href="Cuenta Login/index.html">Cuenta</a></li>
+                        <li><a href="Cuenta Login/">Cuenta</a></li>
                         <li><a href="#">Carrito</a></li>
                     </ul>
                 </nav>
-                    </div>
+              </div>
             </div>
         
             <div class="menuCategorias" id="menu">
-                <nav>
-                <ul>
-                    <li><a href="Categorias/index.html"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
-                    <li><a href="Nosotros/index.html"><i class="fa-solid fa-users"></i>  NOSOTROS</a></li>
-                    <li><a href="Blog/index.html"><i class="fa-solid fa-book"></i> BLOG</a></li>
-                    <li><a href="Tiendas/index.html"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
-                    <li><a href="pdf/Carta Salón.pdf" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
-                </ul>
-                </nav>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                  <nav>
+                    <ul>
+                      <li><a href="Categorias/"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
+                      <li><a href="Nosotros/"><i class="fa-solid fa-users"></i>  NOSOTROS</a></li>
+                      <li><a href="Blog/"><i class="fa-solid fa-book"></i> BLOG</a></li>
+                      <li><a href="Tiendas/"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
+                      <li><a href="pdf/Carta Salón.pdf" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
+                    </ul>
+                  </nav>
             </div>
         </header>
 
@@ -64,11 +66,13 @@
                 <h4>Donde la ciencia crea</h4>
                 <h1>EXPERIENCIAS </h1>
                 <h3>Inolvidables</h3>
-                <p>Combinamos presición, ingredientes de calidad y creatividad para transformar cada postre en una obra de arte</p>
+                <p>Combinamos presición, ingredientes de calidad y creatividad para transformar cada postre en una obra de arte.</p>
                 
             </section>
     
  </div>
+
+ <main class="main">
 
     <div class="favoritos">
 
@@ -78,52 +82,99 @@
         </div>
 
         <div class="favGeneral">
-        <div class="fav">
+          <div class="fav">
             <img src="https://i.pinimg.com/originals/68/58/51/685851565b8e372b6ee27e608299ae65.jpg" alt="">
             <p>Torta Tres Leches</p>
-        </div>
+          </div>
 
-        <div class="fav">
+          <div class="fav">
             <img src="https://cakeshungry.com/wp-content/uploads/2024/06/No-Bake-Nutella-Cheesecake.png" alt="">
             <p>Cheesecake de Nutella</p>
-        </div>
+          </div>
       
 
-        <div class="fav">
+          <div class="fav">
             <img src="https://tse3.mm.bing.net/th/id/OIP.K1TO_2xrPHKMbiwTtoNZdQHaHa?w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
             <p>Tiramisú Clásico</p>
-        </div>
+          </div>
       
-        <div class="fav">
+          <div class="fav">
             <img src="https://easyrecipechef.com/wp-content/uploads/2019/12/Chocolate-Pudding.webp" alt="">
             <p>Mousse de Chocolate</p>
-        </div>
+          </div>
       
-        <div class="fav">
+          <div class="fav">
             <img src="https://www.saucoaltareposteria.com.mx/wp-content/uploads/2023/02/trufas2-1024x1024.png" alt="">
             <p>Trufas de Chocolate</p>
-        </div>
+          </div>
 
         </div>
 
     </div>
 
 
+    <!-- Sección promesa (foto + texto + beneficios) -->
     <div class="Frase">
-            <h2>Postres para cuidarte y consentirte</h2>
+
+        <!-- Imagen decorativa izquierda -->
+        <div class="frase-img">
+            <img src="https://www.alafermedulys.fr/wp-content/uploads/2024/03/1710720257_chocolat-en-patisserie-techniques-de-fonte-et-temperage.jpg" alt="Chocolate artesanal">
+        </div>
+
+        <!-- Texto central de la promesa de la marca -->
+        <div class="frase-texto">
+
+            <!-- Etiqueta pequeña encima del título -->
+            <span>NUESTRA PROMESA</span>
+
+            <!-- Título principal de la promesa -->
+            <h2>
+                Postres para cuidarte <br>
+                <strong>y consentirte</strong>
+            </h2>
+
+            <!-- Descripción de la promesa de calidad -->
+            <p>
+                Cada creación está hecha con ingredientes seleccionados
+                y un toque de creatividad para ofrecerte momentos dulces
+                y memorables.
+            </p>
+
+        </div>
+
+        <!-- Columna derecha con los tres pilares de la marca -->
+        <div class="frase-info">
+
+            <!-- Pilar 1: menos azúcar -->
+            <div class="info-item">
+                <i class="fa-solid fa-leaf"></i>
+                <p>Menos azúcar <br> Más sabor</p>
+            </div>
+
+            <!-- Pilar 2: ingredientes seleccionados -->
+            <div class="info-item">
+                <i class="fa-solid fa-award"></i>
+                <p>Ingredientes <br> seleccionados</p>
+            </div>
+
+            <!-- Pilar 3: sin conservantes -->
+            <div class="info-item">
+                <i class="fa-solid fa-flask"></i>
+                <p>Sin conservantes <br> artificiales</p>
+            </div>
+
+        </div>
+
     </div>
 
     <section class="productos">
         <div class="Contenido">
-        <h2>SELECCIÓN DE LA CASA</h2>
-        <p>Nuestra selección de repostería es una invitación a pausar el diía y disfrutar de un momento de puro placer. Cada postre es una pieza artesanal diseñada
-            para despertar tus sentido, combinando texturas crujientes con rellenos sedosos que se funden en el paladar.
-        </p>
+          <h2>SELECCIÓN DE LA CASA</h2>
+          <p>Nuestra selección de repostería es una invitación a pausar el diía y disfrutar de un momento de puro placer. Cada postre es una pieza artesanal diseñada
+            para despertar tus sentido, combinando texturas crujientes con rellenos sedosos que se funden en el paladar.</p>
 
-        <p>Desde la intensidad del chocolate más puro hasta la frescura vibrante de las frutas de temporada, nuestras creaciones no solo buscan satisfacer un antojo, sino convertir cada bocado en una celebración 
-            de la alta pastelería tradicional.
-        </p>
-
+          <p>Desde la intensidad del chocolate más puro hasta la frescura vibrante de las frutas de temporada, nuestras creaciones no solo buscan satisfacer un antojo, sino convertir cada bocado en una celebración 
+            de la alta pastelería tradicional.</p>
         </div>
 
         <div class="imagenes">
@@ -168,6 +219,8 @@
             </div>  
        </div>
     </section>
+
+ </main>
    
     <footer class="Parte-inferior">
         <div id="footer-contenido-principal" class="footer-contenido">
@@ -176,30 +229,24 @@
                 <h1> SWEET ALCHEMIST </h1>
                 <h3> Pasteleria artesanal </h3>
                 <p> Sweet Alchemist crea postres artesanales elaborados con ingredientes de calidad y un toque de creatividad para cada ocasión.</p>
-                <p>Hechos con dulcura y creatividad</p>
+                <p>Hechos con dulzura y creatividad.</p>
             </div>
 
             <div>
                 <h2>Información</h2>
                 <ul>
-                    <li><a href="Trabaja con Nosotros/index.html"><i class="fa-solid fa-handshake"></i> Trabaja con nosotros</a></li>
-                    <br>
+                    <li><a href="Trabaja con Nosotros/"><i class="fa-solid fa-handshake"></i> Trabaja con nosotros</a></li>
                     <li><a href="#"><i class="fa-solid fa-earth-americas"></i> Zonas de reparto</a></li>
-                    <br>
-                    <li><a href="Contacto/index.html"><i class="fa-solid fa-phone"></i> Contacto</a></li>
-                    <br>
-                    <li><a href="Contacto/index.html"> Nuestras Tiendas</a></li>
+                    <li><a href="Contacto/"><i class="fa-solid fa-phone"></i> Contacto</a></li>
+                    <li><a href="Tiendas/"> <i class="fa-solid fa-store"></i>Nuestras Tiendas</a></li>
                 </ul>
             </div>
             <div>
                 <h2>Políticas</h2>
                 <ul>
-                    <li><a href="Políticas/index.html"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a></li>
-                    <br>
+                    <li><a href="Políticas/"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a></li>
                     <li><a href="#"><i class="fa-regular fa-file-lines"></i> Términos y Condiciones</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-regular fa-credit-card"></i> Cambios y Devoluciones</a></li>
-                    <br>
                     <li><a href="#"> <i class="fa-solid fa-truck-moving"></i> Envios y entregas</a></li>
                 </ul>
             </div>
@@ -207,11 +254,8 @@
                 <h2>Síguenos</h2>
                 <ul>
                     <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-brands fa-tiktok"></i> Tiktok </a></li>
                 </ul>
             </div>
@@ -220,9 +264,7 @@
                 <h2>Contáctanos</h2>
                 <ul>
                     <li><a href="#"><i class="fa-solid fa-location-dot"></i> Visítanos</a></li>
-                    <br>
                     <li><a href="#"> <i class="fa-regular fa-envelope"></i> Escríbenos</a></li>
-                    <br>
                     <li><a href="#"><i class="fa-regular fa-clock"></i> Horario de Atención </a></li>
                 </ul>
             </div>

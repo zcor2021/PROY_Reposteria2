@@ -18,7 +18,7 @@
     flex-wrap: wrap;
     width: 100%;
     padding: 20px 4vw;
-    background-color: rgba(31, 1, 1, 0.651);
+    background-color: rgb(68, 41, 11);
 }
 
 /*--------------------*/
@@ -27,8 +27,10 @@
 .logo {
     border: 3px solid white;
     border-radius: 12px;
-    padding: 10px 18px;
-    min-width: fit-content;
+    padding: 8px 10px;
+    min-width: fit-content; /*sirve para establecer que el ancho mínimo de un elemento sea exactamente el espacio que necesita para mostrar su contenido*/
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*si cambian las propiedades de transform y box-shadow que sea en 0.3s*/
 }
 .logo a {
     text-decoration: none;
@@ -37,52 +39,68 @@
     font-weight: bold;
     letter-spacing: 0.18em;
     font-size: clamp(15px, 1.4vw, 28px);
-    white-space: nowrap;
+}
+/* El logo crece un poco al pasar el cursor */
+.logo:hover {
+    transform: scale(1.05); /*aumenta el tamaño un 5%*/
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /*agrega una sombra alrededor del logo */
 }
 
 /*--------------------*/
 /* BUSCADOR */
 /*--------------------*/
 .buscador {
-    flex: 1;
-    min-width: 240px;
-    max-width: 650px;
+    flex: 1; /*ocupará todo el espacio sobrante de forma equitativa*/
+    min-width: 240px; /*el buscador no se encogerá más de 240px*/
+    max-width: 650px; /*el buscador no se expandirá más de 650px*/
 }
 .buscador input {
-    width: 100%;
-    padding: 14px 20px;
+    width: 100%; /*el input medirá todo el ancho que tenga el div class="buscador"*/
+    padding: 14px 20px; /*espacio interior: arriba-abajo izquierda-derecha*/
     border-radius: 30px;
-    border: none;
-    outline: none;
-    font-size: clamp(14px, 1.2vw, 18px);
+    border: 2px solid white;
+    outline: none; /*sin borde que aparece al seleccionar el input*/
+    font-size: clamp(14px, 1.2vw, 18px); /*el tamaño de la letra se ajustará entre 14px y 18px dependiendo del ancho de la pantalla*/
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 .buscador input:focus {
-    box-shadow: 0 0 5px rgba(200, 162, 122, 0.5);
+    border-color: #c8a27a; /*cambia el color del borde al enfocar el input*/
+    box-shadow: 0 0 5px rgba(200, 162, 122, 0.5); /*al hacer clic en el input se muestra una sombra alrededor*/
+    transform: scale(1.02); /*aumenta el tamaño un 2%*/
 }
 
 /*--------------------*/
 /* MENÚ DERECHO */
 /*--------------------*/
 .subBarra {
-    min-width: fit-content;
+    min-width: fit-content; /*sirve para establecer que el ancho mínimo de un elemento sea exactamente el espacio que necesita para mostrar su contenido*/
 }
 .subBarra ul {
     display: flex;
     align-items: center;
     gap: clamp(15px, 2vw, 40px);
     list-style: none;
-    flex-wrap: wrap;
 }
 .subBarra a {
+    position: relative;
     text-decoration: none;
     color: white;
     font-weight: 500;
     font-size: clamp(15px, 1.1vw, 22px);
-    white-space: nowrap;
 }
-.subBarra a:hover {
-    border-bottom: 2px solid white;
-    padding-bottom: 5px;
+/*mostrar una linea debajo de los enlaces de la derecha*/
+.subBarra a::after{
+    content: ""; /*obligatorio para que ::after se muestre*/
+    position: absolute;
+    left: 0; /*empieza pegado al borde izquierdo del enlace*/
+    bottom: -2px; /*se colocará 2px debajo del enlace*/
+    width: 0; /*IMPORTANTE. Al principio la línea tiene 0 de ancho por lo que es invisible*/
+    height: 2px; /*grosor de la línea*/
+    background-color: white;
+    transition: width 0.3s ease; /*cuando el ancho cambié sea con tiempo de 0.3s*/
+}
+.subBarra a:hover::after {
+    width: 100%;
 }
 
 /*--------------------*/
@@ -91,74 +109,153 @@
 
 .menuCategorias {
     width: 100%;
-    background-color: rgba(31, 1, 1, 0.651);
-    padding: 15px 20px;
+    background-color: rgb(228, 203, 158);
+    padding: 10px 20px;
 }
 .menuCategorias ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 18px;
+    gap: 15px; /*espacio entre los botones*/
     list-style: none;
 }
 .menuCategorias li {
-    flex: 0 1 auto;
+    flex: 1; /*cada categoría ocupará el mismo espacio disponible*/
+    padding: 0px 10px;
 }
 .menuCategorias a {
     display: block;
     text-align: center;
     text-decoration: none;
     color: white;
-    padding: 12px 16px;
+    padding: 14px;
     border-radius: 10px;
     background-color: rgba(129, 69, 69, 0.507);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: clamp(13px, 0.9vw, 18px);
     font-weight: bold;
-    transition: 0.3s;
-    white-space: nowrap;
+    
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .menuCategorias a:hover {
     background-color: rgba(94, 25, 25, 0.623);
+    transform: translateY(-12px); /*mueve el enlace hacia arriba al pasar el cursor*/ 
 }
+
+
+/*---------------------*/
+/*MENU HAMBURGUESA*/
+/*---------------------*/
+#menu-toggle{
+    display:none; /*oculta el checkbox que controla el menú hamburguesa*/
+}
+
+.menu-icon{
+    display: none; /*oculta el icono del menú hamburguesa por defecto*/
+}
+
+
 
 /*--------------------*/
 /* RESPONSIVE */
 /*--------------------*/
 
-@media(max-width:900px) {
-    .barra {
-        justify-content: center;
-    }
-    .subBarra ul {
-        justify-content: center;
-    }
-}
+/* Tabletas: la barra se reorganiza en columna */
+@media (max-width: 1024px) {
 
-@media(max-width:600px) {
-    .logo {
-        width: 100%;
-        text-align: center;
-    }
-    .buscador {
-        width: 100%;
-        min-width: 100%;
-    }
-    .subBarra {
-        width: 100%;
-    }
-    .subBarra ul {
-        justify-content: center;
-    }
-    .menuCategorias ul {
+    /* La barra pasa a columna */
+    .barra {
         flex-direction: column;
-        align-items: center;
+        padding: 15px 30px;
+        gap: 10px;
+        height: auto;
     }
-    .menuCategorias li {
+
+    /* El buscador ocupa todo el ancho disponible */
+    .buscador {
         width: 100%;
         max-width: 100%;
     }
+
+    /* El input del buscador también ocupa todo el ancho */
+    .buscador input {
+        width: 100%;
+    }
+
+    /* Los enlaces del menú se juntan más */
+    .barra ul {
+        gap: 20px;
+        padding: 5px;
+    }
+
+    /* El menú de categorías pierde el position absolute */
+    #menu {
+        position: static;
+        width: 100%;
+    }
+
+    /* Las categorías se envuelven si no caben */
+    .menuCategorias ul {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    /* Los botones de categoría más pequeños */
     .menuCategorias a {
-        white-space: normal;
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Móviles: interfaz simplificada */
+@media (max-width: 768px) {
+
+    /* Logo más pequeño en móvil */
+    .logo {
+        font-size: 18px;
+        letter-spacing: 1px;
+        padding: 6px 8px;
+    }
+
+    /* Barra más compacta */
+    .barra {
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    /* Los enlaces del nav más pequeños */
+    .barra ul li a {
+        font-size: 14px;
+    }
+
+    /* El espacio entre enlaces se reduce bastante */
+    .barra ul {
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .menu-icon{
+        display: block; /*muestra el icono del menú hamburguesa*/
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .menuCategorias nav{
+        display: none; /*oculta el menú de categorías por defecto en móvil*/
+    }
+    .menuCategorias ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .menuCategorias li{
+        width: 100%;
+    }
+    .menuCategorias a {
+        width: 100%;
+    }
+    #menu-toggle:checked ~ nav{
+        display: block; /*muestra el menú de categorías cuando el checkbox está marcado*/
     }
 }

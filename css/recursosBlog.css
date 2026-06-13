@@ -17,6 +17,59 @@ img {
     display: block; /* Evita espacios en blanco debajo de las imágenes */
 }
 
+/* ANIMACIONES */
+
+/* Entrada desde abajo para secciones y tarjetas */
+@keyframes subirEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Entrada lateral desde la izquierda         ****    NADIE USA animation: entrarIzquierda;     ****  */
+@keyframes entrarIzquierda {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* TÍTULOS DE SECCIÓN EN ****DETALLES**** */
+
+/* Bloque de título centrado con margen inferior */
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+/* Título principal de cada sección */
+.titulo-seccion h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: #6b2f38;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Párrafo descriptivo de la sección */
+.titulo-seccion p {
+    color: #7a6b6b;
+    font-size: 18px;
+    width: 70%;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
 /* --- TITULOS CENTRALES --- */
 .titulo-central {
     text-align: center;
@@ -44,13 +97,14 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 180px 8% 80px;
+    padding: 30px 8%;
     gap: 50px;
     min-height: 80vh;
 }
 
 .hero-texto {
     flex: 1;
+    animation: entrarIzquierda 0.9s ease-out forwards;
 }
 
 .subtitulo-blog {
@@ -85,7 +139,7 @@ img {
 }
 
 .btn-coleccion {
-    background: linear-gradient(to right, #8d3f4b, #b05a68);
+    background: linear-gradient(to right, #8b3f4b, #c9857c);
     color: white;
     padding: 16px 35px;
     border: none;
@@ -93,21 +147,34 @@ img {
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .btn-coleccion:hover {
     transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(139, 63, 75, 0.4);
 }
 
 .hero-imagen {
     flex: 1;
+    width: 50%;
+    height: 720px;
+    overflow: hidden;
+    border-radius: 30px;
+    animation: subirEntrada 0.9s ease-out forwards;
 }
 
 .hero-imagen img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 30px;
-    box-shadow: 20px 20px 0px #e4d5cc;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+    transition: transform 0.5s ease;
+}
+.hero-imagen:hover img{
+    transform: scale(1.04);
 }
 
 /* --- SECCIÓN ARTÍCULOS / PRODUCTOS --- */
@@ -124,44 +191,71 @@ img {
 
 .card-producto, .detalle-card {
     background: white;
-    border-radius: 20px;
+    border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    transition: 0.4s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     display: flex;
     flex-direction: column;
+    animation: subirEntrada 0.7s ease-out;
 }
-
+.card-producto:hover, .detalle-card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+/* Imagen de la tarjeta con altura fija */
 .card-producto img, .detalle-card img {
     width: 100%;
-    height: 280px;
+    height: 320px;
     object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
 }
-
+/* Zoom en la imagen al pasar el cursor */
+.card-producto:hover img, .detalle-card:hover img{
+    transform: scale(1.06);
+}
+/* Área de texto dentro de la tarjeta */
 .card-info, .contenido-card {
     padding: 25px;
     flex-grow: 1;
 }
-
+/* Nombre del postre en serif */
 .card-info h3, .contenido-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: #6b2f38;
+    font-size: 27px;
+    color: #7a3741;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+/* Descripción del postre */
+.card-producto p, .contenido-card p{
+    font-size: 17px;
+    line-height: 1.8;
+    color: #6f6f6f;
+    margin-bottom: 25px;
+    text-align: justify;
 }
 
 .precio-tag {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: auto;
+    margin-top: 18px;
+}
+.precio-tag small{
+    color: #777;
+    font-size: 14px;
 }
 
-.monto {
+.monto, .contenido-card span {
     background: #8d3f4b;
     color: white;
     padding: 6px 15px;
     border-radius: 8px;
     font-weight: bold;
+    margin: 10px;
+    font-size: clamp(16px,1.1vw,19px);
 }
 
 /* --- SECCIÓN DEGUSTACIÓN --- */
@@ -198,6 +292,23 @@ img {
     box-shadow: 0 5px 15px rgba(0,0,0,0.04);
 }
 
+.item-mousse h4{
+    margin-bottom: 10px;
+    color: #7a3741;
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+}
+.item-mousse p{
+    color: #555;
+    line-height: 1.7;
+    font-size: 17px;
+    text-align: justify;
+}
+.item-mousse span{
+    font-size: 27px;
+    color: #8b3f4b;
+    font-weight: bold;
+}
 .precio-m {
     font-weight: bold;
     font-size: 22px;
@@ -236,7 +347,13 @@ img {
     height: 100%;
     min-height: 400px;
     object-fit: cover;
+    object-position: center;
     display: block; /* Quita espacios raros */
+    transition: transform 0.5s ease;
+}
+/*zoom en la imagen de suscripción*/
+.suscripcion-img:hover img{
+    transform: scale(1.04);
 }
 
 .suscripcion-info {
@@ -273,16 +390,24 @@ img {
     border-radius: 12px;
     border: none;
     outline: none;
+    font-size: 18px;
 }
 
 .form-sus button {
-    background-color: #f1e8e1;
-    color: #8d3f4b;
+    background-color: #f0c7b4;
+    color: #6b2f38;
     padding: 18px 30px;
     border-radius: 12px;
     border: none;
     font-weight: bold;
     cursor: pointer;
+    font-size: 16px;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.form-sus button:hover{
+    background-color: rgb(226, 170, 148);
+    transform: translateY(-3px);
 }
 
 /* --- RESPONSIVE --- */
@@ -290,6 +415,10 @@ img {
 @media (max-width: 1100px) {
     .grid-productos, .cards-detalles {
         grid-template-columns: repeat(2, 1fr);
+    }
+    /* El párrafo del título ocupa más ancho */
+    .titulo-seccion p {
+        width: 90%;
     }
 }
 
@@ -324,15 +453,52 @@ img {
         flex-direction: column;
         text-align: center;
     }
-    .hero-imagen { order: -1; }
-    .degustacion-img img { height: 400px; }
-    .item-mousse { flex-direction: column; gap: 15px; }
+    .hero-texto{
+        width: 100%; /*para que todo el contenedor de hero-texto tome el 100% del ancho de la pantalla*/
+    }
+    .hero-texto p{
+        max-width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-imagen { 
+        order: -1; /*para que la imagen se muestre antes del texto*/
+        width: 100%;
+        height: 500px;
+        margin-bottom: -30px; 
+    }
+    .degustacion-img{
+        order: -1;
+    }
+    .degustacion-img img { 
+        height: 400px; 
+    }
+    .item-mousse { 
+        flex-direction: column; gap: 15px; 
+    }
 }
 
 @media (max-width: 600px) {
     .grid-productos, .cards-detalles {
         grid-template-columns: 1fr;
     }
-    .hero-texto h1 { font-size: 38px; }
-    .suscripcion-info h2 { font-size: 28px; }
+    .hero-texto h1 { 
+        font-size: 38px; 
+    }
+    .suscripcion-info h2 { 
+        font-size: 28px; 
+    }
+    /* Título de sección más pequeño */
+    .titulo-seccion h2 {
+        font-size: 34px;
+    }
+
+    /* El párrafo del título ocupa todo el ancho */
+    .titulo-seccion p {
+        width: 100%;
+    }
+    .precio-tag span, .precio-tag small{
+        width: 50%;
+    }
 }

@@ -1,123 +1,69 @@
-/*--- CONFIGURACIÓN GENERAL ---*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos para la página de políticas de privacidad */
 body {
+    margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-image: url(https://th.bing.com/th/id/R.c3c09b4a7273665dbba59d34eb535893?rik=I8dD8Vsrg3f4Qg&riu=http%3a%2f%2fshopharbour.com.cn%2fcdn%2fshop%2fproducts%2fdune-swatch-351421.jpg%3fv%3d1692200487&ehk=%2b68l%2bqt2nSL9vMDuqtTKbJRE5uw4TlQk87O%2bD0kGSXE%3d&risl=&pid=ImgRaw&r=0);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-color: rgb(255, 241, 225);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    background-image:  url(https://th.bing.com/th/id/R.c3c09b4a7273665dbba59d34eb535893?rik=I8dD8Vsrg3f4Qg&riu=http%3a%2f%2fshopharbour.com.cn%2fcdn%2fshop%2fproducts%2fdune-swatch-351421.jpg%3fv%3d1692200487&ehk=%2b68l%2bqt2nSL9vMDuqtTKbJRE5uw4TlQk87O%2bD0kGSXE%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;     
+    background-repeat: no-repeat;
+    background-position: center;   
 }
 
-.contenedor-politicas {
-    padding: 160px 5% 80px; /* Espacio para el header fijo */
-    min-height: 100vh;
+/* Es el espacio que se deja entre el encabezado y el pie de página, para que el contenido no quede pegado a ellos */
+main{
+    min-height: calc(100vh - 130px);
 }
 
-/*--- TÍTULO DE LA PÁGINA ---*/
-.seccion-titulo {
-    background-color: rgba(116, 116, 97, 0.8);
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 50px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.seccion-titulo h1 {
+/* Estilos para el titulo de la página */
+.title{
     font-family: 'Playfair Display', serif;
-    color: white;
-    font-size: clamp(28px, 4vw, 45px);
-    letter-spacing: 2px;
-}
-
-/*--- TABLA DE POLÍTICAS ---*/
-.tabla-contenedor {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    overflow-x: auto; /* Permite scroll lateral si es necesario en pantallas muy pequeñas */
-}
-
-.tabla-politica {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 15px; /* Espacio entre filas */
-    margin-bottom: 40px;
-}
-
-.tabla-politica caption {
     text-align: center;
-    width: 100%;
+    color: rgb(48, 35, 12);
+    background-color: rgba(116, 116, 97, 0.644);
+    margin-top: 130px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.cuadroo{
+    margin: 90px 0;
+}
+
+/* Orden para la tabla */
+table{
+width: 45%;
+margin: auto;
+border-spacing: 10px;
+margin-bottom: 20px;
+
+}
+
+/* Estilos para el contenido de informacion de la tabla */
+td{
+    border: 2px solid rgba(78, 50, 8, 0.979);
+    padding: 23px;
+    
+    background-color: antiquewhite;
     font-size: 20px;
-    color: #4a3319;
-    font-weight: 700;
-    margin-bottom: 25px;
-    text-decoration: underline;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Estilo de las celdas */
-.tabla-politica th, 
-.tabla-politica td {
-    padding: 25px;
-    vertical-align: middle;
-    border: 2px solid #5a341b;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.col-titulo {
-    background-color: rgba(207, 207, 170, 0.9);
-    color: #222;
-    font-weight: 700;
-    text-align: center;
-    width: 30%;
-    font-size: 16px;
-    border-radius: 15px 0 0 15px;
-}
-
-.col-contenido {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #444;
     text-align: justify;
-    line-height: 1.6;
-    font-size: 17px;
-    border-radius: 0 15px 15px 0;
 }
 
-/*--- RESPONSIVE (MÓVIL) ---*/
-@media (max-width: 768px) {
-    .contenedor-politicas {
-        padding-top: 180px;
-    }
+/* Estilos para el encabezado de la tabla */
+caption{
+    font-size: 23px;
+    color: rgb(70, 62, 44);
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
 
-    /* Convertimos la tabla en bloques verticales */
-    .tabla-politica, 
-    .tabla-politica tbody, 
-    .tabla-politica tr, 
-    .tabla-politica th, 
-    .tabla-politica td {
-        display: block;
-        width: 100%;
-    }
-
-    .tabla-politica tr {
-        margin-bottom: 30px;
-    }
-
-    .col-titulo {
-        border-radius: 15px 15px 0 0;
-        border-bottom: none;
-        padding: 15px;
-    }
-
-    .col-contenido {
-        border-radius: 0 0 15px 15px;
-        padding: 20px;
-    }
+/* Estilos para la primera columna de la tabla */
+.col1{
+    background-color: rgba(207, 207, 170, 0.644);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
