@@ -51,10 +51,10 @@ body{
     flex-direction: column;
     justify-content: center;
     background-image:
-    linear-gradient(rgba(116,114,114,0.2), rgba(15,15,15,0.4)),
-    url("../imagen/Torta_portada.png");
+    linear-gradient(rgba(158,126,126,0.185), rgba(44,43,43,0.288)),
+    url("../imagen/prin.png");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     padding: 80px 5vw;
     text-align: left;
 }
@@ -75,25 +75,16 @@ body{
 }
 /* Subtítulo con fuente cursiva y animación de brillo */
 .texto h3{
-    font-size: clamp(35px, 5vw, 70px);
+    font-size: clamp(35px, 5vw, 85px);
+    letter-spacing: 0.05em;
     font-family: 'Petit Formal Script';
     color: #5a4113;
     text-shadow:
-    0 0 10px #d8cab0,
+    0 0 10px #979083,
     0 0 20px rgb(175,162,133),
     0 0 40px rgb(214,197,171);
 
-    animation: brilloTexto 3s ease-in-out infinite;
-}
-/* Texto pequeño superior con estilo de etiqueta */
-.texto h4{
-    font-size: clamp(20px, 2vw, 35px);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-family: "Roboto Mono", monospace;
-    color: #5a4113;
-
-    animation: subirEntrada 1s ease-out forwards;
+    animation: entrarIzquierda 3s ease-in-out forwards;
 }
 /* Párrafo descriptivo debajo del título */
 .texto p{
@@ -101,7 +92,7 @@ body{
     max-width: 550px;
     font-size: clamp(20px, 1.8vw, 35px);
     line-height: 1.6;
-    color: white;
+    color: rgb(65,38,13);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
     animation: subirEntrada 1.2s ease-out forwards;
@@ -164,7 +155,7 @@ body{
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(184, 164, 164, 0.39);
+    background-color: rgb(218, 209, 204);
 
     min-height: 75vh;
     padding: 60px 60px;
@@ -178,7 +169,7 @@ body{
 
 /* Título de la sección favoritos*/
 .conte h2{
-    border: 3px dashed black;
+    border-radius: 30px;
     padding: 10px;
     margin-bottom: 30px;
     background-color: rgba(51,29,6,0.185);
@@ -229,7 +220,7 @@ body{
 /* Etiqueta del nombre del postre */
 .fav p{
     margin-top: 15px;
-    background-color: #422d055e;
+    background-color: #85757580;
     padding: 15px;
     border-radius: 20px;
     font-size: clamp(14px,1.2vw,22px);
@@ -238,7 +229,7 @@ body{
 }
 
 .fav:hover p{
-    background-color: rgba(66,45,5,0.75);
+    background-color: #705f5f;
     color: white;
 }
 
@@ -386,7 +377,7 @@ body{
 
     min-height: 100vh;
 
-    background-color: rgb(255,244,230);
+    background-color: rgb(218,209,204);
 
     padding: 80px 60px;
 }
@@ -503,15 +494,13 @@ body{
 }
 
 @media(max-width:768px){
-
+    .texto{
+        background-position: center;
+    }
     .texto{
         text-align: center;
         align-items: center;
         background-color: rgba(0,0,0,0.25);
-    }
-    .texto h4{
-        color: #e0d5cb;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
     }
     .texto h3{
         color: #fce2b6;
@@ -519,6 +508,7 @@ body{
     }
 
     .texto p{
+        color: white;
         max-width: 90%;
         text-shadow: 1px 1px 4px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.6);
         font-weight: 500;
