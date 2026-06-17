@@ -1,0 +1,50 @@
+/*---------- CONFIGURACION GENERAL Y RESET ----------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    overflow-x: auto;
+    width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+
+    min-width: 320px;
+}
+/*----- MAIN -----*/
+.contenedor-trabajo{
+    background-color: rgb(255, 244, 230);
+    padding-top: 40px;
+}
+/*-------- TITULO --------*/
+.titulo{
+    text-align: center;
+    background-color: rgb(97, 67, 67);
+    font-size: clamp(30px, 3vh,40px);
+    color: white;
+    padding: 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+/*-------- MAPA --------*/
+.maps{
+    display: flex;
+    padding: 40px 200px;
+    justify-content: center;
+}
+.maps iframe{
+    width: 100%;
+    border-radius: 30px;
+}
+
+@media (max-width: 768px){
+    .maps{
+        padding: 40px 20px;
+    }
+}
