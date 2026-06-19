@@ -1,0 +1,114 @@
+body{
+margin:0;
+background:#f9f2ef;
+font-family:'Poppins',sans-serif;
+color:#444;
+}
+
+.banner-devo{
+background:linear-gradient(135deg,#5d2434,#c796a7);
+padding:120px 20px;
+text-align:center;
+color:white;
+}
+
+.contenido-devo{
+max-width:900px;
+margin:auto;
+}
+
+.banner-devo h1{
+font-family:'Playfair Display',serif;
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.banner-devo p{
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.etiquetas-devo{
+margin-top:35px;
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.etiquetas-devo span{
+background:rgba(255,255,255,.15);
+padding:12px 20px;
+border-radius:30px;
+}
+
+.viaje-devo,
+.compromiso-devo,
+.envio-devo{
+width:90%;
+max-width:1400px;
+margin:100px auto;
+}
+
+.viaje-devo h2,
+.compromiso-devo h2,
+.envio-devo h2{
+text-align:center;
+font-family:'Playfair Display',serif;
+color:#5d2434;
+margin-bottom:50px;
+font-size:2.5rem;
+}
+
+.pasos-devo{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.paso-devo{
+background:white;
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.paso-devo:hover{
+transform:translateY(-10px);
+}
+
+.paso-devo i{
+font-size:3rem;
+color:#b7758b;
+}
+
+.cards-devo, .info-devo{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.card-devo, .dato-devo{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card-devo i{
+font-size:3rem;
+color:#b7758b;
+margin-bottom:15px;
+}
+
+.card-devo:hover, .dato-devo:hover{
+transform:translateY(-8px);
+transition:.3s;
+}
+
+.card-devo h3,
+.dato-devo h3{
+color:#5d2434;
+}
