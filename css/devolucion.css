@@ -1,3 +1,11 @@
+/*--- CONFIGURACIÓN GENERAL ---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body{
 margin:0;
 background:#f9f2ef;
@@ -19,12 +27,12 @@ margin:auto;
 
 .banner-devo h1{
 font-family:'Playfair Display',serif;
-font-size:4rem;
+font-size:clamp(30px, 5vh,64px);
 margin-bottom:20px;
 }
 
 .banner-devo p{
-font-size:1.2rem;
+font-size:clamp(14px, 2vh, 20px);
 line-height:1.8;
 }
 
@@ -96,6 +104,10 @@ padding:35px;
 border-radius:25px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
+.card-devo{
+    text-align: center;
+}
+
 
 .card-devo i{
 font-size:3rem;

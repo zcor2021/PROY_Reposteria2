@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con nosotros - Sweet Alchemist</title>
+    
+    <link rel="stylesheet" href="../css/encabezado.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/libroReclamaciones.css">
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeseva+One&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="headerPrincipal">
+            <div class="barra" id="barra1">
+            
+              <div class="logo">
+                <a href="../index.html"><i class="fa-solid fa-mug-hot"></i> SWEET ALCHEMIST</a>
+              </div>
+
+              <div class="buscador">
+                <input type="text" placeholder="Buscar postres...">
+              </div>
+
+              <div class="subBarra">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../Cuenta Login/">Cuenta</a></li>
+                        <li><a href="#">Carrito</a></li>
+                    </ul>
+                </nav>
+              </div>
+            </div>
+        
+            <div class="menuCategorias" id="menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                  <nav>
+                    <ul>
+                      <li><a href="../Categorias/"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
+                      <li><a href="../Nosotros/"><i class="fa-solid fa-users"></i>  NOSOTROS</a></li>
+                      <li><a href="../Blog/"><i class="fa-solid fa-book"></i> BLOG</a></li>
+                      <li><a href="../Tiendas/"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
+                      <li><a href="../pdf/Carta Salón.pdf" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
+                    </ul>
+                  </nav>
+            </div>
+        </header>
+
+    <main class="contenedor-trabajo">
+        <div class="titulo">Libro de Reclamaciones</div>
+
+        <article class="formulario">
+                <form class="formulario-libro">
+                    <h2>Sweet Alchemist</h2>
+                    <h3>R.U.C: 1705888052</h3>
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label for="establecimiento">Establecimiento donde se realizó la compra o uso de servicio *</label>
+                            <select id="establecimiento" name="establecimiento" required>
+                                <option value="">Selecciona establecimiento</option>
+                                <option value="Pagina Web">Página Web</option>
+                                <option value="Tienda Miraflores">Tienda Miraflores</option>
+                                <option value="Tienda San Isidro">Tienda San Isidro</option>
+                                <option value="Tienda San Borja">Tienda San Borja</option>
+                                <option value="Tienda Barranco">Tienda Barranco</option>
+                                <option value="Tienda Chacarilla">Tienda Chacarilla</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label>Fecha de Registro *</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="grupo-input">
+                            <label>Hora de registro *</label>
+                            <input type="time" min="09:00" max="20:00" required>
+                        </div>
+                    </div>
+
+                    <h2>Identificación del consumidor reclamante</h2>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label for="tipoDoc">Tipo de Documento *</label>                        
+                            <select id="tipoDoc" name="tipoDoc" required>
+                                <option value="">Selecciona el tipo de documento</option>
+                                <option value="DNI">DNI</option>
+                                <option value="Carnet de Extranjeria">Carnet de Extranjería</option>
+                                <option value="Pasaporte">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="grupo-input">
+                            <label>Documento *</label>
+                            <input type="text" placeholder="Número de Documento" pattern="[0-9]{8}" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label>Nombres - Cliente *</label>
+                            <input type="text" placeholder="Tus nombres" required>
+                        </div>
+                        <div class="grupo-input">
+                            <label>Apellidos - Cliente *</label>
+                            <input type="text" placeholder="Tus apellidos" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label>Género *</label>
+                            <div class="opciones-radio">
+                                <label><input type="radio" name="genero" value="M" required> Masc.</label>
+                                <label><input type="radio" name="genero" value="F"> Fem.</label>
+                                <label><input type="radio" name="genero" value="O"> Otros</label>
+                            </div>
+                        </div>
+                        <div class="grupo-input">
+                            <label>Teléfono *</label>
+                            <input type="tel" placeholder="999 999 999" pattern="^[0-9]{9}$" maxlength="9" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label>Domicilio *</label>
+                            <input type="text" placeholder="Dirección" required>
+                        </div>
+                        <div class="grupo-input">
+                            <label>Correo Electrónico *</label>
+                            <input type="email" placeholder="correo@ejemplo.com" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label>
+                              <input type="checkbox" id="menorEdad" name="menorEdad">
+                              <strong>Menor de Edad</strong>
+                            </label>
+                        </div>
+                    </div>
+
+                    <h2>Identificación del bien contratado</h2>
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label for="tipoContratado">Tipo del bien contratado *</label>         
+                            <select id="tipoContratado" name="tipoContratado" required>
+                                <option value="">Seleccione</option>
+                                <option value="Producto">Producto</option>
+                                <option value="Servicio">Servicio</option>
+                            </select>
+                        </div>
+                        <div class="grupo-input">
+                            <label>Descripción del producto o servicio *</label>
+                            <input type="text" placeholder="Descripción" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label>Nº de comprobante de pago</label>
+                            <input type="text" placeholder="Ej. F001-00012345">
+                        </div>
+                    </div>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label>Fecha de Compra</label>
+                            <input type="date">
+                        </div>
+                        <div class="grupo-input">
+                            <label>Monto a reclamar (S/.)</label>
+                            <input type="number" min="0" step="0.01" placeholder="0.00">
+                        </div>
+                    </div>
+
+                    <h2>Detalle del reclamo</h2>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label for="motivo">Motivo *</label>
+                            <select id="motivo" name="motivo" required>
+                                <option value="">Seleccione</option>
+                                <option value="Reclamo">Reclamo</option>
+                                <option value="Queja">Queja</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label>Detalle de Reclamo *</label>
+                            <input type="text" placeholder="Cuéntenos, ¿qué fue lo que sucedió?" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label>Pedido de Cliente *</label>
+                            <input type="text" placeholder="¿De qué manera podemos solucionarlo?" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-form">
+                        <div class="grupo-input">
+                            <label>
+                                <input type="checkbox" required>
+                                Declaro que la información proporcionada en este reclamo es verdadera y exacta.
+                                Soy consciente de que proporcionar información falsa o fraudulenta puede generar las responsabilidades legales correspondientes.
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="informacion-importante">
+                        <h3>Información Importante</h3>
+                        <p><strong>(*) El campo es obligatorio.</strong></p>
+                        <p><strong>RECLAMO: Disconformidad específica sobre el producto o servicio adquirido.</strong></p>
+                        <p><strong>QUEJA: Disconformidad sobre la atención al cliente o el personal de la empresa.</strong></p>
+                    </div>
+
+                    <div class="acciones-form">
+                        <button type="submit" class="btn-enviar">PROCESAR RECLAMO</button>
+                        <button type="reset" class="btn-limpiar">LIMPIAR</button>
+                    </div>
+                </form>
+            </article>
+    </main>
+
+     <footer class="Parte-inferior">
+        <div id="footer-contenido-principal" class="footer-contenido">
+            
+            <div class="infoFooter">
+                <h1> SWEET ALCHEMIST </h1>
+                <h3> Pasteleria artesanal </h3>
+                <p> Sweet Alchemist crea postres artesanales elaborados con ingredientes de calidad y un toque de creatividad para cada ocasión.</p>
+                <p>Hechos con dulzura y creatividad.</p>
+            </div>
+
+            <div>
+                <h2>Información</h2>
+                <ul>
+                    <li><a href="../Trabaja con Nosotros/"><i class="fa-solid fa-handshake"></i> Trabaja con nosotros</a></li>
+                    <li><a href="../Zonas de Reparto/"><i class="fa-solid fa-earth-americas"></i> Zonas de reparto</a></li>
+                    <li><a href="../Contacto/"><i class="fa-solid fa-phone"></i> Contacto</a></li>
+                    <li><a href="../Tiendas/"> <i class="fa-solid fa-store"></i>Nuestras Tiendas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Políticas</h2>
+                <ul>
+                    <li><a href="../Políticas/"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a></li>
+                    <li><a href="../Condiciones/"><i class="fa-regular fa-file-lines"></i> Términos y Condiciones</a></li>
+                    <li><a href="../Devolucion/"><i class="fa-regular fa-credit-card"></i> Cambios y Devoluciones</a></li>
+                    <li><a href="../Promos/"> <i class="fa-solid fa-truck-moving"></i> Promociones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Síguenos</h2>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i> Tiktok </a></li>
+                </ul>
+            </div>
+
+            <div class="libro">
+                <a href="../Libro de Reclamaciones/">
+                    <img src="../imagen/libro.png" alt="Libro de Reclamaciones">
+                </a>
+                <div class="pago">
+                    <img src="../imagen/visa(3).png" alt="Visa">
+                    <img src="../imagen/mastercard(1).png" alt="Mastercard">
+                    <img src="../imagen/yape(1).png" alt="Yape">
+                    <img src="../imagen/plin(1).png" alt="Plin">
+                </div>
+            </div>
+
+
+        </div>
+            <p>© 2026 Sweet Alchemist. Todos los derechos reservados.</p>
+    </footer>
+    
+</body>
+</html>

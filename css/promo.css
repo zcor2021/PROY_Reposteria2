@@ -1,20 +1,28 @@
-body{
+/*--- CONFIGURACIÓN GENERAL ---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: #e2d2d267;
-    
+
 }
 
 /* BANNER SUPERIOR */
-.titulo-promo{
+.titulo-promo {
     width: 100%;
-    background: linear-gradient(90deg,#6e3041a8,#caa8b2c0);
+    background: linear-gradient(90deg, #6e3041a8, #caa8b2c0);
     padding: 130px 0;
     margin: 0 0 70px 0;
     text-align: center;
 }
 
-.titulo-promo h1{
+.titulo-promo h1 {
     margin: 0;
     color: white;
     font-size: 2.5rem;
@@ -23,20 +31,20 @@ body{
 }
 
 /* TEXTO */
-.texto-promo{
+.texto-promo {
     width: 90%;
     max-width: 1300px;
     margin: 0 auto 70px auto;
     text-align: center;
 }
 
-.texto-promo h2{
+.texto-promo h2 {
     margin-bottom: 20px;
     color: #521a2b;
     font-size: 3rem;
 }
 
-.texto-promo p{
+.texto-promo p {
     max-width: 900px;
     margin: auto;
     line-height: 1.8;
@@ -45,7 +53,7 @@ body{
 }
 
 /* CONTENEDOR PRINCIPAL */
-.prom{
+.prom {
     width: 95%;
     max-width: 1700px;
     margin: auto;
@@ -57,53 +65,53 @@ body{
 }
 
 /* TARJETAS */
-.card-prom{
+.card-prom {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 /* IMÁGENES */
-.card-prom img{
+.card-prom img {
     width: 100%;
     max-width: 420px;
     height: auto;
     border-radius: 14px;
     box-shadow:
-    0 6px 18px rgba(0,0,0,.12);
+        0 6px 18px rgba(0, 0, 0, .12);
     transition: all .3s ease;
 }
 
-.card-prom img:hover{
+.card-prom img:hover {
     transform: translateY(-5px);
     box-shadow:
-    0 10px 25px rgba(0,0,0,.18);
+        0 10px 25px rgba(0, 0, 0, .18);
 }
 
 /* TABLET */
-@media(max-width:1200px){
+@media(max-width:1200px) {
 
-    .prom{
-        grid-template-columns: repeat(2,1fr);
+    .prom {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .card-prom img{
+    .card-prom img {
         max-width: 500px;
     }
 }
 
 /* MÓVIL */
-@media(max-width:768px){
+@media(max-width:768px) {
 
-    .prom{
+    .prom {
         grid-template-columns: 1fr;
     }
 
-    .titulo-promo h1{
+    .titulo-promo h1 {
         font-size: 1.6rem;
     }
 
-    .texto-promo h2{
+    .texto-promo h2 {
         font-size: 1.5rem;
     }
 }

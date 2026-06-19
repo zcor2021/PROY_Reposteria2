@@ -94,6 +94,38 @@ footer{
     margin-top: 20px;
     font-size: clamp(14px, 0.8vw, 17px);
 }
+/*-----------------------*/
+/*LIBRO DE RECLAMACIONES*/
+/*----------------------*/
+
+
+.libro a{
+    display: flex;
+    justify-content: center;
+}
+
+.libro img{
+    width: 280px;
+    height: auto;
+    display: block;
+}
+.footer-contenido .libro a:hover{
+    background-color: transparent;
+    padding: 0;
+}
+
+/*---------------*/
+/*MEDIOS DE PAGO*/
+/*--------------*/
+.libro .pago{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.libro .pago img{
+    width: auto;
+    height: 50px;
+}
 
 /*--------------------*/
 /* RESPONSIVE */

@@ -1,0 +1,45 @@
+/*--- CONFIGURACIÓN GENERAL ---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*-----BODY-----*/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/*-----TITULO-CUERPO------*/
+.cuerpo h1{
+    background-color: rgb(97,67,67);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    padding: 5px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+    text-align: center;
+    font-size: clamp(30px,4vh,60px);
+}
+/*-----CONTENIDO-CUERPO-----*/
+.contenido-cuerpo{
+    margin: auto;
+    background-color: rgb(197, 188, 188);
+    width: 70%;
+    padding: 35px;
+    border-radius: 30px;
+    margin-bottom: 60px;
+}
+.contenido-cuerpo h2{
+    margin-bottom: 20px;
+}
+.contenido-cuerpo p{
+    margin-bottom: 30px;
+}
+.contenido-cuerpo ul li{
+    margin-left: 35px;
+}
+@media(max-width:728px){
+    .contenido-cuerpo{
+        width: 90%;
+    }
+}

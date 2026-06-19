@@ -1,0 +1,98 @@
+/*---------- CONFIGURACION GENERAL Y RESET ----------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    overflow-x: auto;
+    width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+
+    min-width: 320px;
+}
+/*----- MAIN -----*/
+body{
+    background-color: rgb(255, 244, 230);
+}
+.contenedor-trabajo{
+    padding-top: 40px;
+}
+/*-------- TITULO --------*/
+.titulo{
+    text-align: center;
+    background-color: rgb(97, 67, 67);
+    font-size: clamp(30px, 3vh,40px);
+    color: white;
+    padding: 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+/*----- FORMULARIO -----*/
+.formulario{
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    width: 70%;
+    margin: 40px auto;
+    border: 1px solid silver;
+    border-radius: 30px;
+    background-color: white;
+}
+.formulario h2, .formulario h3{
+    text-align: center;
+}
+.formulario-libro{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.fila-form{
+    display: flex;
+    gap: 20px;
+}
+.grupo-input{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.grupo-input input, .grupo-input select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid silver;
+    border-radius: 10px;
+}
+
+/*----- RESPONSIVO EN TABLETS -----*/
+@media (max-width: 992px){
+    .formulario{
+        width: 90%;
+        padding: 30px 20px;
+    }
+    .fila-form{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/*----- RESPONSIVO EN CELULARES -----*/
+@media (max-width:768px){
+    .formulario{
+        border-radius: 20px;
+    }
+    .fila-form{
+        flex-direction: column;
+        gap: 12px;
+    }
+    .grupo-input input, .grupo-input select{
+        width: 100%;
+        font-size: 16px;
+    }
+}
