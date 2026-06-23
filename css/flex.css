@@ -576,8 +576,3 @@ body{
         align-items: center;
     }
 }
-@media(max-width:354px){
-    .texto h1{
-        letter-spacing: -1px;
-    }
-}
