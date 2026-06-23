@@ -19,7 +19,6 @@ body{
 main{
     width:100%;
     padding: 30px;
-    
 }
 
 /* ESTRUCTURA DE DOS COLUMNAS */
@@ -135,7 +134,7 @@ main p{
     overflow:hidden;
     display:flex;
     align-items:center;
-    
+    transition: all 0.3s ease;
 }
 
 .cuadro:hover{
@@ -151,7 +150,6 @@ main p{
 .texto-cuadro h2{
     text-align: center;
 }
-
 
 .texto-cuadro ul{
     padding-left:30px;
@@ -172,6 +170,7 @@ main p{
 .imagen-cuadro{
     width:40%;
     height:290px;
+    margin-right: 20px;
 }
 
 
@@ -180,6 +179,7 @@ main p{
     height:100%;
     object-fit:cover;
     display:block;
+    border-radius: 15px;
 }
 
 
@@ -223,6 +223,8 @@ main p{
     object-fit:cover;
     display:block;
     transition: transform 0.4s ease;
+    border-radius: 15px;
+    margin-right: 20px;
 }
 
 .tarjeta-historia:hover img{
@@ -321,9 +323,43 @@ main p{
 }
 
 /* RESPONSIVE */
+@media(max-width:1600px) {
+    .cuadro{
+        flex-direction: column;
+    }
+    .texto-cuadro, .imagen-cuadro{
+        width: 95%;
+    }
+    .imagen-cuadro{
+        padding-right: 30px; /*arriba ya le habia puesto 20px*/
+        padding-left: 50px;
+        margin-bottom: 20px;
+    }
+}
 
 @media(max-width:1200px){
-
+    .cuadro{
+        flex-direction: row;
+        align-items: stretch;
+        overflow: hidden;
+    }
+    .texto-cuadro{
+        width: 60%;
+        padding: 25px;
+    }
+    .imagen-cuadro{
+        width: 40%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .imagen-cuadro img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0 17px 17px 0;
+        display: block;
+    }
     .fila{
         flex-direction:column;
     }
@@ -375,6 +411,9 @@ main p{
     .cuadro{
         min-width: 95%;
     }
+    .imagen-cuadro{
+        width: 50%;
+    }
 
     .historia-texto h2, .cuadro2 h1, .cuadro2 h2{
         text-align: center;
@@ -383,7 +422,31 @@ main p{
 }
 
 @media(max-width:600px){
-
+    .cuadro{
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+    }
+    .texto-cuadro{
+        width: 100%;
+        padding: 25px;
+        order: 1;
+        text-align: center;
+    }
+    .imagen-cuadro{
+        width: 100%;
+        height: 250px;
+        margin: 0;
+        padding: 0;
+        order: 2;
+    }
+    .imagen-cuadro img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0 0 17px 17px;
+        display: block;
+    }
     main h1{
         font-size:28px;
     }
@@ -404,7 +467,7 @@ main p{
         padding:18px;
     }
 
-    .cuadro2,.cuadro{
+    .cuadro2{
         padding:18px;
     }
 
@@ -416,4 +479,9 @@ main p{
         grid-template-columns:1fr;
     }
 
+}
+@media(max-width:430px){
+    .cuadro .texto-cuadro ul li, .cuadro .texto-cuadro p{
+        text-align: left;
+    }
 }
