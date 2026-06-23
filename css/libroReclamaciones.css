@@ -1,12 +1,11 @@
 /*---------- CONFIGURACION GENERAL Y RESET ----------*/
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 html, body{
-    overflow-x: auto;
+    overflow-x: hidden; /*oculta contenido de la página en caso sobresalga*/
     width: 100%;
 }
 html{
@@ -14,12 +13,10 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-
-    min-width: 320px;
 }
 /*----- MAIN -----*/
 body{
-    background-color: rgb(255, 244, 230);
+    background-color: rgb(242, 238, 233);
 }
 .contenedor-trabajo{
     padding-top: 40px;
@@ -27,26 +24,54 @@ body{
 /*-------- TITULO --------*/
 .titulo{
     text-align: center;
-    background-color: rgb(97, 67, 67);
+    background-color: rgb(85, 61, 61);
     font-size: clamp(30px, 3vh,40px);
     color: white;
-    padding: 10px;
-    font-family: 'Playfair Display', serif;
+    padding: 15px 0;
+    font-family: 'Yeseva One', serif;
     font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+/*NOSCRIPT*/
+.noTieneScript{
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 /*----- FORMULARIO -----*/
 .formulario{
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
-    width: 70%;
-    margin: 40px auto;
-    border: 1px solid silver;
-    border-radius: 30px;
+    padding: 40px;
+    max-width: 900px;
+    margin: 2rem auto;
+    border: 1px solid #f3ebe1;
+    border-radius: 15px;
     background-color: white;
+    box-shadow: 0 10px 30px rgba(94,68,55,0.08);
 }
-.formulario h2, .formulario h3{
+.formulario h2{
     text-align: center;
+    font-family: 'Yeseva One', serif;
+    color: rgb(74,48,37);
+}
+.formulario .sweet-alchemist h2{
+    color: #5e4437;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.ruc-pasteleria{
+    text-align: center;
+    font-family: 'Yeseva One', serif;
+    color: #8c7b72;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
 }
 .formulario-libro{
     width: 100%;
@@ -58,17 +83,124 @@ body{
 .fila-form{
     display: flex;
     gap: 20px;
+    margin-bottom: 20px;
 }
 .grupo-input{
     flex: 1;
     display: flex;
     flex-direction: column;
-}
-.grupo-input input, .grupo-input select{
     width: 100%;
-    padding: 12px;
+}
+/*DISEÑO DE LOS LABEL*/
+.grupo-input label{
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    color: #5e4437;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.grupo-input input:not([type="radio"]):not([type="checkbox"]), .grupo-input select, .grupo-input textarea{
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ebdcd0;
+    border-radius: 8px;
+    background-color: #fffaf7;
+    color: #5e4437;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.grupo-input input:not([type="radio"]):not([type="checkbox"]):focus, .grupo-input select:focus, .grupo-input textarea:focus{
+    border-color: #db4e86;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(212, 65, 125, 0.15);
+    outline: none;
+}
+/*MARCAR GENERO*/
+.opciones-radio{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+/*DATOS DEL APODERADO*/
+.datos-apoderado h2{
+    margin-bottom: 20px;
+}
+.datos-apoderado{
+    display: none;
+    padding: 30px;
     border: 1px solid silver;
-    border-radius: 10px;
+    border-radius: 15px;
+    background-color: antiquewhite;
+}
+.informacion-importante h3{
+    font-family: 'Yeseva One', sans-serif;
+    color: #7f8c8d;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.info-importante-texto strong{
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+/*DISEÑO DE LOS BOTONES ENVIAR Y LIMPIAR*/
+.botones-form{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.btn-enviar, .btn-limpiar{
+    font-family: 'Poppins', sans-serif;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-enviar{
+    background-color: rgb(163, 62, 62);
+    color: white;
+}
+.btn-enviar:hover{
+    background-color: rgb(194,64,64);
+}
+.btn-limpiar{
+    background-color: #f3ebe1;
+    color: #8c6d58;
+}
+.btn-limpiar:hover{
+    background-color: #ebdcd0;
+    color: #5e4437;
+}
+.btn-enviar:hover, .btn-limpiar:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(94,68,55,0.15);
+}
+/*MENSAJE DE ERROR AL MOMENTO DE VALIDAR*/
+.error{
+    color: rgb(201,78,78);
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+    display: block;
+    font-weight: 500;
+}
+/*BOX ERRORES*/
+.boxErrores{
+    text-align: center;
+    font-weight: bold;
 }
 
 /*----- RESPONSIVO EN TABLETS -----*/
@@ -91,7 +223,7 @@ body{
         flex-direction: column;
         gap: 12px;
     }
-    .grupo-input input, .grupo-input select{
+    .grupo-input input:not([type="radio"]):not([type="checkbox"]), .grupo-input select{
         width: 100%;
         font-size: 16px;
     }

@@ -14,7 +14,7 @@ body {
 }
 
 .contenedor-contacto {
-    padding: 160px 5% 80px;
+    padding: 80px 5%;
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
@@ -27,7 +27,7 @@ body {
     align-items: flex-start;
     margin-bottom: 80px;
     background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /*desenfoca el fondo*/
     padding: 50px;
     border-radius: 40px;
     box-shadow: 0 15px 45px rgba(0,0,0,0.05);
@@ -66,13 +66,13 @@ body {
 }
 
 /* GRILLA DE BENEFICIOS */
-.benefits-grid {
+.beneficios-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-.benefit-card {
+.beneficio-card {
     background: rgba(255, 255, 255, 0.6);
     padding: 20px;
     border-radius: 20px;
@@ -80,30 +80,31 @@ body {
     transition: 0.3s;
 }
 
-.benefit-card:hover {
+.beneficio-card:hover {
     transform: translateY(-5px);
     background: white;
 }
 
-.benefit-card i {
+.beneficio-card i {
     font-size: 35px;
     color: #9c4f5c;
     margin-bottom: 12px;
 }
 
-.benefit-card h3 {
+.beneficio-card h3 {
     font-size: 16px;
     color: #4b2e2e;
     margin-bottom: 5px;
 }
 
-.benefit-card p {
+.beneficio-card p {
     font-size: 13px;
     margin: 0;
 }
 
 /* DERECHA (FORMULARIO) */
 .form-card {
+    width: 100%;
     background: white;
     padding: 40px;
     border-radius: 30px;
@@ -123,20 +124,21 @@ body {
     margin-bottom: 20px;
 }
 
-.form-group {
+.grupo-input {
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
-.form-group label {
+.grupo-input label {
     font-size: 14px;
     font-weight: 600;
     color: #5b3d31;
     margin-bottom: 8px;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.grupo-input input, .grupo-input select, .grupo-input textarea {
     padding: 14px;
     border: 1px solid #e7d6cb;
     border-radius: 12px;
@@ -146,12 +148,12 @@ body {
     transition: 0.3s;
 }
 
-.form-group textarea {
+.grupo-input textarea {
     height: 120px;
     resize: none;
 }
 
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+.grupo-input input:focus, .grupo-input select:focus, .grupo-input textarea:focus {
     border-color: #9c4f5c;
     box-shadow: 0 0 10px rgba(156, 79, 92, 0.1);
 }
@@ -175,7 +177,7 @@ body {
 }
 
 /*--- TARJETAS INFERIORES ---*/
-.contact-bottom-info {
+.info-contacto {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
@@ -216,6 +218,18 @@ body {
     color: #dbc7c2;
 }
 
+/*TEXTO DE ERROR*/
+.error{
+    color: rgb(201, 78, 78);
+}
+/*CAJA DE VALIDACION DE ERRORES*/
+.boxErrores{
+    margin: 5px 5px;
+    font-size: clamp(10px,3vh, 14px);
+    font-weight: bold;
+    text-align: center;
+}
+
 /*--- RESPONSIVE ---*/
 
 @media (max-width: 1100px) {
@@ -223,25 +237,34 @@ body {
         flex-direction: column;
         padding: 30px;
     }
-    .contact-bottom-info {
+    .hero-right{
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .info-contacto {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .contenedor-contacto {
-        padding-top: 180px;
-    }
     .form-row {
         flex-direction: column;
     }
-    .benefits-grid {
+    .beneficios-grid {
         grid-template-columns: 1fr;
     }
-    .contact-bottom-info {
+    .info-contacto {
         grid-template-columns: 1fr;
     }
     .hero-left h1 {
         font-size: 45px;
+    }
+}
+@media (max-width: 538px){
+    .hero-right{
+        width: 100%;
+    }
+    .form-card{
+        width: 100%;
     }
 }

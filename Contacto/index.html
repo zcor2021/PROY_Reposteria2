@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Sweet Alchemist</title>
-    <!-- CSS Unificado -->
+    
     <link rel="stylesheet" href="../css/encabezado.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/contacto.css">
     
-    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeseva+One&family=Petit+Formal+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;800&family=Dancing+Script:wght@600&family=Yeseva+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
@@ -56,26 +56,27 @@
             <!-- PARTE IZQUIERDA: TEXTO Y BENEFICIOS -->
             <div class="hero-left">
                 <span class="mini-title">Hablemos ♡</span>
-                <h1>ESTAMOS AQUÍ <br><span>PARA TI</span></h1>
+                <h1>ESTAMOS AQUÍ <br>
+                    <span>PARA TI</span></h1>
                 <p>¿Tienes dudas, necesitas ayuda con tu pedido o quieres crear algo especial? Escríbenos y nuestro equipo te responderá lo antes posible.</p>
 
-                <div class="benefits-grid">
-                    <div class="benefit-card">
+                <div class="beneficios-grid">
+                    <div class="beneficio-card">
                         <i class="fa-regular fa-clock"></i>
                         <h3>Respuesta rápida</h3>
                         <p>En menos de 24 horas.</p>
                     </div>
-                    <div class="benefit-card">
+                    <div class="beneficio-card">
                         <i class="fa-regular fa-heart"></i>
                         <h3>Atención personalizada</h3>
                         <p>El postre perfecto para ti.</p>
                     </div>
-                    <div class="benefit-card">
+                    <div class="beneficio-card">
                         <i class="fa-solid fa-cake-candles"></i>
                         <h3>Pedidos especiales</h3>
                         <p>Diseños para cada ocasión.</p>
                     </div>
-                    <div class="benefit-card">
+                    <div class="beneficio-card">
                         <i class="fa-solid fa-shield-heart"></i>
                         <h3>Compra segura</h3>
                         <p>Tu información protegida.</p>
@@ -89,46 +90,54 @@
                     <h2>Envíanos tu mensaje</h2>
                     <form class="contact-form">
                         <div class="form-row">
-                            <div class="form-group">
+                            <div class="grupo-input">
                                 <label>Nombres Completos</label>
-                                <input type="text" placeholder="Tu nombre" required>
+                                <input id="nombres" type="text" minlength="6" maxlength="50" placeholder="Tu nombre">
+                                <small class="error mensaje-error"></small>
                             </div>
-                            <div class="form-group">
+                            <div class="grupo-input">
                                 <label>Teléfono / WhatsApp</label>
-                                <input type="tel" placeholder="+51 000 000 000" required>
+                                <input id="telefono" type="tel" pattern="[0-9]{9}" maxlength="9" placeholder="+51 000 000 000">
+                                <small class="error mensaje-error"></small>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
+                        <div class="grupo-input">
+                            <div class="grupo-input">
                                 <label>Correo Electrónico</label>
-                                <input type="email" placeholder="tu@email.com" required>
+                                <input id="correo" type="email" minlength="5" maxlength="254" placeholder="tu@email.com">
+                                <small class="error mensaje-error"></small>
                             </div>
-                            <div class="form-group">
-                                <label>Asunto</label>
-                                <select required>
-                                    <option value="">Selecciona un asunto</option>
+                            <div class="grupo-input">
+                                <label for="asunto">Asunto</label>
+                                <select id="asunto" name="asunto">
+                                    <option value="" selected>Selecciona un asunto</option>
                                     <option>Pedido personalizado</option>
                                     <option>Consulta general</option>
                                     <option>Reclamo o sugerencia</option>
                                 </select>
+                                <small class="error mensaje-error"></small>
                             </div>
                         </div>
-                        <div class="form-group full-width">
+                        <div class="grupo-input">
                             <label>Mensaje</label>
-                            <textarea placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
+                            <textarea id="mensaje" minlength="10" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                            <small class="error mensaje-error"></small>
                         </div>
                         <div class="form-button">
                             <button type="submit" class="btn-enviar">
                                 <i class="fa-solid fa-paper-plane"></i> ENVIAR MENSAJE
                             </button>
                         </div>
+
+                        <div id="boxErrores" class="boxErrores">
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
 
-        <!-- TARJETAS DE INFORMACIÓN INFERIORES -->
-        <div class="contact-bottom-info">
+        <!-- TARJETAS DE INFORMACIÓN -->
+        <div class="info-contacto">
             <div class="info-card">
                 <i class="fa-brands fa-whatsapp"></i>
                 <h3>WhatsApp</h3>
@@ -210,5 +219,131 @@
         </div>
             <p>© 2026 Sweet Alchemist. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        //seleccionamos el formulario
+        const formulario = document.querySelector('.form-card');
+
+        function validarFormulario(event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            // busca todas las etiquetas <small> y las deja vacías
+            document.querySelectorAll('.error').forEach(small => {
+                small.textContent = '';
+            });
+
+            let esValido = true; //asumimos que el formulario es valido a menos que se encuentren errores
+
+            //función auxiliar para mostrar el error justo debajo del input
+            const mostrarError = (idInput, mensaje) => {
+                const input = document.getElementById(idInput);
+                if (input) {
+                    //busca el contenedor padre (.grupo-input) y luego la etiqueta <small>
+                    const small = input.closest('.grupo-input').querySelector('.error');
+                    if (small) {
+                        small.textContent = mensaje;
+                    }
+                }
+                esValido = false; //si hay un error, el formulario ya no es válido y no debe enviarse
+            };
+
+            //validaciones campo por campo
+            if (!document.getElementById('nombres').value.trim()) {
+                mostrarError('nombres', 'Ingrese su nombre completo.');
+            }
+            if (!document.getElementById('telefono').value.trim()) {
+                mostrarError('telefono', 'Ingrese su número (9 cifras).');
+            }
+            if (!document.getElementById('correo').value.trim()) {
+                mostrarError('correo', 'Ingrese un correo válido.');
+            }
+            if (!document.getElementById('asunto').value) {
+                mostrarError('asunto', 'Seleccione el asunto.');
+            }
+            if (!document.getElementById('mensaje').value.trim()) {
+                mostrarError('mensaje', 'Cuéntenos en qué podemos ayudarle.');
+            }
+
+
+            //resultado final en la caja inferior
+            const boxErrores = document.getElementById('boxErrores');
+            if (esValido) {
+                boxErrores.style.color = "green";
+                boxErrores.innerHTML = "<h3>¡Mensaje validado y listo para ser enviado!</h3>";
+                //si todo está bien, se usa formulario.submit() para mandar a una bd
+            } else {
+                boxErrores.style.color = "rgb(201,78,78)";
+                boxErrores.innerHTML = "<p>Por favor, revise los campos marcados en rojo en el formulario.</p>";
+            }
+        }
+
+        //se conecta el evento submit con la función validarFormulario
+        formulario.addEventListener('submit', validarFormulario);
+
+
+        const todosLosCampos = formulario.querySelectorAll('input, select, textarea');
+
+        todosLosCampos.forEach(campo => {
+            campo.addEventListener('input', () => 
+            quitarErrorVisual(campo)
+        );
+            campo.addEventListener('change', () => 
+            quitarErrorVisual(campo)
+        );
+        });
+
+        function quitarErrorVisual(elemento) {
+            const grupo = elemento.closest('.grupo-input');
+            if (grupo) {
+                const small = grupo.querySelector('.error');
+                if (small) {
+                    // 1. DECLARAMOS LA VARIABLE VALOR
+                    const valor = elemento.value;
+
+                    // sugerencias en tiempo real
+                    small.style.color = '#6f4e37';
+
+                    switch (elemento.id) {
+
+                        case 'nombres':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length >= 3) ? '' : 'El mínimo de caracteres es 3.';
+                            break;
+
+                        case 'telefono':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length === 9) ? '' : 'Complete los 9 dígitos numéricos de su teléfono.';
+                            break;
+
+                        case 'correo':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            small.textContent = regexCorreo.test(valor) ? '' : 'Ingrese un formato válido (ejemplo@correo.com).';
+                            break;
+
+                        case 'mensaje':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length >= 10) ? '' : 'Cuéntenos detalladamente lo sucedido (Mín. 10 caracteres).';
+                            break;
+
+                        default:
+                            small.textContent = '';
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
