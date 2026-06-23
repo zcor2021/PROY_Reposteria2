@@ -14,7 +14,8 @@ body {
 }
 
 .contenedor-trabajo {
-    padding: 160px 5% 80px; /* Margen para el header fijo */
+    padding: 60px 5%;
+    /* Margen para el header fijo */
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
@@ -27,7 +28,8 @@ body {
     align-items: flex-start;
 }
 
-.columna-info, .columna-formulario {
+.columna-info,
+.columna-formulario {
     flex: 1;
 }
 
@@ -74,7 +76,7 @@ body {
     padding: 20px 10px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .item-beneficio i {
@@ -103,7 +105,7 @@ body {
 }
 
 .franja-extra i {
-    font-size: 40px;
+    font-size: clamp(20px, 3vh, 40px);
     color: #8b5d3d;
 }
 
@@ -112,7 +114,7 @@ body {
     background: rgba(255, 255, 255, 0.85);
     padding: 40px;
     border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .formulario-empleo h1 {
@@ -145,7 +147,8 @@ body {
     margin-bottom: 8px;
 }
 
-.grupo-input input, .grupo-input select {
+.grupo-input input,
+.grupo-input select {
     padding: 12px;
     border: 1px solid #d8c7b8;
     border-radius: 10px;
@@ -166,14 +169,15 @@ body {
     padding: 10px 0;
 }
 
-/* ACCIONES */
+/* BOTONES */
 .acciones-form {
     display: flex;
     gap: 15px;
-    margin-top: 30px;
+    margin: 40px 20px 20px;
 }
 
-.btn-enviar, .btn-limpiar {
+.btn-enviar,
+.btn-limpiar {
     flex: 1;
     padding: 15px;
     border: none;
@@ -184,33 +188,59 @@ body {
 }
 
 .btn-enviar {
-    background: #6b4332;
+    background-color: #6b4332;
     color: white;
 }
 
 .btn-enviar:hover {
-    background: #8d5d4b;
-    transform: translateY(-2px);
+    background-color: #8d5d4b;
 }
 
 .btn-limpiar {
-    background: white;
+    background-color: #f3ebe1;
     border: 1px solid #d8c7b8;
     color: #8b5d3d;
 }
 
-/* VALIDACIÓN VISUAL */
-input:valid:not(:placeholder-shown) {
-    border-color: #7da165;
+.btn-limpiar:hover {
+    background-color: #ebdcd0;
+    color: #5e4437;
 }
 
+.btn-enviar:hover,
+.btn-limpiar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(94, 68, 55, 0.15);
+}
+
+/*TEXTO DE ERROR*/
+.error {
+    color: rgb(201,78,78);
+}
+.boxErrores{
+    margin: 5px 5px;
+    font-size: clamp(10px, 3vh, 14px);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* VALIDACIÓN VISUAL */
+/*input:valid:not(:placeholder-shown), select:valid:not(:placeholder-shown){
+    border: 1px solid #7da165;
+}
+input:invalid, select:invalid{
+    border: 1px solid red;
+}
+*/
 /*--- RESPONSIVE ---*/
 
 @media (max-width: 1200px) {
     .info-trabajo-flex {
         flex-direction: column;
     }
-    .columna-info, .columna-formulario {
+
+    .columna-info,
+    .columna-formulario {
         width: 100%;
     }
 }
@@ -219,6 +249,7 @@ input:valid:not(:placeholder-shown) {
     .grid-beneficios {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .fila-form {
         flex-direction: column;
         gap: 20px;
@@ -226,13 +257,21 @@ input:valid:not(:placeholder-shown) {
 }
 
 @media (max-width: 500px) {
+    .contenedor-trabajo {
+        width: 100%;
+    }
+
     .grid-beneficios {
         grid-template-columns: 1fr;
     }
-    .contenedor-trabajo {
-        padding-top: 180px;
-    }
+
     .formulario-empleo {
         padding: 25px;
+    }
+}
+
+@media (max-width: 358px) {
+    .acciones-form {
+        flex-direction: column;
     }
 }

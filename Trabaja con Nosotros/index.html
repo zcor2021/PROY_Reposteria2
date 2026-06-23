@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabaja con nosotros - Sweet Alchemist</title>
-    
+
     <link rel="stylesheet" href="../css/encabezado.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/trabajo.css">
-    
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeseva+One&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeseva+One&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
     <header class="headerPrincipal">
-            <div class="barra" id="barra1">
-            
-              <div class="logo">
+        <div class="barra" id="barra1">
+
+            <div class="logo">
                 <a href="../index.html"><i class="fa-solid fa-mug-hot"></i> SWEET ALCHEMIST</a>
-              </div>
+            </div>
 
-              <div class="buscador">
+            <div class="buscador">
                 <input type="text" placeholder="Buscar postres...">
-              </div>
+            </div>
 
-              <div class="subBarra">
+            <div class="subBarra">
                 <nav>
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
@@ -34,33 +37,35 @@
                         <li><a href="#">Carrito</a></li>
                     </ul>
                 </nav>
-              </div>
             </div>
-        
-            <div class="menuCategorias" id="menu">
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="menu-icon">&#9776;</label>
-                  <nav>
-                    <ul>
-                      <li><a href="../Categorias/"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
-                      <li><a href="../Nosotros/"><i class="fa-solid fa-users"></i>  NOSOTROS</a></li>
-                      <li><a href="../Blog/"><i class="fa-solid fa-book"></i> BLOG</a></li>
-                      <li><a href="../Tiendas/"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
-                      <li><a href="../pdf/Carta Salón.pdf" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
-                    </ul>
-                  </nav>
-            </div>
-        </header>
+        </div>
+
+        <div class="menuCategorias" id="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <nav>
+                <ul>
+                    <li><a href="../Categorias/"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
+                    <li><a href="../Nosotros/"><i class="fa-solid fa-users"></i> NOSOTROS</a></li>
+                    <li><a href="../Blog/"><i class="fa-solid fa-book"></i> BLOG</a></li>
+                    <li><a href="../Tiendas/"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
+                    <li><a href="../pdf/Carta Salón.pdf" target="_blank"><i
+                                class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main class="contenedor-trabajo">
         <section class="info-trabajo-flex">
-            
+
             <!-- LADO IZQUIERDO: TEXTO Y BENEFICIOS -->
             <article class="columna-info">
                 <div class="tarjeta-texto">
                     <h4>Sé parte de nuestra receta</h4>
                     <h2>¡ÚNETE A NUESTRO EQUIPO!</h2>
-                    <p>Buscamos personas apasionadas por la repostería artesanal y el servicio excepcional. Si quieres crecer en un ambiente dulce y dinámico, ¡este es tu lugar!</p>
+                    <p>Buscamos personas apasionadas por la repostería artesanal y el servicio excepcional. Si quieres
+                        crecer en un ambiente dulce y dinámico, ¡este es tu lugar!</p>
                 </div>
 
                 <div class="grid-beneficios">
@@ -104,39 +109,46 @@
                     <div class="fila-form">
                         <div class="grupo-input">
                             <label>Nombres</label>
-                            <input type="text" placeholder="Tus nombres" required>
+                            <input id="nombres" type="text" minlength="3" maxlength="20" placeholder="Tus nombres">
+                            <small class="error mensaje-error"></small>
                         </div>
                         <div class="grupo-input">
                             <label>Apellidos</label>
-                            <input type="text" placeholder="Tus apellidos" required>
+                            <input id="apellidos" type="text" minlength="2" maxlength="25" placeholder="Tus apellidos">
+                            <small class="error mensaje-error"></small>
                         </div>
                     </div>
 
                     <div class="fila-form">
                         <div class="grupo-input">
-                            <label>Puesto a postular</label>
-                            <select required>
-                                <option value="">Selecciona puesto</option>
+                            <label for="puesto">Puesto a postular</label>
+                            <select id="puesto" name="puesto">
+                                <option value="" selected>Selecciona puesto</option>
                                 <option>Repostero/a</option>
                                 <option>Atención al cliente</option>
                                 <option>Cajero/a</option>
                                 <option>Administración</option>
                             </select>
+                            <small class="error mensaje-error"></small>
                         </div>
                         <div class="grupo-input">
                             <label>Fecha de Nacimiento</label>
-                            <input type="date" required>
+                            <input id="fechaN" type="date">
+                            <small class="error mensaje-error"></small>
                         </div>
                     </div>
 
                     <div class="fila-form">
                         <div class="grupo-input">
                             <label>DNI</label>
-                            <input type="text" placeholder="Número de DNI" pattern="[0-9]{8}" required>
+                            <input id="dni" type="text" placeholder="Número de DNI" pattern="[0-9]{8}" maxlength="8">
+                            <small class="error mensaje-error"></small>
                         </div>
                         <div class="grupo-input">
                             <label>Email</label>
-                            <input type="email" placeholder="correo@ejemplo.com" required>
+                            <input id="correo" type="email" minlength="5" maxlength="254"
+                                placeholder="correo@ejemplo.com">
+                            <small class="error mensaje-error"></small>
                         </div>
                     </div>
 
@@ -144,24 +156,31 @@
                         <div class="grupo-input">
                             <label>Género</label>
                             <div class="opciones-radio">
-                                <label><input type="radio" name="g"> Masc.</label>
-                                <label><input type="radio" name="g"> Fem.</label>
+                                <label><input type="radio" name="genero" id="M" value="M"> Masc.</label>
+                                <label><input type="radio" name="genero" id="F" value="F"> Fem.</label>
+                                <small class="error mensaje-error"></small>
                             </div>
                         </div>
                         <div class="grupo-input">
                             <label>Teléfono</label>
-                            <input type="tel" placeholder="999 999 999" required>
+                            <input id="telefono" type="tel" placeholder="999 999 999" pattern="^[0-9]{9}$"
+                                maxlength="9">
+                            <small class="error mensaje-error"></small>
                         </div>
                     </div>
 
                     <div class="grupo-input">
                         <label>Adjuntar CV (PDF)</label>
-                        <input type="file" accept=".pdf" required>
+                        <input id="cv" type="file" accept=".pdf">
+                        <small class="error mensaje-error"></small>
                     </div>
 
                     <div class="acciones-form">
                         <button type="submit" class="btn-enviar">ENVIAR POSTULACIÓN</button>
                         <button type="reset" class="btn-limpiar">LIMPIAR</button>
+                    </div>
+
+                    <div id="boxErrores" class="boxErrores">
                     </div>
                 </form>
             </article>
@@ -169,21 +188,24 @@
         </section>
     </main>
 
-     <footer class="Parte-inferior">
+    <footer class="Parte-inferior">
         <div id="footer-contenido-principal" class="footer-contenido">
-            
+
             <div class="infoFooter">
                 <h1> SWEET ALCHEMIST </h1>
                 <h3> Pasteleria artesanal </h3>
-                <p> Sweet Alchemist crea postres artesanales elaborados con ingredientes de calidad y un toque de creatividad para cada ocasión.</p>
+                <p> Sweet Alchemist crea postres artesanales elaborados con ingredientes de calidad y un toque de
+                    creatividad para cada ocasión.</p>
                 <p>Hechos con dulzura y creatividad.</p>
             </div>
 
             <div>
                 <h2>Información</h2>
                 <ul>
-                    <li><a href="../Trabaja con Nosotros/"><i class="fa-solid fa-handshake"></i> Trabaja con nosotros</a></li>
-                    <li><a href="../Zonas de Reparto/"><i class="fa-solid fa-earth-americas"></i> Zonas de reparto</a></li>
+                    <li><a href="../Trabaja con Nosotros/"><i class="fa-solid fa-handshake"></i> Trabaja con
+                            nosotros</a></li>
+                    <li><a href="../Zonas de Reparto/"><i class="fa-solid fa-earth-americas"></i> Zonas de reparto</a>
+                    </li>
                     <li><a href="../Contacto/"><i class="fa-solid fa-phone"></i> Contacto</a></li>
                     <li><a href="../Tiendas/"> <i class="fa-solid fa-store"></i>Nuestras Tiendas</a></li>
                 </ul>
@@ -191,10 +213,20 @@
             <div>
                 <h2>Políticas</h2>
                 <ul>
+<<<<<<< HEAD
                     <li><a href="../Políticas/"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a></li>
                     <li><a href="../Condiciones/"><i class="fa-regular fa-file-lines"></i> Términos y Condiciones</a></li>
                     <li><a href="../Devolucion/"><i class="fa-regular fa-credit-card"></i> Cambios y Devoluciones</a></li>
                     <li><a href="../Promos/"> <i class="fa-solid fa-percent"></i> Promociones</a></li>
+=======
+                    <li><a href="../Políticas/"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a>
+                    </li>
+                    <li><a href="../Condiciones/"><i class="fa-regular fa-file-lines"></i> Términos y Condiciones</a>
+                    </li>
+                    <li><a href="../Devolucion/"><i class="fa-regular fa-credit-card"></i> Cambios y Devoluciones</a>
+                    </li>
+                    <li><a href="../Promos/"> <i class="fa-solid fa-truck-moving"></i> Promociones</a></li>
+>>>>>>> f7aaa2a27eb7a47441bf297c37553baa6a6402eb
                 </ul>
             </div>
             <div>
@@ -221,7 +253,171 @@
 
 
         </div>
-            <p>© 2026 Sweet Alchemist. Todos los derechos reservados.</p>
+        <p>© 2026 Sweet Alchemist. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        //seleccionamos el formulario
+        const formulario = document.querySelector('.formulario-empleo');
+
+        function validarFormulario(event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            // busca todas las etiquetas <small> y las deja vacías
+            document.querySelectorAll('.error').forEach(small => {
+                small.textContent = '';
+            });
+
+            let esValido = true; //asumimos que el formulario es valido a menos que se encuentren errores
+
+            //función auxiliar para mostrar el error justo debajo del input
+            const mostrarError = (idInput, mensaje) => {
+                const input = document.getElementById(idInput);
+                if (input) {
+                    //busca el contenedor padre (.grupo-input) y luego la etiqueta <small>
+                    const small = input.closest('.grupo-input').querySelector('.error');
+                    if (small) {
+                        small.textContent = mensaje;
+                    }
+                }
+                esValido = false; //si hay un error, el formulario ya no es válido y no debe enviarse
+            };
+
+            //función auxiliar especial para los radio buttons (Género)
+            const mostrarErrorGenero = (mensaje) => {
+                const grupo = document.querySelector('.opciones-radio').closest('.grupo-input');
+                const small = grupo.querySelector('.error');
+                if (small) {
+                    small.textContent = mensaje;
+                }
+                esValido = false;
+            };
+
+            //validaciones campo por campo
+            if (!document.getElementById('puesto').value) {
+                mostrarError('puesto', 'Seleccione un puesto.');
+            }
+            if (!document.getElementById('fechaN').value) {
+                mostrarError('fechaN', 'Ingrese su fecha de nacimiento.');
+            }
+            if (!document.getElementById('dni').value) {
+                mostrarError('dni', 'Ingrese su número de DNI.');
+            }
+            if (!document.getElementById('nombres').value.trim()) {
+                mostrarError('nombres', 'Ingrese su nombre.');
+            }
+            if (!document.getElementById('apellidos').value.trim()) {
+                mostrarError('apellidos', 'Ingrese su apellido.');
+            }
+
+            //validación especial para Género (radio button)
+            const genero = document.querySelector('input[name="genero"]:checked');
+            if (!genero) {
+                mostrarErrorGenero('Seleccione su género.');
+            }
+
+            if (!document.getElementById('telefono').value.trim()) {
+                mostrarError('telefono', 'Ingrese su número (9 cifras).');
+            }
+            if (!document.getElementById('cv').value.trim()) {
+                mostrarError('cv', 'Adjunte su CV.');
+            }
+            if (!document.getElementById('correo').value.trim()) {
+                mostrarError('correo', 'Ingrese un correo válido.');
+            }
+
+            //resultado final en la caja inferior
+            const boxErrores = document.getElementById('boxErrores');
+            if (esValido) {
+                boxErrores.style.color = "green";
+                boxErrores.innerHTML = "<h3>¡Postulación validada y lista para ser enviada!</h3>";
+                //si todo está bien, se usa formulario.submit() para mandar a una bd
+            } else {
+                boxErrores.style.color = "rgb(201,78,78)";
+                boxErrores.innerHTML = "<p>Por favor, revise los campos marcados en rojo en el formulario.</p>";
+            }
+        }
+
+        //se conecta el evento submit con la función validarFormulario
+        formulario.addEventListener('submit', validarFormulario);
+
+
+        /* --- Funciones --- */
+
+        const todosLosCampos = formulario.querySelectorAll('input, select');
+
+        todosLosCampos.forEach(campo => {
+            campo.addEventListener('input', () =>
+                quitarErrorVisual(campo)
+            );
+
+            campo.addEventListener('change', () =>
+                quitarErrorVisual(campo)
+            );
+        });
+
+        function quitarErrorVisual(elemento) {
+
+            const grupo = elemento.closest('.grupo-input');
+            if (grupo) {
+                const small = grupo.querySelector('.error');
+                if (small) {
+                    // 1. DECLARAMOS LA VARIABLE VALOR
+                    const valor = elemento.value;
+
+                    // sugerencias en tiempo real
+                    small.style.color = '#6f4e37';
+
+                    switch (elemento.id) {
+                        case 'dni':
+                            // Si está completamente vacío no muestra nada, si empezó a escribir evalúa
+                            if (valor.trim() === '') {
+                                small.textContent = '';
+                                break;
+                            }
+                            small.textContent = (valor.length >= 8) ? '' : 'Digite correctamente su número de DNI.';
+                            break;
+
+                        case 'nombres':
+                            if (valor.trim() === '') {
+                                small.textContent = '';
+                                break;
+                            }
+                            small.textContent = (valor.length >= 3) ? '' : 'El mínimo de caracteres es 3.';
+                            break;
+
+                        case 'apellidos':
+                            if (valor.trim() === '') {
+                                small.textContent = '';
+                                break;
+                            }
+                            small.textContent = (valor.length >= 2) ? '' : 'El mínimo de caracteres es 2.';
+                            break;
+
+                        case 'telefono':
+                            if (valor.trim() === '') {
+                                small.textContent = '';
+                                break;
+                            }
+                            small.textContent = (valor.length === 9) ? '' : 'Complete los 9 dígitos numéricos de su teléfono.';
+                            break;
+
+                        case 'correo':
+                            if (valor.trim() === '') {
+                                small.textContent = '';
+                                break;
+                            }
+                            const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            small.textContent = regexCorreo.test(valor) ? '' : 'Ingrese un formato válido (ejemplo@correo.com).';
+                            break;
+
+                        default:
+                            small.textContent = '';
+                    }
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>

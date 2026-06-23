@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabaja con nosotros - Sweet Alchemist</title>
-    
+
     <link rel="stylesheet" href="../css/encabezado.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/libroReclamaciones.css">
-    
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeseva+One&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeseva+One&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
     <header class="headerPrincipal">
-            <div class="barra" id="barra1">
-            
-              <div class="logo">
+        <div class="barra" id="barra1">
+
+            <div class="logo">
                 <a href="../index.html"><i class="fa-solid fa-mug-hot"></i> SWEET ALCHEMIST</a>
-              </div>
+            </div>
 
-              <div class="buscador">
+            <div class="buscador">
                 <input type="text" placeholder="Buscar postres...">
-              </div>
+            </div>
 
-              <div class="subBarra">
+            <div class="subBarra">
                 <nav>
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
@@ -34,222 +37,301 @@
                         <li><a href="#">Carrito</a></li>
                     </ul>
                 </nav>
-              </div>
             </div>
-        
-            <div class="menuCategorias" id="menu">
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="menu-icon">&#9776;</label>
-                  <nav>
-                    <ul>
-                      <li><a href="../Categorias/"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
-                      <li><a href="../Nosotros/"><i class="fa-solid fa-users"></i>  NOSOTROS</a></li>
-                      <li><a href="../Blog/"><i class="fa-solid fa-book"></i> BLOG</a></li>
-                      <li><a href="../Tiendas/"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
-                      <li><a href="../pdf/Carta Salón.pdf" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
-                    </ul>
-                  </nav>
-            </div>
-        </header>
+        </div>
+
+        <div class="menuCategorias" id="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <nav>
+                <ul>
+                    <li><a href="../Categorias/"><i class="fa-solid fa-folder"></i> CATEGORIAS</a></li>
+                    <li><a href="../Nosotros/"><i class="fa-solid fa-users"></i> NOSOTROS</a></li>
+                    <li><a href="../Blog/"><i class="fa-solid fa-book"></i> BLOG</a></li>
+                    <li><a href="../Tiendas/"><i class="fa-solid fa-store"></i> TIENDAS</a></li>
+                    <li><a href="../pdf/Carta Salón.pdf" target="_blank"><i
+                                class="fa-solid fa-arrow-up-from-bracket"></i> CARTA SALÓN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main class="contenedor-trabajo">
-        <div class="titulo">Libro de Reclamaciones</div>
+        <div class="titulo">LIBRO DE RECLAMACIONES</div>
 
-        <article class="formulario">
-                <form class="formulario-libro">
+        <noscript>
+            <div class="noTieneScript">
+                <strong>¡Atención!</strong> Para que este Libro de Reclamaciones funcione correctamente y podamos
+                procesar tu solicitud, necesitas tener JavaScript activado en tu navegador.
+            </div>
+        </noscript>
+
+
+        <article id="form" class="formulario">
+            <form class="formulario-libro">
+                <div class="sweet-alchemist">
                     <h2>Sweet Alchemist</h2>
+                </div>
+                <div class="ruc-pasteleria">
                     <h3>R.U.C: 1705888052</h3>
+                </div>
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label for="establecimiento">Establecimiento donde se realizó la compra o uso de servicio
+                            *</label>
+                        <select id="establecimiento" name="establecimiento">
+                            <option value="" selected>Selecciona establecimiento</option>
+                            <option value="Pagina Web">Página Web</option>
+                            <option value="Tienda Miraflores">Tienda Miraflores</option>
+                            <option value="Tienda San Isidro">Tienda San Isidro</option>
+                            <option value="Tienda San Borja">Tienda San Borja</option>
+                            <option value="Tienda Barranco">Tienda Barranco</option>
+                            <option value="Tienda Chacarilla">Tienda Chacarilla</option>
+                        </select>
+                        <small id="errorEstablecimiento" class="error mensaje-error"></small>
+                    </div>
+                </div>
+
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label>Fecha de Registro *</label>
+                        <input id="fechaR" type="date">
+                        <small class="error mensaje-error"></small>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Hora de registro *</label>
+                        <input id="horaR" type="time" min="09:00" max="20:00">
+                        <small class="error mensaje-error"></small>
+                    </div>
+                </div>
+
+                <h2>Identificación del consumidor reclamante</h2>
+
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label for="tipoDoc">Tipo de Documento *</label>
+                        <select id="tipoDoc" name="tipoDoc">
+                            <option value="">Selecciona el tipo de documento</option>
+                            <option value="DNI">DNI</option>
+                            <option value="Carnet de Extranjeria">Carnet de Extranjería</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                        <small class="error mensaje-error"></small>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Documento *</label>
+                        <input id="documento" type="text" placeholder="Número de Documento" pattern="[0-9]{8}">
+                        <small class="error mensaje-error"></small>
+                    </div>
+                </div>
+
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label>Nombres - Cliente *</label>
+                        <input id="nombres" type="text" minlength="3" maxlength="20" placeholder="Tus nombres">
+                        <small class="error mensaje-error"></small>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Apellidos - Cliente *</label>
+                        <input id="apellidos" type="text" minlength="2" maxlength="25" placeholder="Tus apellidos">
+                        <small class="error mensaje-error"></small>
+                    </div>
+                </div>
+
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label>Género *</label>
+                        <div class="opciones-radio">
+                            <label><input type="radio" name="genero" id="M" value="M"> Masc.</label>
+                            <label><input type="radio" name="genero" id="F" value="F"> Fem.</label>
+                            <label><input type="radio" name="genero" id="O" value="O"> Otros</label>
+                            <small class="error mensaje-error"></small>
+                        </div>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Teléfono *</label>
+                        <input id="telefono" type="tel" placeholder="999 999 999" pattern="^[0-9]{9}$" maxlength="9">
+                        <small class="error mensaje-error"></small>
+                    </div>
+                </div>
+
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label>Domicilio *</label>
+                        <input id="domicilio" type="text" minlength="15" maxlength="60" placeholder="Dirección">
+                        <small class="error mensaje-error"></small>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Correo Electrónico *</label>
+                        <input id="correo" type="email" minlength="5" maxlength="254" placeholder="correo@ejemplo.com">
+                        <small class="error mensaje-error"></small>
+                    </div>
+                </div>
+
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label>
+                            <input id="menorEdad" type="checkbox" name="menorEdad">
+                            <strong>Menor de Edad</strong>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="datosApoderado" class="datos-apoderado">
+                    <h2>Ingrese los datos de su apoderado, padre o madre</h2>
+
                     <div class="fila-form">
                         <div class="grupo-input">
-                            <label for="establecimiento">Establecimiento donde se realizó la compra o uso de servicio *</label>
-                            <select id="establecimiento" name="establecimiento" required>
-                                <option value="">Selecciona establecimiento</option>
-                                <option value="Pagina Web">Página Web</option>
-                                <option value="Tienda Miraflores">Tienda Miraflores</option>
-                                <option value="Tienda San Isidro">Tienda San Isidro</option>
-                                <option value="Tienda San Borja">Tienda San Borja</option>
-                                <option value="Tienda Barranco">Tienda Barranco</option>
-                                <option value="Tienda Chacarilla">Tienda Chacarilla</option>
-                            </select>
+                            <label>Nombres y apellidos *</label>
+                            <input type="text" id="nombreApoderado" minlength="6" maxlength="50"
+                                placeholder="Campo obligatorio">
+                            <small class="error mensaje-error"></small>
                         </div>
                     </div>
 
                     <div class="fila-form">
                         <div class="grupo-input">
-                            <label>Fecha de Registro *</label>
-                            <input type="date" required>
-                        </div>
-                        <div class="grupo-input">
-                            <label>Hora de registro *</label>
-                            <input type="time" min="09:00" max="20:00" required>
-                        </div>
-                    </div>
-
-                    <h2>Identificación del consumidor reclamante</h2>
-
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label for="tipoDoc">Tipo de Documento *</label>                        
-                            <select id="tipoDoc" name="tipoDoc" required>
-                                <option value="">Selecciona el tipo de documento</option>
-                                <option value="DNI">DNI</option>
-                                <option value="Carnet de Extranjeria">Carnet de Extranjería</option>
-                                <option value="Pasaporte">Pasaporte</option>
-                            </select>
-                        </div>
-                        <div class="grupo-input">
-                            <label>Documento *</label>
-                            <input type="text" placeholder="Número de Documento" pattern="[0-9]{8}" required>
-                        </div>
-                    </div>
-
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label>Nombres - Cliente *</label>
-                            <input type="text" placeholder="Tus nombres" required>
-                        </div>
-                        <div class="grupo-input">
-                            <label>Apellidos - Cliente *</label>
-                            <input type="text" placeholder="Tus apellidos" required>
-                        </div>
-                    </div>
-
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label>Género *</label>
-                            <div class="opciones-radio">
-                                <label><input type="radio" name="genero" value="M" required> Masc.</label>
-                                <label><input type="radio" name="genero" value="F"> Fem.</label>
-                                <label><input type="radio" name="genero" value="O"> Otros</label>
-                            </div>
+                            <label>Número de Documento de Identidad *</label>
+                            <input type="text" id="dniApoderado" pattern="[0-9]{8}" maxlength="8"
+                                placeholder="Campo obligatorio">
+                            <small class="error mensaje-error"></small>
                         </div>
                         <div class="grupo-input">
                             <label>Teléfono *</label>
-                            <input type="tel" placeholder="999 999 999" pattern="^[0-9]{9}$" maxlength="9" required>
+                            <input type="tel" id="telefonoApoderado" pattern="[0-9]{9}" maxlength="9"
+                                placeholder="Campo obligatorio">
+                            <small class="error mensaje-error"></small>
                         </div>
                     </div>
+                </div>
 
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label>Domicilio *</label>
-                            <input type="text" placeholder="Dirección" required>
-                        </div>
-                        <div class="grupo-input">
-                            <label>Correo Electrónico *</label>
-                            <input type="email" placeholder="correo@ejemplo.com" required>
-                        </div>
+                <h2>Identificación del bien contratado</h2>
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label for="tipoContratado">Tipo del bien contratado *</label>
+                        <select id="tipoContratado" name="tipoContratado">
+                            <option value="">Seleccione</option>
+                            <option value="Producto">Producto</option>
+                            <option value="Servicio">Servicio</option>
+                        </select>
+                        <small class="error mensaje-error"></small>
                     </div>
-
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label>
-                              <input type="checkbox" id="menorEdad" name="menorEdad">
-                              <strong>Menor de Edad</strong>
-                            </label>
-                        </div>
+                    <div class="grupo-input">
+                        <label>Descripción del producto o servicio *</label>
+                        <input id="descripcion" type="text" minlength="10" maxlength="50" placeholder="Descripción">
+                        <small class="error mensaje-error"></small>
                     </div>
+                </div>
 
-                    <h2>Identificación del bien contratado</h2>
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label for="tipoContratado">Tipo del bien contratado *</label>         
-                            <select id="tipoContratado" name="tipoContratado" required>
-                                <option value="">Seleccione</option>
-                                <option value="Producto">Producto</option>
-                                <option value="Servicio">Servicio</option>
-                            </select>
-                        </div>
-                        <div class="grupo-input">
-                            <label>Descripción del producto o servicio *</label>
-                            <input type="text" placeholder="Descripción" required>
-                        </div>
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label>Nº de comprobante de pago</label>
+                        <input id="nComprobante" type="text" minlength="13" maxlength="13"
+                            placeholder="Ej. F001-00012345">
+                        <small class="error mensaje-error"></small>
                     </div>
+                </div>
 
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label>Nº de comprobante de pago</label>
-                            <input type="text" placeholder="Ej. F001-00012345">
-                        </div>
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label>Fecha de Compra</label>
+                        <input id="fechaCompra" type="date">
+                        <small class="error mensaje-error"></small>
                     </div>
-
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label>Fecha de Compra</label>
-                            <input type="date">
-                        </div>
-                        <div class="grupo-input">
-                            <label>Monto a reclamar (S/.)</label>
-                            <input type="number" min="0" step="0.01" placeholder="0.00">
-                        </div>
+                    <div class="grupo-input">
+                        <label>Monto a reclamar (S/.)</label>
+                        <input id="montoReclamado" type="number" min="0" step="0.10" placeholder="0.00">
+                        <small class="error mensaje-error"></small>
                     </div>
+                </div>
 
-                    <h2>Detalle del reclamo</h2>
+                <h2>Detalle del reclamo</h2>
 
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label for="motivo">Motivo *</label>
-                            <select id="motivo" name="motivo" required>
-                                <option value="">Seleccione</option>
-                                <option value="Reclamo">Reclamo</option>
-                                <option value="Queja">Queja</option>
-                            </select>
-                        </div>
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label for="motivo">Motivo *</label>
+                        <select id="motivo" name="motivo">
+                            <option value="">Seleccione</option>
+                            <option value="Reclamo">Reclamo</option>
+                            <option value="Queja">Queja</option>
+                        </select>
+                        <small class="error mensaje-error"></small>
                     </div>
+                </div>
 
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label>Detalle de Reclamo *</label>
-                            <input type="text" placeholder="Cuéntenos, ¿qué fue lo que sucedió?" required>
-                        </div>
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label>Detalle de Reclamo *</label>
+                        <textarea id="detalleReclamo" rows="4" type="text" minlength="50"
+                            placeholder="Cuéntenos, ¿qué fue lo que sucedió?"></textarea>
+                        <small class="error mensaje-error"></small>
                     </div>
+                </div>
 
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label>Pedido de Cliente *</label>
-                            <input type="text" placeholder="¿De qué manera podemos solucionarlo?" required>
-                        </div>
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label>Pedido de Cliente *</label>
+                        <input id="pedidoCliente" type="text" minlength="15"
+                            placeholder="¿De qué manera podemos solucionarlo?">
+                        <small class="error mensaje-error"></small>
                     </div>
+                </div>
 
-                    <div class="fila-form">
-                        <div class="grupo-input">
-                            <label>
-                                <input type="checkbox" required>
-                                Declaro que la información proporcionada en este reclamo es verdadera y exacta.
-                                Soy consciente de que proporcionar información falsa o fraudulenta puede generar las responsabilidades legales correspondientes.
-                            </label>
-                        </div>
+                <div class="fila-form">
+                    <div class="grupo-input">
+                        <label>
+                            <input id="condicion" type="checkbox" value="condicion">
+                            Declaro que la información proporcionada en este reclamo es verdadera y exacta.
+                            Soy consciente de que proporcionar información falsa o fraudulenta puede generar las
+                            responsabilidades legales correspondientes.
+                        </label>
+                        <small class="error mensaje-error"></small>
                     </div>
+                </div>
 
-                    <div class="informacion-importante">
-                        <h3>Información Importante</h3>
+                <div class="informacion-importante">
+                    <h3>Información Importante</h3>
+
+                    <div class="info-importante-texto">
                         <p><strong>(*) El campo es obligatorio.</strong></p>
-                        <p><strong>RECLAMO: Disconformidad específica sobre el producto o servicio adquirido.</strong></p>
-                        <p><strong>QUEJA: Disconformidad sobre la atención al cliente o el personal de la empresa.</strong></p>
+                        <p><strong>RECLAMO: Disconformidad específica sobre el producto o servicio adquirido.</strong>
+                        </p>
+                        <p><strong>QUEJA: Disconformidad sobre la atención al cliente o el personal de la
+                                empresa.</strong></p>
                     </div>
+                </div>
 
-                    <div class="acciones-form">
-                        <button type="submit" class="btn-enviar">PROCESAR RECLAMO</button>
-                        <button type="reset" class="btn-limpiar">LIMPIAR</button>
-                    </div>
-                </form>
-            </article>
+                <div class="botones-form">
+                    <button type="submit" value="Enviar" class="btn-enviar">PROCESAR RECLAMO</button>
+                    <button type="reset" value="Limpiar" class="btn-limpiar">LIMPIAR</button>
+                </div>
+
+                <div id="boxErrores" class="boxErrores">
+                </div>
+            </form>
+        </article>
+
+        <div id="resultado" class="resultado"></div>
     </main>
 
-     <footer class="Parte-inferior">
+    <footer class="Parte-inferior">
         <div id="footer-contenido-principal" class="footer-contenido">
-            
+
             <div class="infoFooter">
                 <h1> SWEET ALCHEMIST </h1>
                 <h3> Pasteleria artesanal </h3>
-                <p> Sweet Alchemist crea postres artesanales elaborados con ingredientes de calidad y un toque de creatividad para cada ocasión.</p>
+                <p> Sweet Alchemist crea postres artesanales elaborados con ingredientes de calidad y un toque de
+                    creatividad para cada ocasión.</p>
                 <p>Hechos con dulzura y creatividad.</p>
             </div>
 
             <div>
                 <h2>Información</h2>
                 <ul>
-                    <li><a href="../Trabaja con Nosotros/"><i class="fa-solid fa-handshake"></i> Trabaja con nosotros</a></li>
-                    <li><a href="../Zonas de Reparto/"><i class="fa-solid fa-earth-americas"></i> Zonas de reparto</a></li>
+                    <li><a href="../Trabaja con Nosotros/"><i class="fa-solid fa-handshake"></i> Trabaja con
+                            nosotros</a></li>
+                    <li><a href="../Zonas de Reparto/"><i class="fa-solid fa-earth-americas"></i> Zonas de reparto</a>
+                    </li>
                     <li><a href="../Contacto/"><i class="fa-solid fa-phone"></i> Contacto</a></li>
                     <li><a href="../Tiendas/"> <i class="fa-solid fa-store"></i>Nuestras Tiendas</a></li>
                 </ul>
@@ -257,10 +339,20 @@
             <div>
                 <h2>Políticas</h2>
                 <ul>
+<<<<<<< HEAD
                     <li><a href="../Políticas/"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a></li>
                     <li><a href="../Condiciones/"><i class="fa-regular fa-file-lines"></i> Términos y Condiciones</a></li>
                     <li><a href="../Devolucion/"><i class="fa-regular fa-credit-card"></i> Cambios y Devoluciones</a></li>
                     <li><a href="../Promos/"> <i class="fa-solid fa-percent"></i> Promociones</a></li>
+=======
+                    <li><a href="../Políticas/"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a>
+                    </li>
+                    <li><a href="../Condiciones/"><i class="fa-regular fa-file-lines"></i> Términos y Condiciones</a>
+                    </li>
+                    <li><a href="../Devolucion/"><i class="fa-regular fa-credit-card"></i> Cambios y Devoluciones</a>
+                    </li>
+                    <li><a href="../Promos/"> <i class="fa-solid fa-truck-moving"></i> Promociones</a></li>
+>>>>>>> f7aaa2a27eb7a47441bf297c37553baa6a6402eb
                 </ul>
             </div>
             <div>
@@ -287,8 +379,325 @@
 
 
         </div>
-            <p>© 2026 Sweet Alchemist. Todos los derechos reservados.</p>
+        <p>© 2026 Sweet Alchemist. Todos los derechos reservados.</p>
     </footer>
-    
+
+
+    <script>
+        //seleccionamos el formulario
+        const formulario = document.querySelector('.formulario-libro');
+
+        function validarFormulario(event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            // busca todas las etiquetas <small> y las deja vacías
+            document.querySelectorAll('.error').forEach(small => {
+                small.textContent = '';
+            });
+
+            let esValido = true; //asumimos que el formulario es valido a menos que se encuentren errores
+
+            //función auxiliar para mostrar el error justo debajo del input
+            const mostrarError = (idInput, mensaje) => {
+                const input = document.getElementById(idInput);
+                if (input) {
+                    //busca el contenedor padre (.grupo-input) y luego la etiqueta <small>
+                    const small = input.closest('.grupo-input').querySelector('.error');
+                    if (small) {
+                        small.textContent = mensaje;
+                    }
+                }
+                esValido = false; //si hay un error, el formulario ya no es válido y no debe enviarse
+            };
+
+            //función auxiliar especial para los radio buttons (Género)
+            const mostrarErrorGenero = (mensaje) => {
+                const grupo = document.querySelector('.opciones-radio').closest('.grupo-input');
+                const small = grupo.querySelector('.error');
+                if (small) {
+                    small.textContent = mensaje;
+                }
+                esValido = false;
+            };
+
+            //validaciones campo por campo
+            if (!document.getElementById('establecimiento').value) {
+                mostrarError('establecimiento', 'Seleccione un establecimiento.');
+            }
+            if (!document.getElementById('fechaR').value) {
+                mostrarError('fechaR', 'Ingrese la fecha.');
+            }
+            if (!document.getElementById('horaR').value) {
+                mostrarError('horaR', 'Ingrese la hora.');
+            }
+            if (!document.getElementById('tipoDoc').value) {
+                mostrarError('tipoDoc', 'Seleccione el tipo de documento.');
+            }
+            if (!document.getElementById('documento').value) {
+                mostrarError('documento', 'Ingrese su número de documento.');
+            }
+            if (!document.getElementById('nombres').value.trim()) {
+                mostrarError('nombres', 'Ingrese su nombre.');
+            }
+            if (!document.getElementById('apellidos').value.trim()) {
+                mostrarError('apellidos', 'Ingrese su apellido.');
+            }
+
+            //validación especial para Género (radio button)
+            const genero = document.querySelector('input[name="genero"]:checked');
+            if (!genero) {
+                mostrarErrorGenero('Seleccione su género.');
+            }
+
+            if (!document.getElementById('telefono').value.trim()) {
+                mostrarError('telefono', 'Ingrese su número (9 cifras).');
+            }
+            if (!document.getElementById('domicilio').value.trim()) {
+                mostrarError('domicilio', 'Ingrese su dirección.');
+            }
+            if (!document.getElementById('correo').value.trim()) {
+                mostrarError('correo', 'Ingrese un correo válido.');
+            }
+
+            //LÓGICA DEL APODERADO
+            const menorEdad = document.getElementById('menorEdad').checked;
+
+            //valida al apoderado SI la casilla de menor de edad está marcada
+            if (menorEdad === true) {
+                if (!document.getElementById('nombreApoderado').value.trim()) {
+                    mostrarError('nombreApoderado', 'Ingrese el nombre de su apoderado.');
+                }
+                if (!document.getElementById('dniApoderado').value.trim()) {
+                    mostrarError('dniApoderado', 'Ingrese el documento de su apoderado.');
+                }
+                if (!document.getElementById('telefonoApoderado').value.trim()) {
+                    mostrarError('telefonoApoderado', 'Ingrese el teléfono de su apoderado.');
+                }
+            }
+
+            if (!document.getElementById('tipoContratado').value) {
+                mostrarError('tipoContratado', 'Seleccione el bien contratado.');
+            }
+            if (!document.getElementById('descripcion').value.trim()) {
+                mostrarError('descripcion', 'Describa el producto/servicio.');
+            }
+            if (!document.getElementById('motivo').value) {
+                mostrarError('motivo', 'Seleccione el motivo.');
+            }
+            if (!document.getElementById('detalleReclamo').value.trim()) {
+                mostrarError('detalleReclamo', 'Ingrese el detalle del reclamo.');
+            }
+            if (!document.getElementById('pedidoCliente').value.trim()) {
+                mostrarError('pedidoCliente', 'Indique su pedido.');
+            }
+
+            const condicion = document.getElementById('condicion').checked;
+            if (!condicion) {
+                mostrarError('condicion', 'Debe aceptar la declaración jurada.');
+            }
+
+            //resultado final en la caja inferior
+            const boxErrores = document.getElementById('boxErrores');
+            if (esValido) {
+                boxErrores.style.color = "green";
+                boxErrores.innerHTML = "<h3>¡Reclamo validado y listo para ser enviado!</h3>";
+                //si todo está bien, se usa formulario.submit() para mandar a una bd
+            } else {
+                boxErrores.style.color = "rgb(201,78,78)";
+                boxErrores.innerHTML = "<p>Por favor, revise los campos marcados en rojo en el formulario.</p>";
+            }
+        }
+
+        //se conecta el evento submit con la función validarFormulario
+        formulario.addEventListener('submit', validarFormulario);
+
+
+        /* --- Funciones --- */
+
+        const tipoDoc = document.getElementById("tipoDoc");
+        const inputDocumento = document.getElementById("documento");
+
+        tipoDoc.addEventListener("change", () => {
+            if (tipoDoc.value === "DNI") {
+                inputDocumento.maxLength = 8;
+                inputDocumento.pattern = "[0-9]{8}";
+                inputDocumento.placeholder = "Ingrese 8 dígitos";
+            }
+            else if (tipoDoc.value === "Carnet de Extranjeria") {
+                inputDocumento.maxLength = 12;
+                inputDocumento.pattern = "[A-Za-z0-9]{9,12}";
+                inputDocumento.placeholder = "Ingrese de 9 a 12 caracteres";
+            }
+            else if (tipoDoc.value === "Pasaporte") {
+                inputDocumento.maxLength = 12;
+                inputDocumento.pattern = "[A-Za-z0-9]{6,12}";
+                inputDocumento.placeholder = "Ingrese de 6 a 12 caracteres";
+            }
+        });
+
+        const checkMenorEdad = document.getElementById("menorEdad");
+        const datosApoderado = document.getElementById("datosApoderado");
+
+        const camposApoderado = [
+            document.getElementById("nombreApoderado"),
+            document.getElementById("dniApoderado"),
+            document.getElementById("telefonoApoderado")
+        ];
+
+        //oculta por defecto al cargar la página
+        datosApoderado.style.display = "none";
+
+        checkMenorEdad.addEventListener("change", () => {
+            if (checkMenorEdad.checked) {
+                datosApoderado.style.display = "block";
+            } else {
+                datosApoderado.style.display = "none";
+                //limpia los campos y los errores si el usuario desmarca la casilla
+                camposApoderado.forEach(campo => {
+                    campo.value = "";
+                    const errorSmall = campo.closest('.grupo-input').querySelector('.error');
+                    if (errorSmall) errorSmall.textContent = "";
+                });
+            }
+        });
+
+        const todosLosCampos = formulario.querySelectorAll('input, select, textarea');
+
+        todosLosCampos.forEach(campo => {
+            campo.addEventListener('input', () => 
+            quitarErrorVisual(campo)
+        );
+            campo.addEventListener('change', () => 
+            quitarErrorVisual(campo)
+        );
+        });
+
+        function quitarErrorVisual(elemento) {
+            const grupo = elemento.closest('.grupo-input');
+            if (grupo) {
+                const small = grupo.querySelector('.error');
+                if (small) {
+                    // 1. DECLARAMOS LA VARIABLE VALOR
+                    const valor = elemento.value;
+
+                    // sugerencias en tiempo real
+                    small.style.color = '#6f4e37';
+
+                    switch (elemento.id) {
+                        case 'documento':
+                            // Si está completamente vacío no muestra nada, si empezó a escribir evalúa
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length >= elemento.maxLength) ? '' : `Recuerde el formato: ${elemento.placeholder}`;
+                            break;
+
+                        case 'nombres':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length >= 3) ? '' : 'El mínimo de caracteres es 3.';
+                            break;
+
+                        case 'apellidos':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length >= 2) ? '' : 'El mínimo de caracteres es 2.';
+                            break;
+
+                        case 'telefono':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length === 9) ? '' : 'Complete los 9 dígitos numéricos de su teléfono.';
+                            break;
+
+                        case 'domicilio':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length >= 15) ? '' : 'Complete bien (Mínimo 15 caracteres).';
+                            break;
+
+                        case 'correo':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            small.textContent = regexCorreo.test(valor) ? '' : 'Ingrese un formato válido (ejemplo@correo.com).';
+                            break;
+
+                        case 'nombreApoderado':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length >= 6) ? '' : 'Ingrese el nombre y apellido de su apoderado (Mínimo 6 letras).';
+                            break;
+
+                        case 'dniApoderado':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length === 8) ? '' : 'Ingrese los 8 dígitos del documento del apoderado.';
+                            break;
+
+                        case 'telefonoApoderado':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length === 9) ? '' : 'Ingrese los 9 dígitos del teléfono del apoderado.';
+                            break;
+
+                        case 'descripcion':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length >= 10) ? '' : 'Describa el producto brevemente (Mín. 10 caracteres).';
+                            break;
+
+                        case 'nComprobante':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length === 13) ? '' : 'Debe tener exactamente 13 caracteres (Ej. F001-00012345)';
+                            break;
+
+                        case 'detalleReclamo':
+                            if (valor.trim() === '') { 
+                                small.textContent = ''; 
+                                break; 
+                            }
+                            small.textContent = (valor.length >= 50) ? '' : 'Cuéntenos detalladamente lo sucedido (Mín. 50 caracteres).';
+                            break;
+
+                        case 'pedidoCliente':
+                            if (valor.trim() === '') {
+                                small.textContent = ''; 
+                                break;
+                            }
+                            small.textContent = (valor.length >= 15) ? '' : 'Escriba qué solución solicita (Mín. 15 caracteres).';
+                            break;
+
+                        default:
+                            small.textContent = '';
+                    }
+                }
+            }
+        }
+    </script>
+
 </body>
+
 </html>
