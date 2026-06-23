@@ -10,94 +10,88 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url(https://th.bing.com/th/id/R.c3c09b4a7273665dbba59d34eb535893?rik=I8dD8Vsrg3f4Qg&riu=http%3a%2f%2fshopharbour.com.cn%2fcdn%2fshop%2fproducts%2fdune-swatch-351421.jpg%3fv%3d1692200487&ehk=%2b68l%2bqt2nSL9vMDuqtTKbJRE5uw4TlQk87O%2bD0kGSXE%3d&risl=&pid=ImgRaw&r=0);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-color: rgb(255, 244, 230);
+    background-color: rgb(214, 202, 195);
+
 }
 
+
+/* -----CONTENEDOR PRINCIPAL--------*/
 .Bloque {
-    padding: 60px 0; /* Espacio para el header fijo */
+    width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
-    width: 100%;
+    gap:clamp(40px,5vw,60px);
+    
 }
 
 /*--- BANNER SUPERIOR ---*/
 .info-tienda {
-    background-color: rgba(255,255,255,0.541);
-    display: flex;
-    width: 100%;
-    border-top: 4px solid #5a4113;
-    border-bottom: 4px solid #5a4113;
-    overflow: hidden;
+    
+
+
+    width:100%;
+     min-height: 650px;
+    background-color:rgba(255,255,255,0.541);
+    background-image:url(../imagen/fondo1.png);
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+     padding: clamp(120px, 15vw, 190px) 20px;
+
 }
 
-.img-banner, .texto-banner {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+.info-tienda h5 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: 500;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    color: #5c4033;
+    margin-bottom: 20px;
+    
 }
 
-.img-banner img{
-    width: 100%;
-    object-fit: cover;
-    border-left: 5px solid #5a4113;
-    border-right: 5px solid #5a4113;
-    transition: transform 0.4s ease;
+.info-tienda h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(60px, 8vw, 110px);
+    font-weight: 500;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #4b2d20;
+    line-height: 0.9;
+    margin: 0 0 40px;
+
 }
 
-.img-banner img:hover{
-    transform: scale(1.02);
+.info-tienda h2 {
+     font-family: "Montserrat", sans-serif;
+     font-size: clamp(15px, 1.5vw, 21px);
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    color: #4b403a;
+    max-width: 550px;
+    margin: auto;
 }
 
-.texto-banner {
-    padding: 40px 60px;
-    text-align: center;
-}
 
-.texto-banner h5, .texto-banner h4 {
-    font-size: clamp(35px, 4vw, 55px);
-    font-family: 'Petit Formal Script';
-    color: #5a4113;
-    line-height: 1.1;
-    text-decoration: underline;
-}
-
-.texto-banner h2 {
-    font-size: clamp(20px, 2vw, 28px);
-    margin: 25px 0 15px;
-    color: #222;
-    font-weight: 700;
-}
-
-.texto-banner p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #444;
-}
-
-.img-banner img {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-    object-fit: cover;
-    border-left: 5px solid #5a4113;
-    border-right: 5px solid #5a4113;
-}
 
 /*--- REJILLA DE TIENDAS (GRID) ---*/
 .contenedor-maps {
     display: grid;
     /* Crea columnas automáticas de mínimo 320px */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    gap: clamp(30px, 5vw, 70px);
     width: 90%;
     max-width: 1300px;
+    padding-bottom: 60px;
+    
 }
 
 /*--- TARJETAS (CARDS) ---*/
@@ -105,7 +99,7 @@ body {
     background-color: white;
     border-radius: 25px;
     padding: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.178);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -119,7 +113,7 @@ body {
 
 .maps img {
     width: 100%;
-    height: 250px;
+    height: clamp(200px, 20vw, 250px);
     object-fit: cover;
     border-radius: 18px;
     margin-bottom: 20px;
@@ -170,35 +164,73 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/*--- RESPONSIVE ---*/
 
-@media (max-width: 1024px) {
-    .info-tienda {
-        flex-direction: column;
+/* ==========================
+        TABLET
+========================== */
+
+@media (max-width:1024px){
+
+    .info-tienda{
+
+        padding:120px 20px;
+
     }
-    .img-banner{
-        margin-bottom: 40px;
-    }
-    .img-banner img {
-        width: 80%;
-        height: 300px;
-        margin: 0 auto;
-    }
-    .texto-banner {
-        padding: 50px 20px;
-    }
+
 }
 
-@media (max-width: 768px) {
-    .Bloque {
-        padding-top: 40px;
+
+/* ==========================
+        MOVIL
+========================== */
+
+@media (max-width:768px){
+
+    .Bloque{
+
+        gap:40px;
+
     }
-    .contenedor-maps {
-        grid-template-columns: 1fr; /* Una sola columna en celulares */
-        width: 90%;
+
+    .info-tienda{
+
+        min-height:500px;
+
+        padding:100px 25px;
+
+        background-position:center;
+
     }
-    .img-banner img{
-        width: 100%;
-        height: 220px;
+
+    .contenedor-maps{
+
+        width:92%;
+
+        grid-template-columns:1fr;
+
     }
+
+}
+
+
+/* ==========================
+      MOVIL PEQUEÑO
+========================== */
+
+@media (max-width:480px){
+
+    .info-tienda{
+
+        min-height:450px;
+
+        padding:80px 20px;
+
+    }
+
+    .info-tienda h4{
+
+        font-size:55px;
+
+    }
+
 }

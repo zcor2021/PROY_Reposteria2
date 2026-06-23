@@ -6,9 +6,10 @@
     box-sizing: border-box;
 }
 html, body{
-    overflow-x: auto;
+    overflow-x: hidden;
     width: 100%;
 }
+/* Todas las imágenes se adaptan al tamaño del contenedor */
 img{
     max-width: 100%;
     display: block;
@@ -18,9 +19,11 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: rgb(214, 202, 195);
 
     min-width: 320px;
 }
+
 
 /*-------------------------------------*/
 /* CONTENEDOR DE TODA LA PÁGINA INICIO */
@@ -39,10 +42,12 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position:relative;
+    z-index:100;
 }
 
 /*--------------------*/
-/* TEXTO PORTADA */
+/* SECCION TEXTO PORTADA */
 /*--------------------*/
 
 .texto{
@@ -51,16 +56,17 @@ body{
     flex-direction: column;
     justify-content: center;
     background-image:
-    linear-gradient(rgba(158,126,126,0.185), rgba(44,43,43,0.288)),
+    linear-gradient(rgba(165, 145, 145, 0.233), rgba(83, 83, 83, 0.288)),
     url("../imagen/prin.png");
     background-size: cover;
     background-position: bottom;
     padding: 80px 5vw;
     text-align: left;
 }
+
 /* Título principal grande con animación de entrada */
 .texto h1{
-    font-size: clamp(45px, 7vw, 120px);
+    font-size: clamp(45px, 7vw, 90px);
     letter-spacing: 0.1em;
     font-family: "DM Serif Display", serif;
     color: rgb(224, 213, 203);
@@ -73,9 +79,10 @@ body{
 
     animation: entrarIzquierda 1s ease-out forwards;
 }
+
 /* Subtítulo con fuente cursiva y animación de brillo */
 .texto h3{
-    font-size: clamp(35px, 5vw, 85px);
+    font-size: clamp(35px, 5vw, 55px);
     letter-spacing: 0.05em;
     font-family: 'Petit Formal Script';
     color: #5a4113;
@@ -86,21 +93,23 @@ body{
 
     animation: entrarIzquierda 3s ease-in-out forwards;
 }
-/* Párrafo descriptivo debajo del título */
+
+/* Párrafo descriptivo debajo del título y subtitulo */
 .texto p{
     margin-top: 30px;
     max-width: 550px;
-    font-size: clamp(20px, 1.8vw, 35px);
+    font-size: clamp(20px, 1.8vw, 29px);
     line-height: 1.6;
     color: rgb(65,38,13);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    text-align: justify;
     animation: subirEntrada 1.2s ease-out forwards;
 }
 
 /*-------------------------------------*/
 /* ANIMACIONES DEL TEXTO DE LA PORTADA */
 /*-------------------------------------*/
+
 
 /* Animación de entrada desde abajo */
 @keyframes subirEntrada {
@@ -142,125 +151,253 @@ body{
 
 
 
-/*--------------------*/
-/* SECCIÓN FAVORITOS */
-/*--------------------*/
+/*COLOR GENERAL DE LAS SECCIONES PRINCIPALES*/
 
-.favoritos{
-    grid-row: row-favoritos/row-Frase;
-    grid-column: col-header/col-last;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background-color: rgb(218, 209, 204);
-
-    min-height: 75vh;
-    padding: 60px 60px;
+main, .categoriasFavoritas{
+    background-color: #ece6e6a8;
+    /*background-color: rgb(218,209,204);*/
 }
 
-/* Contenedor central del texto introductorio */
+
+/*-------------------------------------------------------*/
+/* SECCIÓN FAVORITOS: Productos mas consumidos o favoritos*/
+/*--------------------------------------------------------*/
+
+.favoritos {
+    width:90%;
+    margin:70px auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+   
+    
+}
+
+/* Contenedor del título principal del texto introductorio */
 .conte{
-    width: 80%;
-    text-align: center;
+    width:80%;
+    text-align:center;
+    margin-bottom:60px;
+
 }
 
 /* Título de la sección favoritos*/
 .conte h2{
-    border-radius: 30px;
-    padding: 10px;
-    margin-bottom: 30px;
-    background-color: rgba(51,29,6,0.185);
-    font-size: clamp(28px, 4vw, 60px);
-    font-family: 'Yeseva One';
-    color: rgb(78,74,74);
-    letter-spacing: 0.05em;
-}
-
-/* Párrafo descriptivo de la sección */
-.conte p{
-    font-size: clamp(16px, 1.5vw, 24px);
+    padding:10px;
+    margin:10px auto;
+    font-size:clamp(28px,4vw,50px);
+    font-family:'Yeseva One';
+    letter-spacing:.05em;
+    color:rgb(94, 58, 60);
+    
 }
 
 /* Grid para las columnas de las tarjetas de favoritos */
 .favGeneral{
-    margin-top: 70px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 40px;
-    width: 100%;
+    width:93%; /*ANCHURA DE LAS TARJETAS*/
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:60px 50px;
 }
 
 /* Tarjetas individuales de los postres de favoritos*/
 .fav{
-    text-align: center; /*nombres de los postres*/
-    transition: transform 0.3s;
+    position:relative;
+    width:100%;
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    padding-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.4s ease;
 }
 
 /* Efecto hover que eleva la tarjeta */
 .fav:hover{
     transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(90,50,40,.25);
+
 }
+
+/* titulo superior de la foto */
+
+.tituloPostre{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    padding:10px;
+    text-align:center;
+    background:rgba(255, 255, 255, 0.945);
+    backdrop-filter:blur(5px);
+    color:#5a3828;
+    font-size:21px;
+    font-weight:bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index:2;
+}
+
 
 /* Imagen de cada favorito con esquinas redondeadas */
 .fav img{
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 30px;
-    transition: transform 0.4s;
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    
+    transition: .5s ease;
 }
 
 /* Escala la imagen al pasar el cursor */
 .fav:hover img{
-    transform: scale(1.05);
-}
-/* Etiqueta del nombre del postre */
-.fav p{
-    margin-top: 15px;
-    background-color: #85757580;
-    padding: 15px;
-    border-radius: 20px;
-    font-size: clamp(14px,1.2vw,22px);
-    font-weight: 500;
-    transition: 0.3s;
+     transform:scale(1.06);
 }
 
-.fav:hover p{
-    background-color: #705f5f;
-    color: white;
+/* Bonton de compra */
+.botonFav{
+    display:block;
+    width:60%;
+    margin: 20px auto 0 ;
+    padding:12px;
+    text-align:center;
+    background:#8d324d;
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s ease;
 }
 
+.botonFav:hover{
+    background:#6f2339;
+     transform:scale(1.05);
+}
+
+/*------------------------------------*/
+/* CATEGORIAS INFERIORES DE FAVORITOS*/
+/*------------------------------------*/
+
+
+.categoriasFavoritas{
+    width:84%;
+    margin:80px auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:50px;
+
+}
+
+/* Tarjetas*/
+
+.tarjetaCategoria{
+    height:280px;
+    border-radius:25px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    background-size:cover;
+    background-position: center;
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.192);
+    transition:.5s ease;
+
+}
+
+.tarjetaCategoria:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+}
+
+
+/* capa oscura para leer texto */
+.tarjetaCategoria::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(255,255,255,0), rgba(255,255,255,.35));
+}
+
+
+
+/* IMAGENES DE FONDO */
+.panes{background-image:url("../imagen/panes1.png");}
+.frappe{background-image:url("../imagen/hel.png");}
+.chocoteja{background-image:url("../imagen/choco.png");}
+.caliente{background-image:url("../imagen/cafe.png");}
+
+
+
+/* CONTENIDO de la tarjetas */
+.contenidoCategoria{
+    position:relative;
+    z-index:2;
+    width:31%;
+    margin-right: 20px;
+    color:rgb(0, 0, 0);
+}
+
+.contenidoCategoria h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.contenidoCategoria p{
+    font-size:18px;
+    line-height:1.5;
+    margin-bottom:20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+
+/* Boton que conecta con # de categorias */
+
+.contenidoCategoria a{
+    display:inline-block;
+    padding:10px 35px;
+    background:#8d324d;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+    transition:.6s ease;
+}
+
+
+.contenidoCategoria a:hover{
+    background:#6f2339;
+     transform:scale(1.05);
+
+}
 
 
 
 /*--------------------*/
-/* FRASE */
+/* SECCION DE FRASE */
 /*--------------------*/
 
 /* Fondo con imagen y capa oscura encima */
 .Frase{
     grid-row: row-Frase/row-productos;
     grid-column: col-header/col-last;
-
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-
     min-height: 60vh;
     width: 100%;
-
-    background-image:linear-gradient(rgba(25, 18, 14, 0.70),rgba(25, 18, 14, 0.70)),url(https://www.alafermedulys.fr/wp-content/uploads/2024/03/1710720257_chocolat-en-patisserie-techniques-de-fonte-et-temperage.jpg);
+    background-image:linear-gradient(rgba(25, 18, 14, 0.87),rgba(25, 18, 14, 0.884)),
+    url(https://static.vecteezy.com/system/resources/thumbnails/028/642/324/small_2x/small-cakes-on-display-at-the-patisserie-counter-photo.jpg);
     background-size: cover;
     background-position: center;
-
     overflow: hidden;
     box-sizing: border-box;
     padding-right: 90px;
-    gap: 60px;
+    gap: 80px;
 }
+
 /* Contenedor de la imagen izquierda */
 .frase-img {
     width: 38%;
@@ -273,7 +410,7 @@ body{
     min-height: 550px;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
+    transition: .5s ease;
 }
 
 /* Efecto zoom al pasar el cursor sobre la imagen */
@@ -294,11 +431,11 @@ body{
 .frase-texto span {
     color: #d8a14f;
     letter-spacing: 4px;
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
-/* Título grande con fuente serif */
+/* Título grande-principal con fuente serif */
 .Frase h2{
     color: white;
     font-family: 'Playfair Display', serif;
@@ -311,14 +448,14 @@ body{
 /* Palabra resaltada en dorado con cursiva */
 .frase-texto strong {
     color: #d8a14f;
-    font-style: italic;
+    
 }
 
 /* Párrafo descriptivo con interlineado amplio */
 .frase-texto p {
     font-size: 21px;
     line-height: 1.8;
-    color: rgba(255,255,255,.85);
+    color: rgba(255, 255, 255, 0.938);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -337,7 +474,7 @@ body{
     align-items: center;
     gap: 18px;
     color: white;
-    transition: transform 0.3s ease;
+    transition: 0.3s ease;
 }
 
 /* Eleva el ítem al pasar el cursor */
@@ -361,218 +498,330 @@ body{
 }
 
 
-/*--------------------*/
-/* PRODUCTOS */
-/*--------------------*/
+/*------------------------*/
+/* PRODUCTOS DEL CARRUSEL*/
+/*------------------------*/
+
 
 /* Fondo crema para la sección de productos */
 .productos{
-    grid-row: row-productos/row-Parte-inferior;
-    grid-column: col-header/col-last;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-
-    min-height: 100vh;
-
-    background-color: rgb(218,209,204);
-
+    min-height: 60vh;
+    background-color: rgb(214, 202, 195);
     padding: 80px 60px;
 }
 
-/* Columna izquierda con el texto explicativo */
+/*Parte superior*/
 .Contenido{
-    width: 21%;
+    margin:0 auto 45px auto;
+    text-align:center;
+
 }
 
-/*titulo para la sección de seleccion de la casa*/
+
 .Contenido h2{
-    border: 3px dashed;
-    padding: 19px;
-    margin-bottom: 50px;
-    text-align: center;
-    background-color: rgba(100,115,128,0.329);
-    font-family: 'Yeseva One';
-    color: rgb(58,57,56);
-    font-size: clamp(24px,2vw,40px);
-    letter-spacing: 0.05em;
+    font-family:'Yeseva One';
+    letter-spacing:.05em;
+    font-size:45px;
+    color:#6b3e26;
+    margin-bottom:20px;
+    position:relative;
+    text-transform: uppercase;
+    
 }
 
-/* Párrafo descriptivo de la selección */
+/* pequeño detalle elegante */
+.Contenido h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:6px;
+    background:#9b5366;
+    margin:15px auto 0;
+    border-radius:10px;
+}
+
 .Contenido p{
-    margin-bottom: 50px;
-    text-align: justify;
-    font-size: clamp(16px,1.2vw,21px);
+    max-width:45%;
+    margin:15px auto;
+    color:#4a3328;
+    font-size:20px;
+    line-height:1.8;
+    text-align:justify;
+
 }
 
-/*grid de 4 columnas para las imagenes*/
+/*Parte del carrusel*/
+.carrusel{
+    width:85%;
+    margin:40px auto;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.contenedor-imagenes{
+    width:100%;
+    overflow:hidden;
+}
 .imagenes{
-    width: 75%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 50px;
+    display:flex;
+    gap:25px;
+    transition:.5s ease;
 }
-
 .cajaaa{
-    transition: transform 0.3s ease;
+    flex:0 0 calc((100% - 75px) / 4);
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    text-decoration:none;
+    color:inherit;
+    display:block;
+    cursor:pointer;
+    transition:.4s ease;
 }
 
 .cajaaa:hover{
-    transform: translateY(-10px);
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(90,50,40,.25);
 }
 
 .cajaaa img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 30px;
-    transition: transform 0.4s ease;
+    width:100%;
+    height:290px;
+    object-fit:cover;
+    transition:.5s ease;
 }
-
 .cajaaa:hover img{
-    transform: scale(1.05);
+    transform:scale(1.08);
 }
 
 .cajaaa p{
-    margin-top: 12px;
-    text-align: center;
-    font-size: clamp(14px,1vw,18px);
-    font-weight: 500;
+    text-align:center;
+    padding:15px;
+    font-size:20px;
+    color:#6b3e26;
+    font-weight:bold;
+    transition:.3s ease;
 }
+.cajaaa:hover p{
+    color:#8d324d;
+
+}
+
+/*botones-flechas para mover el carrusel*/
+.flecha{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#8d324d;
+    color:white;
+    cursor:pointer;
+    font-size:20px;
+    flex-shrink:0;
+    transition:.3s ease;
+}
+
+.flecha:hover{
+    background:#6f2339;
+    transform:scale(1.1);
+}
+
 
 /*--------------------*/
 /* RESPONSIVE */
 /*--------------------*/
 
+/*TABLETS GRANDES*/
+
+
 @media(max-width:992px){
 
+    /* Ajuste de productos */
     .productos{
-        flex-direction: column;
+        padding:60px 40px;
     }
 
-    .Contenido, .imagenes{
-        width: 100%;
+    /* Texto superior de productos */
+    .Contenido p{
+        max-width:80%;
     }
 
-    .imagenes{
-        grid-template-columns: repeat(2,1fr);
+    /* Carrusel */
+    .cajaaa{
+         flex:0 0 calc((100% - 25px)/2);
     }
 
+    /* Sección frase cambia a columna */
     .Frase{
-        flex-direction: column;
-        padding-right: 0;
-        gap: 30px;
+        flex-direction:column;
+        padding-right:0;
+        gap:30px;
     }
 
-    .frase-img, .frase-texto, .frase-info{
-        width: 100%;
+    .frase-img,
+    .frase-texto,
+    .frase-info{
+        width:100%;
     }
 
     .frase-img img{
-        min-height: 350px;
+        min-height:350px;
     }
 
     .frase-texto{
-        padding: 0 30px;
-        text-align: center;
-        align-items: center;
+        padding:0 30px;
+        text-align:center;
+        align-items:center;
     }
 
     .frase-info{
-        padding: 0 30px 40px;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        padding:0 30px 40px;
+        flex-direction:row;
+        justify-content:space-around;
+        flex-wrap:wrap;
     }
 
     .info-item{
-        width: 250px;
+        width:250px;
     }
 
+    /* Favoritos */
+    .favGeneral{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    /* Categorías */
+    .categoriasFavoritas{
+        width:90%;
+    }
 }
 
+/*TABLETS PEQUEÑAS*/
 @media(max-width:768px){
+
+    /* Portada */
     .texto{
-        background-position: center;
+        padding:60px 30px;
+        text-align:center;
+        align-items:center;
+        background-position:center;
     }
-    .texto{
-        text-align: center;
-        align-items: center;
-        background-color: rgba(0,0,0,0.25);
-    }
+
     .texto h3{
-        color: #fce2b6;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        color:#fce2b6;
+        text-shadow:2px 2px 8px rgba(0,0,0,.6);
     }
 
     .texto p{
-        color: white;
-        max-width: 90%;
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.6);
-        font-weight: 500;
+        color:white;
+        max-width:90%;
+        text-align:center;
+        text-shadow:1px 1px 4px rgba(0,0,0,.9);
     }
 
+    /* Favoritos */
     .favGeneral{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
+        width:100%;
     }
 
+    /* Categorías */
+    .categoriasFavoritas{
+        grid-template-columns:1fr;
+        width:90%;
+    }
+
+    .contenidoCategoria{
+        width:45%;
+    }
+
+    /* Productos */
+    .Contenido p{
+        max-width:90%;
+    }
+
+    .carrusel{
+        width:95%;
+    }
 }
+
+
+/*TELÉFONOS MÓVILES*/
 
 @media(max-width:480px){
 
+    /* Portada */
     .texto{
-        padding: 60px 20px;
+        padding:40px 20px;
     }
 
-    .favoritos, .productos{
-        padding: 60px 20px;
+    .texto h1{
+        letter-spacing:.05em;
     }
 
-    .favGeneral, .imagenes{
-        grid-template-columns: 1fr;
+    /* Favoritos */
+
+    .favoritos{
+        width:95%;
+    
     }
 
+    .favGeneral{
+        grid-template-columns:1fr;
+
+    }
     .fav img{
-        height: 300px;
+        height:300px;
     }
 
-}
-@media(max-width: 900px){
 
+    /* Categorías */
+    .tarjetaCategoria{
+        height:300px;
+    }
+
+    .contenidoCategoria{
+        width:70%;
+        margin-right:15px;
+    }
+
+    .contenidoCategoria h3{
+        font-size:23px;
+    }
+
+    .contenidoCategoria p{
+        font-size:15px;
+    }
+
+    /* Productos */
     .productos{
-        flex-direction: column;
+        padding:50px 20px;
+
     }
 
-    .Contenido{
-        width: 100%;
+    .Contenido h2{
+        font-size:32px;
     }
 
-    .imagenes{
-        width: 100%;
-        grid-template-columns: repeat(2,1fr);
+    .Contenido p{
+        font-size:17px;
+        text-align:center;
     }
 
-    .favGeneral{
-        grid-template-columns: repeat(2,1fr);
+    /* Carrusel en móvil */
+    .carrusel{
+        width:100%;
+        gap:10px;
     }
 
-}
-
-@media(max-width: 600px){
-
-    .imagenes{
-        grid-template-columns: 1fr;
+    .cajaaa{
+        flex:0 0 100%;
     }
 
-    .favGeneral{
-        grid-template-columns: 1fr;
-    }
-
-    .texto{
-        padding: 40px 20px;
-        text-align: center;
-        align-items: center;
+    .flecha{
+        width:40px;
+        height:40px;
+        font-size:16px;
     }
 }

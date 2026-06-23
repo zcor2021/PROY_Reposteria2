@@ -1,5 +1,9 @@
 /*--- BASES DE ESTILOS.CSS FUSIONADAS ---*/
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -8,7 +12,18 @@ body {
     background-attachment: fixed;
 }
 
-.contenedor-opciones { padding: 160px 5% 80px; }
+.contenedor-opciones h1{
+    background-color: #c4a98a7e;
+    padding: 20px 30px;
+    width: 100%;
+    margin-bottom: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.contenedor-opciones { 
+    padding: 30px 5% 50px; 
+}
 
 /*--- TABLA DE PRODUCTOS ---*/
 .tabla-postres {
@@ -21,23 +36,51 @@ body {
     overflow: hidden;
 }
 
-.tabla-postres tr { border-bottom: 2px solid #ddd; }
-.tabla-postres td { padding: 40px 25px; vertical-align: middle; }
+.tabla-postres tr { 
+    border-bottom: 2px solid #ddd; 
+}
+.tabla-postres td { 
+    padding: 40px 25px; 
+    vertical-align: middle; 
+}
 
 .img-postre img {
-    width: 200px;
+    width: 300px;
     height: 200px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.desc-postre { width: 50%; padding: 0 40px; }
-.desc-postre h3 { font-size: 24px; color: #332111; margin-bottom: 15px; font-family: 'DM Serif Display', serif; }
-.desc-postre p { color: #555; line-height: 1.6; text-align: justify; }
+.desc-postre { 
+    width: 49%; 
+    padding: 0 20px;
+ }
 
-.precio-postre { text-align: center; }
-.precio { font-size: 32px; font-weight: bold; color: #9c4f5c; margin-bottom: 20px; font-family: 'DM Serif Display', serif; }
+
+.desc-postre h3 { 
+    font-size: 25px; 
+    color: #332111;
+    margin-bottom: 15px; 
+    font-family:'Times New Roman', Times, serif; 
+    
+}
+
+
+.desc-postre p { 
+    color: #555; 
+    line-height: 1.6; 
+    text-align: justify; }
+
+.precio-postre { 
+    text-align: center; 
+}
+
+.precio { 
+    font-size: 28px; 
+    font-weight: bold; color: #9c4f5c; 
+    margin-bottom: 20px; 
+    font-family: 'DM Serif Display', serif; }
 
 .btn-seleccionar {
     display: inline-block;

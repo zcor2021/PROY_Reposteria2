@@ -50,7 +50,7 @@ footer{
 /* ENLACES */
 /*--------------------*/
 .footer-contenido a{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Poppins';
     text-decoration: none;
     color: white;
     font-size: clamp(15px, 0.9vw, 18px);

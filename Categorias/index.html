@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="../css/categorias.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=DM+Serif+Display&family=Petit+Formal+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">   
+
+
 </head>
 
+    <script src="../Categorias/javascript.js"></script>
 <body>
     <header class="headerPrincipal">
         <div class="barra" id="barra1">
@@ -48,212 +52,511 @@
         </div>
     </header>
 
-    <main class="main-categorias">
-        <!-- BANNER HERO -->
-        <section class="categorias-hero">
-            <div class="hero-content">
-                <span class="sub-hero">HECHOS CON AMOR ♡</span>
-                <h1>POSTRES QUE <br> <span class="enamoran">ENAMORAN</span></h1>
-                <p>Descubre nuestras creaciones artesanales elaboradas con ingredientes de calidad y un toque de magia. Explora sabores únicos diseñados para convertir cualquier momento en una experiencia inolvidable.</p>
-                <a href="../Opciones/index.html" class="btn-hero">EXPLORAR TODOS LOS POSTRES <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </section>
+     <!-- PORTADA -->
+    <section class="portadaCategorias">
 
-        <div class="layout-categorias">
-            <!-- SIDEBAR -->
-            <aside class="sidebar">
-                <ul class="nav-links">
-                    <li><a href="#Inicio">Detalle</a></li>
-                    <li><a href="#Tortas">Tortas</a></li>
-                    <li><a href="#Cheesecakes">Cheesecakes</a></li>
-                    <li><a href="#PostresClasicos">Postres Clásicos</a></li>
-                    <li><a href="#TartasPies">Tartas y pies</a></li>
-                    <li><a href="#Cupcakes">Cupcakes</a></li>
-                    <li><a href="#Galletas">Galletas</a></li>
-                    <li><a href="#Chocolates">Chocolates</a></li>
-                </ul>
-            </aside>
+        <div class="textoPortada">
 
-            <div class="main-content">
+            <span class="frasePortada">HECHOS CON AMOR ♡</span>
+            <h1>POSTRES QUE <span> ENAMORAN</span></h1>
+
+            <p>Descubre nuestras creaciones artesanales elaboradas con ingredientes de calidad y un toque de magia.</p>
+
+            <a href="#" class="botonPortada">VER POSTRES</a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Filtros -->
+
+    <div class="filtrosProductos">
+
+        <div class="filtro">
+            <label>Ordenar por:</label>
+
+            <select id="ordenarProductos">
+                <option value="default">Por defecto</option>
+                <option value="menor">Precio menor a mayor</option>
+                <option value="mayor">Precio mayor a menor</option>
+                <option value="popular">Más populares</option>
+            </select>
+
+        </div>
+
+
+        <div class="filtro">
+
+            <label>Vista:</label>
+            <select id="cambiarVista">
+                <option value="grid">Cuadrícula</option>
+                <option value="lista">Lista detallada</option>
+            </select>
+
+        </div>
+
+</div>
+
+
+
+    <div class="contenedorCategorias">
+
+        <aside class="menuLateral">
+
+            <ul>
+
+                <li><a href="#Inicio">Detalle</a></li>
+                <li><a href="#Tortas">Tortas</a></li>
+                <li><a href="#Cheesecakes">Cheesecakes</a></li>
+                <li><a href="#PostresClasicos">Clásicos</a></li>
+                <li><a href="#TartasPies">Tartas</a></li>
+                <li><a href="#Cupcakes">Cupcakes</a></li>
+                <li><a href="#Galletas">Galletas</a></li>
+                <li><a href="#Chocolates">Chocolates</a></li>
+                <li><a href="#Macarons">Macarons</a></li>
+                <li><a href="#Frappés">Frappés</a></li>
+                <li><a href="#Croissants">Croissants</a></li>
+                
+
+            </ul>
+
+        </aside>
+
+            <div class="zonaProductos">
                 
                 <!-- SECCIÓN DETALLE (BIENVENIDA) -->
-                <section id="Inicio" class="seccion-target">
-                    <div class="card-bienvenida">
-                        <div class="img-container">
-                            <img src="https://peruretail.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/Postres.png" alt="Postres">
+                <section id="Inicio" class="seccion bienvenida">
+                        
+                    <div class="contenido-detalle">
+                        <h3 class="fraseP">Deliciosos♡</h3>
+                        <h1>Pasteles</h1>
+
+                        <p>Bienvenido a Sweet Alchemist, el lugar donde cada pastel cuenta una historia y cada bocado es pura magia.
+                        
+                        <p>Explora nuestras creaciones artesanales hechas con ingredientes seleccionados y mucho amor.</p>
+                       
+                    </div>
+
+
+                <div class="info-extra">
+
+                    <div class="envio">
+                        <div class="icono-envio"> 
+                            <i class="fa-solid fa-truck-fast"></i>
                         </div>
-                        <div class="text-container">
-                            <p>Bienvenido a nuestra selección de categorías, donde cada opción representa una experiencia diferente. Cada una de nuestras categorías ha sido creada pensando en ofrecerte variedad, calidad y una experiencia deliciosa.</p>
-                            <p>Descubre un mundo lleno de sabores únicos y dulces momentos en nuestra pastelería. Cada una de nuestras categorías ha sido creada pensando en ofrecerte variedad, calidad y una experiencia deliciosa.</p>
-                            <p>Desde opciones clásicas hasta creaciones más innovadoras, encontrarás el postre perfecto para cualquier ocasión. Explora cada sección y déjate sorprender por nuestras propuestas. Selecciona una categoría del menú y comienza a disfrutar de nuestras especialidades preparadas con dedicación y los mejores ingredientes.</p>
+                        <div class="texto-envio">
+                            <h4>Entregas especiales</h4>
+                            <p>Preparamos cada pedido con cuidado para que llegue perfecto a tus momentos especiales.</p>
                         </div>
                     </div>
+
+                </div>
+
                 </section>
 
+
+
                 <!-- TORTAS -->
-                <section id="Tortas" class="seccion-target">
-                    <h2 class="titulo-banner-cat">Tortas</h2>
-                    <div class="grid-productos">
-                        <article class="producto-card">
-                            <img src="https://www.cocinadelirante.com/sites/default/files/images/2020/03/como-hacer-pastel-de-chocolate-con-cerveza-y-betun.jpg" alt="">
-                            <div class="info"><h3>Chocolate con ganache</h3><p class="precio">S/. 35,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                <section id="Tortas" class="seccion">
+                        <h2 class="tituloCategoria">Tortas Artesanales</h2>
+
+                        <div class="listaProductos">
+
+                        <article class="tarjetaProducto">
+                            <img src="https://recipeshorizon.com/wp-content/uploads/2025/07/chocolate-walnut-cake-2025-07-17-203002.webp" alt="">
+                            <div class="info"><h3>Chocolate con ganache</h3><p class="descripcionProducto">Torta húmeda de chocolate cubierta con ganache artesanal y decoración especial.</p><p class="precio">S/. 35,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
-                            <img src="https://capriccioperu.com/wp-content/uploads/2020/04/Delicia_Lucuma_1.jpg" alt="">
+                        <article class="tarjetaProducto">
+                            <img src="https://mozart.cl/wp-content/uploads/2025/05/82_MIF_2399_Torta_de_Lucuma_Sin_Azucar_Anadida_1080x1080.jpg" alt="">
                             <div class="info"><h3>Torta de Lúcuma</h3><p class="precio">S/. 29,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
-                            <img src="https://wapa.cronosmedia.glr.pe/original/2022/03/03/6220d9d62b61d2649f3d57d7.jpg" alt="">
+                        <article class="tarjetaProducto">
+                            <img src="https://satisfyyourcravings.com/wp-content/uploads/2024/04/8-2-780x782.png" alt="">
                             <div class="info"><h3>Torta Tres Leches</h3><p class="precio">S/. 36,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
+                        <article class="tarjetaProducto">
                             <img src="https://cheznadine.es/wp-content/uploads/2023/06/Chez-Nadine-5-scaled.jpg" alt="">
                             <div class="info"><h3>Torta Zanahoria</h3><p class="precio">S/. 32,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://media.diariouno.com.ar/p/377ea9a617710ad9f3626ced3ebd1f5b/adjuntos/298/imagenes/009/418/0009418285/1200x0/smart/receta-red-velvetjpg.jpg" alt="">
+                            <div class="info"><h3>Torta Red Velvet</h3><p class="precio">S/. 35,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                           <img src="https://images.aws.nestle.recipes/resized/2024_10_28T11_45_43_badun_images.badun.es_10ea646191ce_tarta_de_limon_con_leche_condensada_8ab6_1290_742.jpg" alt="">
+                            <div class="info"><h3>Delicia de Limón</h3><p class="precio">S/. 43,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                           <img src="https://i0.wp.com/skandibaking.com/wp-content/uploads/2022/01/DSC_0250.jpg?resize=1536%2C1232&ssl=1" alt="">
+                            <div class="info"><h3>Galleta con chocolate</h3><p class="precio">S/. 30,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
                     </div>
+
                 </section>
 
                 <!-- CHEESECAKES -->
-                <section id="Cheesecakes" class="seccion-target">
-                    <h2 class="titulo-banner-cat">Cheesecakes</h2>
-                    <div class="grid-productos">
-                        <article class="producto-card">
+                <section id="Cheesecakes" class="seccion">
+                    <h2 class="tituloCategoria">Cheesecakes</h2>
+                    <div class="listaProductos">
+                        <article class="tarjetaProducto">
                             <img src="https://www.vekia.com.pe/cdn/shop/files/cheesecakefresas_3751x.jpg?v=1704914243" alt="">
                             <div class="info"><h3>Cheesecake de Fresa</h3><p class="precio">S/. 75,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
+                        <article class="tarjetaProducto">
                             <img src="https://statics.guiadecocinafacil.com/2025/06/crop/685d552c8f86d__1050x560.webp" alt="">
                             <div class="info"><h3>Cheesecake Nutella</h3><p class="precio">S/. 118,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
+                        <article class="tarjetaProducto">
                             <img src="https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/997faf56321975c360c0a50d5b77448c.jpg" alt="">
                             <div class="info"><h3>Cheesecake Maracuyá</h3><p class="precio">S/. 83,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
+                        <article class="tarjetaProducto">
                             <img src="https://easypeasyrecipe.com/wp-content/uploads/2024/08/could-this-no-bake-lemon-cheesecake-be-your-new-favorite-dessert.png" alt="">
                             <div class="info"><h3>Cheesecake Limón</h3><p class="precio">S/. 52,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        
+                        <article class="tarjetaProducto">
+                            <img src="https://www.abc.com.py/resizer/v2/OKRMBNC3DFDVRLMGVINNF4IWJU.jpg?auth=191cd52eb2cab8b49bde6d380dcc7f164cf6a600204e8beb58e0c33c9e654b70" alt="">
+                            <div class="info"><h3>Cheesecake de Oreo</h3><p class="precio">S/. 72,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://mundocheesecake.com/wp-content/uploads/2023/12/cheesecakehorno-1024x576.png" alt="">
+                            <div class="info"><h3>Cheesecake de Frutos Rojos</h3><p class="precio">S/. 55,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://savoringmoments.com/wp-content/uploads/2025/05/0_2_640_N-102.webp" alt="">
+                            <div class="info"><h3>Cheesecake de Mango</h3><p class="precio">S/. 58,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                         <article class="tarjetaProducto">
+                            <img src="https://www.foodandwine.com/thmb/0CxpIUiE-nidWekgOUdh2EIaUuQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fwcooks-dulce-de-leche-cheesecake-ft-_recipe2019_244-2936cf1005b940b391b0ef11109ac63e.jpg" alt="">
+                            <div class="info"><h3>Cheesecake de dulce de leche</h3><p class="precio">S/. 57,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
                     </div>
                 </section>
 
                 <!-- POSTRES CLÁSICOS -->
-                <section id="PostresClasicos" class="seccion-target">
-                    <h2 class="titulo-banner-cat">Postres Clásicos</h2>
-                    <div class="grid-productos">
-                        <article class="producto-card">
+                <section id="PostresClasicos" class="seccion">
+                    <h2 class="tituloCategoria">Postres Clásicos</h2>
+                    <div class="listaProductos">
+                        <article class="tarjetaProducto">
                             <img src="https://cdn.blog.paulinacocina.net/wp-content/uploads/2020/01/receta-de-tiramisu-facil-y-economico-1740483918.jpg" alt="">
                             <div class="info"><h3>Tiramisú Clásico</h3><p class="precio">S/. 35,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
-                            <img src="https://bonpanperu.com/wp-content/uploads/2023/10/Crema-volteada.jpg" alt="">
+                        <article class="tarjetaProducto">
+                            <img src="https://es.cravingsjournal.com/wp-content/uploads/2019/04/crema-volteada-2.jpg" alt="">
                             <div class="info"><h3>Crema Volteada</h3><p class="precio">S/. 23,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
+                        <article class="tarjetaProducto">
                             <img src="https://www.iperu.org/wp-content/uploads/2018/07/suspiro-de-limena.jpg" alt="">
                             <div class="info"><h3>Suspiro Limeña</h3><p class="precio">S/. 36,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
-                            <img src="https://static.wikia.nocookie.net/doughnuts/images/0/03/Picarones.png" alt="">
-                            <div class="info"><h3>Picarones</h3><p class="precio">S/. 15,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        <article class="tarjetaProducto">
+                             <img src="https://recetinas.com/wp-content/uploads/2023/07/mousse-de-maracuya.jpg" alt="">
+                            <div class="info"><h3>Mousse de maracuyá</h3><p class="precio">S/. 50,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+
+                        <article class="tarjetaProducto">
+                            <img src="https://images.aws.nestle.recipes/original/2024_10_18T11_53_16_badun_images.badun.es_4ed41e942636_mousse_de_chocolate_intenso_3e96.jpg" alt="">
+                            <div class="info"><h3>Mousse de Chocolate</h3><p class="precio">S/. 69,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+            
+                        <article class="tarjetaProducto">
+                            <img src="https://www.maricruzavalos.com/wp-content/uploads/2020/09/arroz-con-leche-recipe.jpg" alt="">
+                            <div class="info"><h3>Arroz con Leche</h3><p class="precio">S/. 19,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
                     </div>
                 </section>
 
                 <!-- TARTAS Y PIES -->
-                <section id="TartasPies" class="seccion-target">
-                    <h2 class="titulo-banner-cat">Tartas y Pies</h2>
-                    <div class="grid-productos">
-                        <article class="producto-card">
+                <section id="TartasPies" class="seccion">
+                    <h2 class="tituloCategoria">Tartas y Pies</h2>
+                    <div class="listaProductos">
+                        <article class="tarjetaProducto">
                             <img src="https://www.recetasnestle.cl/sites/default/files/srh_recipes/49d627e69672b6915c22f2eb2dfd1b93.jpg" alt="">
                             <div class="info"><h3>Pie de Limón</h3><p class="precio">S/. 72,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
-                            <img src="https://perudelights.com/wp-content/uploads/2012/08/P10198201.jpg" alt="">
+                        <article class="tarjetaProducto">
+                            <img src="https://static.vecteezy.com/system/resources/previews/039/074/193/large_2x/ai-generated-a-homemade-apple-pie-golden-brown-crust-filled-with-cinnamon-spiced-apples-a-symbol-of-american-comfort-free-photo.jpeg" alt="">
                             <div class="info"><h3>Pie de Manzana</h3><p class="precio">S/. 35,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://img.freepik.com/premium-photo/tray-fruit-tarts-marble-table_984355-916.jpg" alt="">
+                            <div class="info"><h3>Tartaleta de frutas</h3><p class="precio">S/. 58,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://insanelygoodrecipes.com/wp-content/uploads/2022/03/Homemade-McCormick-Pumpkin-Pie-with-Whipped-Cream-and-Pumpkin-Pie-Spice-768x1152.jpg" alt="">
+                            <div class="info"><h3>Pie de calabaza</h3><p class="precio">S/. 37,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+
+                        <article class="tarjetaProducto">
+                             <img src="https://img.freepik.com/premium-photo/blueberry-pie-food-table-generate-ai_98396-74846.jpg" alt="">
+                            <div class="info"><h3>Pie de Arándanos</h3><p class="precio">S/. 45,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://img.freepik.com/premium-photo/mouthwatering-homemade-pie-placed-sturdy-metal-rack-primed-waiting-be-savored-latticetopped-cherry-pie-fresh-from-oven-ai-generated_538213-10553.jpg" alt="">
+                            <div class="info"><h3>Pie de Frambuesa</h3><p class="precio">S/. 55,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+
+
                     </div>
                 </section>
 
                 <!-- CUPCAKES -->
-                <section id="Cupcakes" class="seccion-target">
-                    <h2 class="titulo-banner-cat">Cupcakes</h2>
-                    <div class="grid-productos">
-                        <article class="producto-card">
+                <section id="Cupcakes" class="seccion">
+                    <h2 class="tituloCategoria">Cupcakes</h2>
+                    <div class="listaProductos">
+                        <article class="tarjetaProducto">
                             <img src="https://cdn7.kiwilimon.com/recetaimagen/21434/960x640/11491.jpg.jpg" alt="">
                             <div class="info"><h3>Cupcake Chocolate</h3><p class="precio">S/. 12,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
+                        <article class="tarjetaProducto">
                             <img src="https://www.allrecipes.com/thmb/W5Ou0-fSTAHi5vM9FdJkplRzgNQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/212429-red-velvet-cupcakes-ddmfs-0178-3x4-hero-e5cd9e2684dd4d90b40d9aa0d42e3ee2.jpg" alt="">
                             <div class="info"><h3>Red Velvet</h3><p class="precio">S/. 14,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW6K47vsYeu3loAAYI1-OVyrLIoz0nhXe3mQ&s" alt="">
+                            <div class="info"><h3>Cupcake de Vainilla</h3><p class="precio">S/. 10,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                             <img src="https://media.airedesantafe.com.ar/p/b2b150d2c57a8f358277d8ebffdef2ac/adjuntos/268/imagenes/003/839/0003839944/1200x0/smart/muffins-oreo-la-receta-facil-y-pocos-ingredientes-sorprender-los-mas-chicos.png" alt="">
+                            <div class="info"><h3>Muffin de Oreo</h3><p class="precio">S/. 10,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://www.polinenlacocina.cl/wp-content/uploads/2009/11/IMG_5208.jpg" alt="">
+                            <div class="info"><h3>Muffin de Rellenos con manjar</h3><p class="precio">S/. 10,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://i.pinimg.com/originals/bd/65/cf/bd65cf168dddff4d8948b96492ab0e31.jpg" alt="">
+                            <div class="info"><h3>Muffin de chocolate </h3><p class="precio">S/. 18,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+
+
                     </div>
                 </section>
 
                 <!-- GALLETAS -->
-                <section id="Galletas" class="seccion-target">
-                    <h2 class="titulo-banner-cat">Galletas</h2>
-                    <div class="grid-productos">
-                        <article class="producto-card">
+                <section id="Galletas" class="seccion">
+                    <h2 class="tituloCategoria">Galletas</h2>
+                    <div class="listaProductos">
+                        <article class="tarjetaProducto">
                             <img src="https://limagallery.com/wp-content/uploads/2020/03/galletas-1100x733.jpg" alt="">
-                            <div class="info"><h3>Choco Chips</h3><p class="precio">S/. 16,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                            <div class="info"><h3>Galletas Choco Chips</h3><p class="precio">S/. 16,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
+                        <article class="tarjetaProducto">
                             <img src="https://hispanaglobal.com/wp-content/uploads/2022/03/Dulce-De-Leche-cookies-9-scaled.jpg" alt="">
                             <div class="info"><h3>Alfajores Manjar</h3><p class="precio">S/. 10,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://harinas.monisa.com/wp-content/uploads/2024/03/0012_Galleta-red-velvet.jpg" alt="">
+                            <div class="info"><h3>Galletas Red Velvet</h3><p class="precio">S/. 22,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://i.pinimg.com/originals/79/65/fa/7965fa54f20aa2e007c40d6ebbf73e11.jpg" alt="">
+                            <div class="info"><h3>Alfajores de Chocolate</h3><p class="precio">S/. 13,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.GperXQq9P_7rwZ2pj8UbMwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                            <div class="info"><h3>Alfajores de pistacho</h3><p class="precio">S/. 16,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://www.recetasnestle.cl/sites/default/files/srh_recipes/e2c855cf0b83b440a0b878e8adaa3a9d.jpg" alt="">
+                            <div class="info"><h3>Galletas de avena y miel</h3><p class="precio">S/. 15,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://i.blogs.es/576dcf/galletas-de-chocolate/840_560.jpg" alt="">
+                            <div class="info"><h3>Galletas de Chocolate</h3><p class="precio">S/. 15,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
                     </div>
                 </section>
 
                 <!-- CHOCOLATES -->
-                <section id="Chocolates" class="seccion-target">
-                    <h2 class="titulo-banner-cat">Chocolates</h2>
-                    <div class="grid-productos">
-                        <article class="producto-card">
+                <section id="Chocolates" class="seccion">
+                    <h2 class="tituloCategoria">Chocolates</h2>
+                    <div class="listaProductos">
+                        <article class="tarjetaProducto">
                             <img src="https://www.infobae.com/resizer/v2/MKFFGTOPSZDNNMDXGM7A4R777A.png?auth=3cb1536bf38f6351f4a5dd7574c49080daa3b5cca3ba2b0d6c2a88dfde1621ec" alt="">
                             <div class="info"><h3>Trufa Chocolate</h3><p class="precio">S/. 22,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
-                        <article class="producto-card">
+                        <article class="tarjetaProducto">
                             <img src="https://thumb.viva.id/vivapurwasuka/665x374/2025/03/20/67db1b3e5a2cb-chocolate-lava-cake_purwasuka.jpg" alt="">
                             <div class="info"><h3>Volcán Chocolate</h3><p class="precio">S/. 32,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
                         </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://dulcealeli.com.co/wp-content/uploads/2023/08/Guia-paso-a-paso-para-hacer-Bombones-de-chocolates-rellenos-irresistibles.webp" alt="">
+                            <div class="info"><h3>Bombones rellenos</h3><p class="precio">S/. 18,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/74C6868E-720D-433B-972B-596860320AC4/Derivates/B0002D65-189C-4436-9744-E3B563F96C36.jpg" alt="">
+                            <div class="info"><h3>Brownnie con fudge</h3><p class="precio">S/. 18,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                             <img src="https://i.pinimg.com/736x/be/dc/3e/bedc3e8d6a53176221efeccca89d8032.jpg" alt="">
+                            <div class="info"><h3>Barras de chocolate artesanal</h3><p class="precio">S/. 27,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                             <img src=" https://i.pinimg.com/736x/16/b7/87/16b787e39dc2bdecab618bf99ebf2e13.jpg" alt="">
+                            <div class="info"><h3>Paletas de chocolate decoradas</h3><p class="precio">S/. 22,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- MACARONS -->
+                <section id="Macarons" class="seccion">
+                    <h2 class="tituloCategoria">Macarons</h2>
+                    <div class="listaProductos">
+                        <article class="tarjetaProducto">
+                            <img src="https://i.pinimg.com/736x/b2/a6/9e/b2a69e13818ee5ad7fdb8c9c0213bf65.jpg" alt="">
+                            <div class="info"><h3>Macaron de fresa</h3><p class="precio">S/. 21,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://sugarspunrun.com/wp-content/uploads/2023/03/Chocolate-Macarons-Recipe-1-of-1.jpg" alt="">
+                            <div class="info"><h3>Macaron de chocolate</h3><p class="precio">S/. 19,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://www.spatuladesserts.com/wp-content/uploads/2021/04/Pistachio-macaron-4055704-720x1080.jpg" alt="">
+                            <div class="info"><h3>Macaron de pistacho</h3><p class="precio">S/. 25,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                             <img src="https://media.scoolinary.app/recipes/images/2023/06/Damien-1_IVI4855.jpg" alt="">
+                            <div class="info"><h3>Macaron de maracuyá</h3><p class="precio">S/. 20,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://static.vecteezy.com/system/resources/previews/038/950/207/non_2x/ai-generated-coffee-macarons-on-a-light-background-with-coffee-beans-top-view-photo.jpeg" alt="">
+                            <div class="info"><h3>Macaron de café</h3><p class="precio">S/. 19,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                             <img src="https://i.pinimg.com/originals/8d/a9/b6/8da9b6c92bec3ec0066c367a69cd63c7.jpg" alt="">
+                            <div class="info"><h3>Macaron de limón</h3><p class="precio">S/. 15,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        
+                        <article class="tarjetaProducto">
+                             <img src=" https://kisetsumimiyori.com/wp-content/uploads/2021/07/istockphoto-1326709562-612x612.jpg" alt="">
+                            <div class="info"><h3>Macaron de frambuesa</h3><p class="precio">S/. 22,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- MACARONS -->
+                <section id="Frappés" class="seccion">
+                    <h2 class="tituloCategoria">Bebidas y Frappés</h2>
+                    <div class="listaProductos">
+                        <article class="tarjetaProducto">
+                            <img src="https://www.cenariomt.com.br/wp-content/uploads/2025/02/receita-de-milkshake-de-chocolate-delicia-cremosa-e-rapida-de-fazer-5373555.webp" alt="">
+                            <div class="info"><h3>Milkshake de chocolate</h3><p class="precio">S/. 17,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://www.unicornsinthekitchen.com/wp-content/uploads/2018/08/Strawberry-Milkshake.jpg" alt="">
+                            <div class="info"><h3>Milkshake de fresa</h3><p class="precio">S/. 17,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://i.pinimg.com/736x/30/1f/a7/301fa7dc94b28c0c0de5e1e92c7e7a2e.jpg" alt="">
+                            <div class="info"><h3>Milkshake de oreo</h3><p class="precio">S/. 17,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                             <img src="https://www.gastrolabweb.com/u/fotografias/m/2020/8/17/f1280x720-2561_134236_5050.jpg" alt="">
+                            <div class="info"><h3>Frappé de café</h3><p class="precio">S/. 15,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://www.cocinadelirante.com/688x459/filters:format(webp):quality(75)/sites/default/files/styles/gallerie/public/frappe-chocolate-cafe-leche-receta.jpg" alt="">
+                            <div class="info"><h3>Frappé de chocolate</h3><p class="precio">S/. 14,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                             <img src="https://satisfyyourcravings.com/wp-content/uploads/2024/07/3-26.png" alt="">
+                            <div class="info"><h3>Smoothie de frutos rojos</h3><p class="precio">S/. 16,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- CROISSANTS -->
+                <section id="Croissants" class="seccion">
+                    <h2 class="tituloCategoria">Croissants</h2>
+                    <div class="listaProductos">
+                        <article class="tarjetaProducto">
+                            <img src="https://plusrecetas.com/cdn/recipes/Croissants_de_Mantequilla.jpg" alt="">
+                            <div class="info"><h3>Croissants de mantequilla</h3><p class="precio">S/. 13,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5287fa22e4b0f296720af5f7/1440878884280-TAQ8HDMWJ0TRFRS7CV8L/ke17ZwdGBToddI8pDm48kNi92jXvMwdejWIsBRxzPRpZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyv2UDFjFAZ4RWzTuoRRVahCIfTlyYrETyytep84LYdqki2TpAouzGLeeSeNB_cEL0/image-asset.jpeg" alt="">
+                            <div class="info"><h3>Croissants rellenos de chocolate</h3><p class="precio">S/. 15,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://tofuu.getjusto.com/orioneat-local/resized2/tDtxDfcXopvPNXC87-800-x.webp" alt="">
+                            <div class="info"><h3>Croissants rellenos de manjar</h3><p class="precio">S/. 17,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://thf.bing.com/th/id/R.f45e53870132a009db5288225b1c4915?rik=Rfd4JI9OjVtcUQ&riu=http%3a%2f%2fdcdn.mitiendanube.com%2fstores%2f001%2f268%2f144%2fproducts%2f1ef1b8a0-ed57-4069-8554-0022c74193441-dae299de0df1feebb216051165365169-640-0.jpeg&ehk=shr2ybN1OJemM77E8MZXTL%2b%2bH2nEZdrCcTzL4YTZ7S0%3d&risl=&pid=ImgRaw&r=0" alt="">
+                            <div class="info"><h3>Croissant con crema pastelera</h3><p class="precio">S/. 15,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                         <article class="tarjetaProducto">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/050/391/450/small_2x/eat-appetizing-cuisine-meal-croissant-sandwich-food-ham-french-tilted-angle-breakfast-lunch-a-croissant-sandwich-with-cream-cheese-and-ham-on-a-white-plate-tilted-at-an-angle-photo.jpg" alt="">
+                            <div class="info"><h3>Croissant de queso y jamón</h3><p class="precio">S/. 18,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        <article class="tarjetaProducto">
+                            <img src="https://cooksavor.com/wp-content/uploads/2025/10/nutella_croissant_featured-1024x1024.jpg" alt="">
+                            <div class="info"><h3>Croissant de Nutella</h3><p class="precio">S/. 20,00</p><a href="#" class="btn-seleccionar">SELECCIONAR</a></div>
+                        </article>
+                        
+
+
+                        
                     </div>
                 </section>
 
             </div>
         </div>
 
-        <!-- BARRA MAUVE (AQUÍ ESTÁ LO QUE FALTABA) -->
-        <section class="barra-footer-info">
-            <div class="info-item">
-                <i class="fa-solid fa-seedling"></i>
-                <div class="txt">
-                    <h3>INGREDIENTES DE CALIDAD</h3>
-                    <p>Seleccionamos los mejores ingredientes para ti</p>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fa-solid fa-mortar-pestle"></i>
-                <div class="txt">
-                    <h3>PREPARACIÓN ARTESANAL</h3>
-                    <p>Hecho a mano con pasión y dedicación</p>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fa-solid fa-truck"></i>
-                <div class="txt">
-                    <h3>ENVÍOS SEGUROS</h3>
-                    <p>Llegamos a donde nos necesites</p>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fa-solid fa-bell-concierge"></i>
-                <div class="txt">
-                    <h3>ATENCIÓN PERSONALIZADA</h3>
-                    <p>Estamos aquí para ayudarte en cada paso</p>
-                </div>
-            </div>
-        </section>
-    </main>
+    
+    
+    
+        <section class="barraDatos">
+
+    <div class="dato">
+
+        <i class="fa-solid fa-seedling"></i>
+
+        <div class="textoDato">
+
+            <h3>INGREDIENTES DE CALIDAD</h3>
+            <p>Seleccionamos los mejores ingredientes para ti</p>
+
+        </div>
+
+    </div>
+
+    <div class="dato">
+        <i class="fa-solid fa-mortar-pestle"></i>
+        <div class="textoDato">
+            <h3>PREPARACIÓN ARTESANAL</h3>
+            <p>Hecho a mano con pasión y dedicación</p>
+
+        </div>
+
+    </div>
+
+    <div class="dato">
+        <i class="fa-solid fa-truck"></i>
+        <div class="textoDato">
+            <h3>ENVÍOS SEGUROS</h3>
+            <p>Llegamos a donde nos necesites</p>
+
+        </div>
+
+    </div>
+
+    <div class="dato">
+        <i class="fa-solid fa-bell-concierge"></i>
+        <div class="textoDato">
+            <h3>ATENCIÓN PERSONALIZADA</h3>
+            <p>Estamos aquí para ayudarte en cada paso</p>
+
+        </div>
+
+    </div>
+
+</section>
+
 
      <footer class="Parte-inferior">
         <div id="footer-contenido-principal" class="footer-contenido">
@@ -280,7 +583,7 @@
                     <li><a href="../Políticas/"><i class="fa-solid fa-magnifying-glass"></i> Políticas de Privacidad</a></li>
                     <li><a href="../Condiciones/"><i class="fa-regular fa-file-lines"></i> Términos y Condiciones</a></li>
                     <li><a href="../Devolucion/"><i class="fa-regular fa-credit-card"></i> Cambios y Devoluciones</a></li>
-                    <li><a href="../Promos/"> <i class="fa-solid fa-truck-moving"></i> Promociones</a></li>
+                    <li><a href="../Promos/"> <i class="fa-solid fa-percent"></i> Promociones</a></li>
                 </ul>
             </div>
             <div>

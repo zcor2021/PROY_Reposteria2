@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     background: #e2d2d267;
+    
 
 }
 
@@ -20,14 +21,28 @@ body {
     padding: 130px 0;
     margin: 0 0 70px 0;
     text-align: center;
-}
+    background-image: url("../imagen/promofondo.png");
+    background-size:cover;
+    background-position: center;
+
+        }
 
 .titulo-promo h1 {
-    margin: 0;
-    color: white;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size:80px;
+    color:#4b2e24;
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    margin:10px 0;
+    letter-spacing: 4px;
+}
+
+.titulo-promo h3{
+    font-size:28px;
+    letter-spacing:8px;
+    color:#5a3a2d;
+    font-weight:500;
+    margin:0;
+    text-transform:uppercase;
 }
 
 /* TEXTO */
@@ -36,6 +51,7 @@ body {
     max-width: 1300px;
     margin: 0 auto 70px auto;
     text-align: center;
+    
 }
 
 .texto-promo h2 {
@@ -49,7 +65,7 @@ body {
     margin: auto;
     line-height: 1.8;
     color: #444;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 /* CONTENEDOR PRINCIPAL */

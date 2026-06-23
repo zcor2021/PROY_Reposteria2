@@ -18,7 +18,8 @@
     flex-wrap: wrap;
     width: 100%;
     padding: 20px 4vw;
-    background-color: rgb(97, 67, 67);
+    background-color: rgba(49, 34, 34, 0.89);
+    /*background-color: rgb(97, 67, 67);*/
 }
 
 /*--------------------*/
@@ -29,7 +30,6 @@
     border-radius: 12px;
     padding: 8px 10px;
     min-width: fit-content; /*sirve para establecer que el ancho mínimo de un elemento sea exactamente el espacio que necesita para mostrar su contenido*/
-    
     transition: transform 0.3s ease, box-shadow 0.3s ease; /*si cambian las propiedades de transform y box-shadow que sea en 0.3s*/
 }
 .logo a {
@@ -38,7 +38,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     letter-spacing: 0.18em;
-    font-size: clamp(15px, 1.4vw, 28px);
+    font-size: clamp(15px, 1.4vw, 25px);
 }
 /* El logo crece un poco al pasar el cursor */
 .logo:hover {
@@ -109,7 +109,7 @@
 
 .menuCategorias {
     width: 100%;
-    background-color: rgb(194, 177, 167);
+    background-color: rgb(214, 202, 195);
     padding: 19px 20px;
 }
 .menuCategorias ul {
